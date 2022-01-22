@@ -3,7 +3,7 @@ import React from "react"
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 position-absolute top-0 start-0 w-full bg-dark bg-lg-transparent mb-10">
+    <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 position-absolute top-0 start-0 w-full bg-lg-transparent mb-10">
       <div className="container-xl max-w-screen-xl">
         <Link className="navbar-brand" to="/">
           <img src="../../images/gurjsingh-logo.png" className="h-10" alt="" />
@@ -25,15 +25,61 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="#">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Services
-              </Link>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <Link class="dropdown-item" to="/services/buyers">
+                    Buyers
+                  </Link>
+                </li>
+                <li>
+                  <Link class="dropdown-item" to="/services/sellers">
+                    Sellers
+                  </Link>
+                </li>
+                <li>
+                  <Link class="dropdown-item" to="/services/investors">
+                    Investors
+                  </Link>
+                </li>
+              </ul>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="#">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Resources
-              </Link>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <Link class="dropdown-item" to="/first-time-buyers">
+                    First Time Buyers Center
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    to="https://www.ratehub.ca/mortgage-payment-calculator"
+                  >
+                    Mortage Calculator
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav-item">
               <Link className="nav-link" href="/about">
