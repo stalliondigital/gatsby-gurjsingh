@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <Layout>
       <div>
-        <section className="position-relative pt-48 pb-40 bg-dark bg-cover bg-size--cover">
-          <span className="position-absolute top-0 start-0 w-full h-full bg-dark opacity-80"></span>
-          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center text-lg-start pt-5 pb-5 pt-lg-6">
+        <section className="home position-relative pt-48 pb-40  bg-cover bg-size--cover">
+          <span className="position-absolute top-0 start-0 w-full h-full opacity-80"></span>
+          <div className="container-lg max-w-screen-xl   position-relative overlap-10 text-center text-lg-start pt-5 pb-5 pt-lg-6">
             <div className="row row-grid align-items-center">
-              <div className="col-lg-8 text-center text-lg-start">
+              <div className="header rounded-5 bg-black bg-opacity-50 p-10 col-lg-8 text-center text-lg-start">
                 <h1 className="ls-tight font-bolder display-5 text-white mb-5">
                   Bridging the Gap Between Unimaginable and Possible
                 </h1>
