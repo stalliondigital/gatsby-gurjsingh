@@ -1,7 +1,4 @@
 @import "@webpixels/css";
-div > section.home {
-  background-image: url(./../images/background.png);
-  .header {
-    backdrop-filter: blur(20px);
-  }
+section {
+  padding-bottom: 60px;
 }
