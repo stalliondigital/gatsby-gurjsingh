@@ -170,24 +170,44 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="request">
-          <i>icon</i>
-          <h2>Request a Detailed Buyers Kit</h2>
-          <h3>All the information you need as a buyer in your hands.</h3>
-          <input type="text" name="name" id="name" placeholder="Name" />
-          <input
-            type="number"
-            name="phone"
-            id="phone"
-            placeholder="Phone Number"
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-          />
-          <button>Send</button>
+        <section className="request experience bg-black container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
+          <div className="container bg-warning container-lg max-w-screen-xl mb-5 rounded py-5">
+            <form class="g-3 text-center">
+              <h2 className="ls-tight font-bolder display-5 text-white ">
+                Request a Detailed Buyers Kit
+              </h2>
+              <p className="lead mb-10 ls-tight text-white">
+                All the information you need as a buyer in your hands.
+              </p>
+
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control text-warning bg-white bg-opacity-50 border-0"
+                    placeholder="Name"
+                    aria-label="Name"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="number"
+                    class="form-control text-warning bg-white bg-opacity-50 border-0"
+                    placeholder="Phone Number"
+                    aria-label="Phone Number"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="email"
+                    class="form-control text-warning bg-white bg-opacity-50 border-0"
+                    placeholder="Email Address"
+                    aria-label="Email Address"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
         </section>
       </div>
     </Layout>
