@@ -15,6 +15,6 @@ module.exports = {
 
   siteMetadata: {
     title: "Gurjivan Singh",
-    description: "Professional Realtor &copy;",
+    description: "Professional Realtor ©",
   },
 }
