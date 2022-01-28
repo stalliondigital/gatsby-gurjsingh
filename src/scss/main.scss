@@ -2,3 +2,123 @@
 section {
   padding-bottom: 60px;
 }
+
+// obout section index page
+section.about {
+  background-color: #181819;
+
+  .about-container {
+    background-color: #222222;
+    border-left: #eab308 solid;
+    padding-right: 0;
+
+    .container-fluid {
+      padding-right: 0;
+    }
+  }
+}
+
+section.experience {
+  background: radial-gradient(
+    circle,
+    rgba(234, 179, 8, 0.6530987395) -10%,
+    #4f431c 17%,
+    #222222 32%,
+    #181819 40%
+  );
+  .card-container {
+    .card-testimonial {
+      background-color: #222222;
+      border: none !important;
+      .card-body {
+        border: none;
+        color: white;
+      }
+      .card-footer {
+        background-color: rgba(228, 170, 46, 0.1);
+        color: #eab308;
+        border-radius: 0 0 15px 15px;
+      }
+    }
+    .card:focus {
+      border: none !important;
+    }
+  }
+}
+
+section.request {
+  background-color: #181819;
+
+  .container-request {
+    background-color: #eab308;
+    .book-icon {
+      background-color: rgba(245, 215, 121, 0.75);
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 27px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      transform: rotate(-7.3deg);
+    }
+    p {
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .form-data {
+      .arrow-icon {
+        font-size: 45px;
+        color: #f5d779;
+        background-color: #eab308;
+
+        .fa-icon {
+          background-color: #ae860b;
+          border-radius: 50%;
+          background-size: 40px 40px;
+          border: none;
+        }
+      }
+
+      ::placeholder {
+        color: #ae860b;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+section.footer {
+  background-color: #222222;
+
+  .contact {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .cite {
+    font-size: 1.1875em;
+  }
+
+  .links {
+    p.header {
+      font-weight: bold;
+      padding-bottom: 1em;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: rfs-fluid-value(2rem);
+    }
+  }
+
+  .footer-name {
+    font-size: 1.1875em;
+  }
+  .footer-license {
+    font-size: 0.9325em;
+  }
+  .footer-mls {
+    font-size: 0.625em;
+    opacity: 0.5;
+  }
+}
