@@ -4,6 +4,13 @@ import { Link } from "gatsby"
 import gurjivanImage from "./../images/gurjivan-image.png"
 import coupleTogether from "./../images/couple-together.png"
 import backgroundimage from "./../images/background.png"
+
+// font awesome library
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBook } from "@fortawesome/free-solid-svg-icons"
+import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
+
+
 export default function Home() {
   return (
     <Layout>
@@ -43,8 +50,13 @@ export default function Home() {
           </div>
         </section>
         <section className="bg-black reason-why container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="container-lg max-w-screen-xl  bg-dark text-lg mb-5 border-start-5 border-warning rounded-end-5 border-end-0 rounded-start-2 ">
+          <div className="container-lg max-w-screen-xl bg-dark text-lg mb-5 border-start-5 border-warning rounded-end-5 border-end-0 rounded-start-2 ">
             <div className="row align-items-center">
+              <div className="d-block d-lg-none col-lg-4 pe-0">
+                <div className="container-fluid">
+                  <img src={gurjivanImage} alt="" className="cropped1" />
+                </div>
+              </div>
               <div className="col-lg-8 p-10">
                 <h2 className="ls-tight font-bolder display-5 text-white mb-5 p-10">
                   Why Gurjivan?
@@ -65,9 +77,9 @@ export default function Home() {
                   More about Gurj
                 </Link>
               </div>
-              <div className="col-lg-4 pe-0">
+              <div className="d-none d-lg-block col-lg-4 pe-0">
                 <div className="container-fluid">
-                  <img src={gurjivanImage} alt="" className="img-fluid w-100" />
+                  <img src={gurjivanImage} alt="" className="img-fluid " />
                 </div>
               </div>
             </div>
@@ -172,7 +184,10 @@ export default function Home() {
         </section>
         <section className="request experience bg-black container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
           <div className="container bg-warning container-lg max-w-screen-xl mb-5 rounded py-5">
-            <form class="g-3 text-center">
+            <form class="g-3 text-center justify-content-center">
+              <h2>
+                <FontAwesomeIcon icon={faBook} />
+              </h2>
               <h2 className="ls-tight font-bolder display-5 text-white ">
                 Request a Detailed Buyers Kit
               </h2>
@@ -180,8 +195,8 @@ export default function Home() {
                 All the information you need as a buyer in your hands.
               </p>
 
-              <div class="row">
-                <div class="col">
+              <div class="row justify-content-center g-3 px-10">
+                <div class="col-9 col-lg-3">
                   <input
                     type="text"
                     class="form-control text-warning bg-white bg-opacity-50 border-0"
@@ -189,7 +204,7 @@ export default function Home() {
                     aria-label="Name"
                   />
                 </div>
-                <div class="col">
+                <div class="col-9 col-lg-3">
                   <input
                     type="number"
                     class="form-control text-warning bg-white bg-opacity-50 border-0"
@@ -197,13 +212,16 @@ export default function Home() {
                     aria-label="Phone Number"
                   />
                 </div>
-                <div class="col">
+                <div class="col-9 col-lg-3">
                   <input
                     type="email"
                     class="form-control text-warning bg-white bg-opacity-50 border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />
+                </div>
+                <div className="col-lg-1">
+                  <FontAwesomeIcon icon={farArrow} />
                 </div>
               </div>
             </form>
