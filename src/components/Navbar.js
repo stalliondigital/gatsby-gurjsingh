@@ -22,11 +22,18 @@ export default function Navbar() {
         {/* <!-- Logo --> */}
         {/* <div class="container-fluid"> */}
         <Link className="navbar-brand ms-10" to="/">
-          <img src={logo} className="h-10" alt="" />
-          <span className="navbar-text">
-            {title}
-            {description}
-          </span>
+          <div className="row row-cols-auto">
+            <div className="col">
+              <img src={logo} className="h-10" alt="" />
+            </div>
+            <div className="col">
+              <span className="navbar-text">
+                {title}
+                <br />
+                {description}
+              </span>
+            </div>
+          </div>
         </Link>
         <button
           className="navbar-toggler"
