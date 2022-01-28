@@ -1,9 +1,10 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-fontawesome-css`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -11,6 +12,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-sass`,
   ],
 
   siteMetadata: {
