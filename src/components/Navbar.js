@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 position-absolute top-0 start-0 w-full bg-dark bg-lg-transparent">
       <div className="container-xl max-w-screen-xl">
         {/* <!-- Logo --> */}
-        {/* <div class="container-fluid"> */}
+        {/* <div className="container-fluid"> */}
         <Link className="navbar-brand ms-10" to="/">
           <div className="row row-cols-auto">
             <div className="col">
@@ -53,9 +53,9 @@ export default function Navbar() {
           id="navbarCollapse"
         >
           <ul className="navbar-nav ms-auto navbar-end ">
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -64,27 +64,27 @@ export default function Navbar() {
               >
                 Services
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link class="dropdown-item" to="/services/buyers">
+                  <Link className="dropdown-item" to="/services/buyers">
                     Buyers
                   </Link>
                 </li>
                 <li>
-                  <Link class="dropdown-item" to="/services/sellers">
+                  <Link className="dropdown-item" to="/services/sellers">
                     Sellers
                   </Link>
                 </li>
                 <li>
-                  <Link class="dropdown-item" to="/services/investors">
+                  <Link className="dropdown-item" to="/services/investors">
                     Investors
                   </Link>
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -93,15 +93,15 @@ export default function Navbar() {
               >
                 Resources
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link class="dropdown-item" to="/first-time-buyers">
+                  <Link className="dropdown-item" to="/first-time-buyers">
                     First Time Buyers Center
                   </Link>
                 </li>
                 <li>
                   <a
-                    class="dropdown-item"
+                    className="dropdown-item"
                     href="https://www.ratehub.ca/mortgage-payment-calculator"
                     target="_blank"
                     rel="noreferrer"
