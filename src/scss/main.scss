@@ -3,17 +3,23 @@ section {
   padding-bottom: 60px;
 }
 
+section.home {
+  .header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
 // obout section index page
 section.about {
   background-color: #181819;
 
   .about-container {
     background-color: #222222;
-    border-left: #eab308 solid;
+    border-left: #eab308 solid 9px;
     padding-right: 0;
-
-    .container-fluid {
-      padding-right: 0;
+    @include media-breakpoint-down(lg) {
+      border-left: none;
     }
   }
 }
@@ -26,6 +32,7 @@ section.experience {
     #222222 32%,
     #181819 40%
   );
+
   .card-container {
     .card-testimonial {
       background-color: #222222;
@@ -38,6 +45,9 @@ section.experience {
         background-color: rgba(228, 170, 46, 0.1);
         color: #eab308;
         border-radius: 0 0 15px 15px;
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: rfs-fluid-value(1.5rem);
       }
     }
     .card:focus {
@@ -121,4 +131,64 @@ section.footer {
     font-size: 0.625em;
     opacity: 0.5;
   }
+}
+
+section.solution {
+  background-color: #181819;
+  .card-container {
+    .card {
+      background-color: #37373d;
+      color: white;
+      .card-img {
+        background-color: #27272c;
+        display: flex;
+        justify-content: center;
+        img {
+          height: 145px;
+          width: fit-content;
+        }
+      }
+      .number {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        background: #979797;
+        border: none;
+        color: white;
+        text-align: center;
+        font: 32px Arial, sans-serif;
+        display: inline-block;
+        line-height: 85%;
+      }
+    }
+  }
+}
+
+.break {
+  background: #181819;
+  h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 8px solid #27272c;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    span {
+      background: #181819;
+      color: #27272c;
+      padding: 0 10px;
+    }
+  }
+}
+
+section.phases {
+  background-color: #181819;
+  h2.phase {
+    color: #eab308;
+  }
+}
+
+p.description {
+  color: white;
+  opacity: 0.75;
 }
