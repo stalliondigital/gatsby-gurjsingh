@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import gurjivanImage from "./../images/gurjivan-image.png"
+import gurjivanImageCut from "./../images/gurjivan-image-cut.png"
 import coupleTogether from "./../images/couple-together.png"
 import backgroundimage from "./../images/background.png"
 
@@ -9,7 +10,6 @@ import backgroundimage from "./../images/background.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBook } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
-
 
 export default function Home() {
   return (
@@ -50,12 +50,14 @@ export default function Home() {
           </div>
         </section>
         <section className="about reason-why container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="about-container container-lg max-w-screen-xl text-lg mb-5 border-start-7 pe-0 rounded-end-5 border-end-0 rounded-start-2 ">
+          <div className="about-container container-lg max-w-screen-xl text-lg mb-5 p-0 rounded-5 rounded-start-2 ">
             <div className="row row-cols-auto align-items-center">
               <div className="d-block d-lg-none">
-                <div className="container">
-                  <img src={gurjivanImage} alt="" />
-                </div>
+                <img
+                  className="img-fluid rounded-top-5"
+                  src={gurjivanImageCut}
+                  alt=""
+                />
               </div>
               <div className="col-lg-8 p-10">
                 <h2 className="ls-tight font-bolder display-5 text-white mb-5 ">
@@ -70,28 +72,30 @@ export default function Home() {
                   process ensuring & instilling confidence within all of his
                   clients and their deals.
                 </p>
-                <Link
-                  to="/about"
-                  className="btn btn-lg btn-primary bg-yellow-500 border-none shadow-sm mx-2 px-lg-8"
-                >
-                  More about Gurj
-                </Link>
+                <div className="d-flex justify-content-end">
+                  <Link
+                    to="/about"
+                    className="btn btn-lg btn-primary bg-yellow-500 border-none shadow-sm mx-2 px-lg-8"
+                  >
+                    More about Gurj
+                  </Link>
+                </div>
               </div>
               <div className="d-none d-lg-block col-lg-4 justify-content-end">
-                <div className="container">
+                <div className="d-flex flex-row-reverse">
                   <img src={gurjivanImage} alt="" className="img-fluid " />
                 </div>
               </div>
             </div>
           </div>
-          <div className="about-container border-0 container-lg max-w-screen-xl mt-10 rounded-5">
+          <div className="about-container border-0 p-0 container-lg max-w-screen-xl mt-10 rounded-5">
             <div className="row align-items-center">
               <div className="col-lg-5">
                 <img src={coupleTogether} alt="" className="img-fluid w-100" />
               </div>
               <div className="col-lg-7">
-                <div className="container p-5">
-                  <h2 className="ls-tight font-bolder display-5 text-white mb-5 ">
+                <div className="container pb-10 pb-lg-0">
+                  <h2 className="ls-tight font-bolder display-5 text-white mb-5 pt-10 pt-lg-0 ">
                     Buying your first home?
                   </h2>
                   <p className="lead text-white text-opacity-80 mb-10">
@@ -117,9 +121,9 @@ export default function Home() {
             </h2>
             <div className="row my-5 g-4 justify-content-center row-cols-1 row-cols-lg-3">
               <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card m-15 m-lg-3 p-4 p-lg-2 h-100">
-                  <div className="card-body text-center">
-                    <p>
+                <div className="card-testimonial card m-15 m-lg-3 h-100">
+                  <div className="card-body p-5 text-center">
+                    <p className="p-5">
                       “Jivan has been able to quickly indentify shifting market
                       trends and investment opportunities that many others have
                       missed. Using proprietary analysis tools Jivan is able to
@@ -130,9 +134,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card border-0 m-15 m-lg-3 p-4 p-lg-2 h-100">
-                  <div className="card-body text-center">
-                    <p>
+                <div className="card-testimonial card m-15 m-lg-3 h-100">
+                  <div className="card-body p-5 text-center">
+                    <p className="p-5">
                       “Wow! I got referred to Gurj from a family friend and I
                       honestly didn't have high expectations after dealing with
                       my last realtor. But Gurj was so good! Communication,
@@ -144,9 +148,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card border-0 m-15 m-lg-3 p-4 p-lg-2 h-100">
-                  <div className="card-body text-center">
-                    <p>
+                <div className="card-testimonial card m-15 m-lg-3 h-100">
+                  <div className="card-body p-5 text-center">
+                    <p className="p-5">
                       “Jivan is one of the most professional, forward thinking
                       guys I have met. Will continue to do business at anytime.”
                     </p>
@@ -155,9 +159,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card border-0 m-15 m-lg-3 p-4 p-lg-2 h-100">
-                  <div className="card-body text-center">
-                    <p>
+                <div className="card-testimonial card m-15 m-lg-3 h-100">
+                  <div className="card-body p-5 text-center">
+                    <p className="p-5">
                       “Gurjivan Singh is the best realtor I have ever dealt
                       with. Very professional, experienced, and helpful. Highly
                       recommend.”
@@ -167,9 +171,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card border-0 m-15 m-lg-3 p-4 p-lg-2 h-100">
-                  <div className="card-body text-center">
-                    <p>
+                <div className="card-testimonial card m-15 m-lg-3 h-100">
+                  <div className="card-body p-5 text-center">
+                    <p className="p-5">
                       “Really pleasant interaction with this service. Helped
                       make my move from the island to the mainland so much
                       smoother. They were friendly and seemed very genuine.
@@ -184,7 +188,7 @@ export default function Home() {
         </section>
         <section className="request container-fluid text-lg-start pb-10 pt-lg-6 align-items-center pt-10">
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
-            <form class="g-3 text-center justify-content-center">
+            <form className="g-3 text-center justify-content-center">
               <h2 className="book-icon">
                 <FontAwesomeIcon className="font-awesome" icon={faBook} />
               </h2>
@@ -196,27 +200,27 @@ export default function Home() {
                 <br /> a buyer in your hands.
               </p>
 
-              <div class="form-data row justify-content-center align-center g-3 px-10">
-                <div class="col-9 col-lg-3">
+              <div className="form-data row justify-content-center align-center g-3 px-10">
+                <div className="col-9 col-lg-3">
                   <input
                     type="text"
-                    class="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control text-warning bg-white bg-opacity-50 border-0"
                     placeholder="Name"
                     aria-label="Name"
                   />
                 </div>
-                <div class="col-9 col-lg-3">
+                <div className="col-9 col-lg-3">
                   <input
                     type="number"
-                    class="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control text-warning bg-white bg-opacity-50 border-0"
                     placeholder="Phone Number"
                     aria-label="Phone Number"
                   />
                 </div>
-                <div class="col-9 col-lg-3">
+                <div className="col-9 col-lg-3">
                   <input
                     type="email"
-                    class="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control text-warning bg-white bg-opacity-50 border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />
