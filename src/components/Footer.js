@@ -166,7 +166,7 @@ export default function Footer() {
             <p className="footer-name">
               © 2022 Gurjivan Singh. All Rights Reserved
             </p>
-            <p className="footer-license">Made by Stallion Digital</p>
+            <p className="footer-license">Made with ♥ by Stallion Digital</p>
           </div>
           <div className="col-12 col-lg-6 order-1 order-lg-2">
             <div className="container justify-content-center align-items-center">
