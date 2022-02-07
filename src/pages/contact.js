@@ -76,7 +76,7 @@ export default function Contact() {
                       <img
                         src={sol_3}
                         className="card-img-top"
-                        alt="a post with likes and hearts"
+                        alt="a publication with likes and hearts"
                       />
                     </div>
                     <div className="card-body row align-items-center ">

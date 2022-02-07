@@ -200,7 +200,7 @@ export default function Home() {
                 <img
                   src={inv_1}
                   className="img-fluid pe-lg-6 "
-                  alt="money and gold coins"
+                  alt="a person with his hand on his head"
                 />
               </div>
             </div>

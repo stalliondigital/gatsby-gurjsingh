@@ -56,7 +56,7 @@ export default function Home() {
                 <img
                   className="img-fluid rounded-top-5"
                   src={gurjivanImageCut}
-                  alt=""
+                  alt="Portrait of Gurjivan Singh"
                 />
               </div>
               <div className="col-lg-8 p-10">
@@ -74,7 +74,7 @@ export default function Home() {
                 </p>
                 <div className="d-flex justify-content-end">
                   <Link
-                    to="/about"
+                    to="#"
                     className="btn btn-lg btn-primary bg-yellow-500 border-none shadow-sm mx-2 px-lg-8"
                   >
                     More about Gurj
@@ -83,7 +83,11 @@ export default function Home() {
               </div>
               <div className="d-none d-lg-block col-lg-4 justify-content-end">
                 <div className="d-flex flex-row-reverse">
-                  <img src={gurjivanImage} alt="" className="img-fluid " />
+                  <img
+                    src={gurjivanImage}
+                    alt="Portrait of Gurjivan Singh"
+                    className="img-fluid "
+                  />
                 </div>
               </div>
             </div>
@@ -91,7 +95,7 @@ export default function Home() {
           <div className="about-container border-0 p-0 container-lg max-w-screen-xl mt-10 rounded-5">
             <div className="row align-items-center">
               <div className="col-lg-5">
-                <img src={coupleTogether} alt="" className="img-fluid w-100" />
+                <img src={coupleTogether} alt="couple happy next to a house" className="img-fluid w-100" />
               </div>
               <div className="col-lg-7">
                 <div className="container pb-10 pb-lg-0">

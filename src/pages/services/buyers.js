@@ -205,7 +205,7 @@ export default function Home() {
                 <img
                   src={prep_2}
                   className="img-fluid pe-lg-6 "
-                  alt="money and gold coins"
+                  alt="money and gold coins stacked"
                 />
               </div>
               <div className="col-12 col-lg-8">

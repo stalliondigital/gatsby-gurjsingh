@@ -79,7 +79,7 @@ export default function Home() {
                     <img
                       src={sellers_2}
                       className="card-img-top"
-                      alt="a person talking on the phone"
+                      alt="a person watering a plant"
                     />
                   </div>
                   <div className="card-body d-flex flex-row align-items-center">
@@ -98,7 +98,7 @@ export default function Home() {
                     <img
                       src={sellers_3}
                       className="card-img-top"
-                      alt="a person next to a for sale sign"
+                      alt="a person holding the roof of a house"
                     />
                   </div>
                   <div className="card-body d-flex flex-row align-items-center">
@@ -117,7 +117,7 @@ export default function Home() {
                     <img
                       src={sellers_4}
                       className="card-img-top"
-                      alt="a person next to a for sale sign"
+                      alt="a photografic camera"
                     />
                   </div>
                   <div className="card-body d-flex flex-row align-items-center">
@@ -136,7 +136,7 @@ export default function Home() {
                     <img
                       src={sellers_5}
                       className="card-img-top"
-                      alt="a person next to a for sale sign"
+                      alt="a hand holding a megaphone"
                     />
                   </div>
                   <div className="card-body d-flex flex-row ">
@@ -155,7 +155,7 @@ export default function Home() {
                     <img
                       src={sellers_6}
                       className="card-img-top"
-                      alt="a person next to a for sale sign"
+                      alt="a person carrying a wheelbarrow"
                     />
                   </div>
                   <div className="card-body d-flex flex-row align-items-center">
@@ -193,7 +193,7 @@ export default function Home() {
                     <img
                       src={sellers_8}
                       className="card-img-top"
-                      alt="a person next to a for sale sign"
+                      alt="a computer with envelopes next to it"
                     />
                   </div>
                   <div className="card-body d-flex flex-row align-items-center">

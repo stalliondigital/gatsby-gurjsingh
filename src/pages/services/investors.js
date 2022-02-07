@@ -47,7 +47,7 @@ export default function Home() {
                 <img
                   src={diff_img}
                   className="img-fluid pe-lg-7"
-                  alt="three people discussing"
+                  alt="a person drawing graphs on a whiteboard"
                 />
               </div>
               <h2 className="ls-tight font-bolder display-5 text-white text-center mb-2 ">
@@ -106,7 +106,7 @@ export default function Home() {
                 <img
                   src={inv_1}
                   className="img-fluid pe-lg-6 "
-                  alt="money and gold coins"
+                  alt="a magnifying glass on a document"
                 />
               </div>
             </div>
@@ -172,8 +172,8 @@ export default function Home() {
               <div className="row my-5 g-4 justify-content-center row-cols-1 row-cols-lg-3">
                 <div className="card-container col-8 col-lg-4 ">
                   <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="p-5">
+                    <div className="card-body p-5 text-start">
+                      <p className="lh-sm">
                         “Super helpful in answering every question I had. As
                         someone with next to no knowledge in real estate, he was
                         able to explain in an easy to understand way. Have not
@@ -185,8 +185,8 @@ export default function Home() {
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
                   <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="p-5">
+                    <div className="card-body p-5 text-start">
+                      <p className="lh-sm">
                         “A very honest and pleasant person. He gives super
                         genuine responses and advice and is overall just a very
                         professional and outstanding person.”
@@ -197,8 +197,8 @@ export default function Home() {
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
                   <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="p-5">
+                    <div className="card-body p-5 text-start">
+                      <p className="lh-sm">
                         “After countless experiences with realtors, I can
                         confidently say that my wife and I have thoroughly
                         enjoyed seeking for a home with Gurj. He made it simple
@@ -211,8 +211,8 @@ export default function Home() {
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
                   <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="p-5">
+                    <div className="card-body p-5 text-start">
+                      <p className="lh-sm">
                         “Gurjivan Singh is the best realtor I have ever dealt
                         with. Very professional, experienced, and helpful.
                         Highly recommend.”
@@ -223,8 +223,8 @@ export default function Home() {
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
                   <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="p-5">
+                    <div className="card-body p-5 text-start">
+                      <p className="lh-sm">
                         “Really pleasant interaction with this service. Helped
                         make my move from the island to the mainland so much
                         smoother. They were friendly and seemed very genuine.
