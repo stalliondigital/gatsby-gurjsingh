@@ -12,6 +12,15 @@ nav {
     // form FILL IT, SENDS AN EMAIL TO SPECIFIC EMAIL ADDRESS
     // deploy to netlify->
   }
+  @include media-breakpoint-down(lg) {
+    background-color: #181819;
+  }
+  .nav-button:focus {
+    background-color: #222222 !important;
+  }
+  .nav-dropdown {
+    background-color: #333333;
+  }
 }
 // use svg
 // copy the markup code, d-flex strech and shrink
@@ -49,33 +58,36 @@ section.about {
 }
 
 section.experience {
-  background: radial-gradient(
-    circle,
-    rgba(234, 179, 8, 0.6530987395) -10%,
-    #4f431c 17%,
-    #222222 32%,
-    #181819 40%
-  );
+  background-color: #181819;
+  .experience-inside {
+    background: radial-gradient(
+      circle,
+      rgba(234, 179, 8, 0.3) -10%,
+      rgba(79, 67, 28, 0.3) 17%,
+      rgba(34, 34, 34, 0.3) 32%,
+      rgba(24, 24, 25, 0.3) 40%
+    );
 
-  .card-container {
-    .card-testimonial {
-      background-color: #222222;
-      border: none !important;
-      .card-body {
-        border: none;
-        color: white;
+    .card-container {
+      .card-testimonial {
+        background-color: #222222;
+        border: none !important;
+        .card-body {
+          border: none;
+          color: white;
+        }
+        .card-footer {
+          background-color: rgba(228, 170, 46, 0.1);
+          color: #eab308;
+          border-radius: 0 0 15px 15px;
+        }
+        @include media-breakpoint-down(lg) {
+          font-size: rfs-fluid-value(1.5rem);
+        }
       }
-      .card-footer {
-        background-color: rgba(228, 170, 46, 0.1);
-        color: #eab308;
-        border-radius: 0 0 15px 15px;
+      .card:focus {
+        border: none !important;
       }
-      @include media-breakpoint-down(lg) {
-        font-size: rfs-fluid-value(1.5rem);
-      }
-    }
-    .card:focus {
-      border: none !important;
     }
   }
 }
@@ -97,13 +109,19 @@ section.request {
       color: white;
       transform: rotate(-7.3deg);
     }
+    .phone-icon {
+      color: rgba(245, 215, 121, 0.75);
+    }
+    .primary {
+      color: #eab308;
+    }
     p {
       font-size: 28px;
       font-weight: 400;
     }
 
     .form-data {
-      .arrow-icon {
+      .arrow-icon button {
         font-size: 45px;
         color: #f5d779;
         background-color: #eab308;
@@ -214,4 +232,41 @@ section.phases {
 p.description {
   color: white;
   opacity: 0.75;
+}
+
+.contact-page {
+  background-color: #181819;
+  padding-top: 100px;
+  section.solution {
+    // background-color: #eab308;
+    background: linear-gradient(180deg, #eab308 70%, #181819 30%);
+    .card-container {
+      .card {
+        background-color: #37373d;
+        color: white;
+        .card-img {
+          background-color: #27272c;
+          display: flex;
+          justify-content: center;
+          img {
+            height: 145px;
+            width: fit-content;
+          }
+        }
+        .number {
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          padding: 10px;
+          background: #979797;
+          border: none;
+          color: white;
+          text-align: center;
+          font: 32px Arial, sans-serif;
+          display: inline-block;
+          line-height: 85%;
+        }
+      }
+    }
+  }
 }
