@@ -34,13 +34,13 @@ export default function Home() {
                 <div className="mt-10 align-items-start">
                   <Link
                     to="/services/buyers"
-                    className="btn btn-lg btn-primary bg-yellow-500 border-none shadow-sm mx-2 px-lg-8"
+                    className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8"
                   >
                     I am a buyer
                   </Link>
                   <Link
                     to="/services/sellers"
-                    className="btn btn-lg btn-neutral border-none mx-2 px-lg-8"
+                    className="btn btn-lg secondary border-none mx-2 px-lg-8"
                   >
                     I am a seller
                   </Link>
