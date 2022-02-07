@@ -1,4 +1,20 @@
 @import "@webpixels/css";
+@import url("http://fonts.cdnfonts.com/css/itc-cheltenham-std");
+
+// NAVBAR
+
+nav {
+  .logo-text {
+    font-family: "ITC Cheltenham Std", sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    // font-stretch: expanded;
+    // form FILL IT, SENDS AN EMAIL TO SPECIFIC EMAIL ADDRESS
+    // deploy to netlify->
+  }
+}
+// use svg
+// copy the markup code, d-flex strech and shrink
 section {
   padding-bottom: 60px;
 }
@@ -7,6 +23,14 @@ section.home {
   .header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+  }
+  .primary {
+    background-color: #eab308;
+    color: white;
+  }
+  .secondary {
+    background-color: #9797a0;
+    color: white;
   }
 }
 
@@ -172,7 +196,6 @@ section.solution {
     text-align: center;
     border-bottom: 8px solid #27272c;
     line-height: 0.1em;
-    margin: 10px 0 20px;
     span {
       background: #181819;
       color: #27272c;
