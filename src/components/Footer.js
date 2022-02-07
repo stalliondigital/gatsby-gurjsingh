@@ -182,7 +182,7 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-reset" to="/about">
+                    <Link className="text-reset" to="#">
                       About
                     </Link>
                   </li>
