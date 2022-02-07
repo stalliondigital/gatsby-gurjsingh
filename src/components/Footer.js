@@ -35,7 +35,7 @@ export default function Footer() {
     <section className="footer pt-10 container-fluid text-white">
       <div className="container-fluid">
         <div className="row">
-          <div className="contact col-12 col-lg-7 row pb-10">
+          <div className="contact col-12 col-lg-7 row pb-10 pb-lg-0">
             <div className="col-7 ">
               <Link className="text-reset" to="/">
                 <div className="row row-cols-auto">
@@ -56,28 +56,71 @@ export default function Footer() {
                 home, I'm here to help you every step of the way.
               </p>
               <div className="row pt-4">
-                <div className="col-6 d-flex justify-content-around">
-                  <FontAwesomeIcon icon={faPhoneAlt} />
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <FontAwesomeIcon icon={faFacebook} />
-                  <FontAwesomeIcon icon={faInstagram} />
-                  <FontAwesomeIcon icon={faTwitter} />
-                  <FontAwesomeIcon icon={faLinkedinIn} />
+                <div className="col-8 d-flex justify-content-around">
+                  <a className="text-reset" href="tel:778-951-8275">
+                    <FontAwesomeIcon icon={faPhoneAlt} />
+                  </a>
+                  <a className="text-reset" href="mailto:gurj@gurjsingh.ca">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </a>
+                  <a
+                    className="text-reset"
+                    href="https://www.facebook.com/GetGurj"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faFacebook} />
+                  </a>
+                  <a
+                    className="text-reset"
+                    href="https://www.instagram.com/getgurj/"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    className="text-reset"
+                    href="https://twitter.com/getgurj"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faTwitter} />
+                  </a>
+                  <a
+                    className="text-reset"
+                    href="https://www.linkedin.com/in/getgurj/"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </a>
                 </div>
               </div>
             </div>
             <div className="col-5">
               <img src={footerImg} className="h-4" alt="" />
-              <p className="pt-2 pb-5">RE/MAX 2000 REALTY</p>
+              <a
+                className="text-reset"
+                href="https://www.remax.ca"
+                target="_blank"
+              >
+                <p className="pt-2 pb-5">RE/MAX 2000 REALTY</p>
+              </a>
               <div className="row g-0 ">
                 <div className="col-1">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} />
+                  <a
+                    className="text-reset"
+                    href="https://goo.gl/maps/5jnt94uo3t56WFsz9"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />
+                  </a>
                 </div>
                 <div className="col-11">
                   #103-15127 100th Avenue, Surrey, BC V3R 0N9
                 </div>
                 <p className="pt-3">
-                  <FontAwesomeIcon icon={faPhoneAlt} /> 778-951-8275
+                  <a className="text-reset pe-2" href="tel:778-951-8275">
+                    <FontAwesomeIcon icon={faPhoneAlt} />
+                  </a>{" "}
+                  778-951-8275
                 </p>
               </div>
             </div>
@@ -166,7 +209,16 @@ export default function Footer() {
             <p className="footer-name">
               © 2022 Gurjivan Singh. All Rights Reserved
             </p>
-            <p className="footer-license">Made with ♥ by Stallion Digital</p>
+            <p className="footer-license">
+              Made with ♥ by{" "}
+              <a
+                className="text-reset"
+                href="https://stalliondigital.ca"
+                target="_blank"
+              >
+                Stallion Digital
+              </a>
+            </p>
           </div>
           <div className="col-12 col-lg-6 order-1 order-lg-2">
             <div className="container justify-content-center align-items-center">
