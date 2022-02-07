@@ -1,6 +1,7 @@
 import { Link, graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import logo from "./../images/gurjsingh-logo.png"
+import gurjivanSinghLogo from "./../images/gurjivan-singh-logo.png"
 
 export default function Navbar() {
   const data = useStaticQuery(graphql`
@@ -17,26 +18,24 @@ export default function Navbar() {
   const { title, description } = data.site.siteMetadata
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 position-absolute top-0 start-0 w-full bg-dark bg-lg-transparent">
+    <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 position-absolute top-0 start-0 w-full bg-lg-transparent">
       <div className="container-xl max-w-screen-xl">
         {/* <!-- Logo --> */}
         {/* <div className="container-fluid"> */}
         <Link className="navbar-brand ms-10" to="/">
           <div className="row row-cols-auto">
             <div className="col">
-              <img src={logo} className="h-10" alt="" />
+              <img src={logo} className="h-14" alt="" />
             </div>
             <div className="col">
-              <span className="logo-text navbar-text lh-1 pb-0 ">
-                {title}
-              </span>
+              <img src={gurjivanSinghLogo} className="h-8 pb-0" alt="" />
               <br />
-              <span className="navbar-text fs-7 lh-1 pt-0">{description}</span>
+              <span className="navbar-text fs-7 fw-light lh-0 pt-0">{description}</span>
             </div>
           </div>
         </Link>
         <button
-          className="navbar-toggler"
+          className="nav-button navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarCollapse"
@@ -64,19 +63,31 @@ export default function Navbar() {
               >
                 Services
               </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul
+                className="nav-dropdown dropdown-menu border-0"
+                aria-labelledby="navbarDropdown"
+              >
                 <li>
-                  <Link className="dropdown-item" to="/services/buyers">
+                  <Link
+                    className="dropdown-item text-white"
+                    to="/services/buyers"
+                  >
                     Buyers
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services/sellers">
+                  <Link
+                    className="dropdown-item text-white"
+                    to="/services/sellers"
+                  >
                     Sellers
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services/investors">
+                  <Link
+                    className="dropdown-item text-white"
+                    to="/services/investors"
+                  >
                     Investors
                   </Link>
                 </li>
@@ -93,15 +104,21 @@ export default function Navbar() {
               >
                 Resources
               </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <ul
+                className="nav-dropdown dropdown-menu border-0"
+                aria-labelledby="navbarDropdown"
+              >
                 <li>
-                  <Link className="dropdown-item" to="/first-time-buyers">
+                  <Link
+                    className="dropdown-item text-white"
+                    to="/first-time-buyers"
+                  >
                     First Time Buyers Center
                   </Link>
                 </li>
                 <li>
                   <a
-                    className="dropdown-item"
+                    className="dropdown-item text-white"
                     href="https://www.ratehub.ca/mortgage-payment-calculator"
                     target="_blank"
                     rel="noreferrer"
@@ -117,10 +134,10 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <div className="d-flex align-items-lg-center mt-3 ms-3 mt-lg-0">
+          <div className="d-flex justify-content-start align-items-lg-center mt-3 mt-lg-0">
             <Link
               to="/contact"
-              className="btn btn-sm btn-neutral bg-yellow-500 border-none text-light w-full w-lg-auto"
+              className="btn btn-sm btn-neutral bg-yellow-500 border-none text-light w-auto w-lg-auto"
             >
               Contact
             </Link>
