@@ -27,11 +27,11 @@ export default function Navbar() {
               <img src={logo} className="h-10" alt="" />
             </div>
             <div className="col">
-              <span className="navbar-text">
+              <span className="logo-text navbar-text lh-1 pb-0 ">
                 {title}
-                <br />
-                {description}
               </span>
+              <br />
+              <span className="navbar-text fs-7 lh-1 pt-0">{description}</span>
             </div>
           </div>
         </Link>
