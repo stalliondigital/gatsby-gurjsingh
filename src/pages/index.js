@@ -115,72 +115,76 @@ export default function Home() {
           </div>
         </section>
         <section className="experience container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="experience-container container-lg max-w-screen-xl   mb-5 ">
-            <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
-              What Others Say
-            </h2>
-            <div className="row my-5 g-4 justify-content-center row-cols-1 row-cols-lg-3">
-              <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card m-15 m-lg-3 h-100">
-                  <div className="card-body p-5 text-center">
-                    <p className="p-5">
-                      “Jivan has been able to quickly indentify shifting market
-                      trends and investment opportunities that many others have
-                      missed. Using proprietary analysis tools Jivan is able to
-                      back up his leads and finds with concrete facts.”
-                    </p>
+          <div className="experience-inside container-fluid text-lg-start">
+            <div className="experience-container container-lg max-w-screen-xl   mb-5 ">
+              <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
+                What Others Say
+              </h2>
+              <div className="row my-5 g-4 justify-content-center row-cols-1 row-cols-lg-3">
+                <div className="card-container col-8 col-lg-4 ">
+                  <div className="card-testimonial card m-15 m-lg-3 h-100">
+                    <div className="card-body p-5 text-center">
+                      <p className="lh-sm">
+                        “Jivan has been able to quickly indentify shifting
+                        market trends and investment opportunities that many
+                        others have missed. Using proprietary analysis tools
+                        Jivan is able to back up his leads and finds with
+                        concrete facts.”
+                      </p>
+                    </div>
+                    <div className="card-footer">Vince McGurik</div>
                   </div>
-                  <div className="card-footer">Vince McGurik</div>
                 </div>
-              </div>
-              <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card m-15 m-lg-3 h-100">
-                  <div className="card-body p-5 text-center">
-                    <p className="p-5">
-                      “Wow! I got referred to Gurj from a family friend and I
-                      honestly didn't have high expectations after dealing with
-                      my last realtor. But Gurj was so good! Communication,
-                      responsiveness and ability to get things done was
-                      surreal.”
-                    </p>
+                <div className="card-container col-8 col-lg-4 ">
+                  <div className="card-testimonial card m-15 m-lg-3 h-100">
+                    <div className="card-body p-5 text-center">
+                      <p className="lh-sm">
+                        “Wow! I got referred to Gurj from a family friend and I
+                        honestly didn't have high expectations after dealing
+                        with my last realtor. But Gurj was so good!
+                        Communication, responsiveness and ability to get things
+                        done was surreal.”
+                      </p>
+                    </div>
+                    <div className="card-footer">Daniel Randley</div>
                   </div>
-                  <div className="card-footer">Daniel Randley</div>
                 </div>
-              </div>
-              <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card m-15 m-lg-3 h-100">
-                  <div className="card-body p-5 text-center">
-                    <p className="p-5">
-                      “Jivan is one of the most professional, forward thinking
-                      guys I have met. Will continue to do business at anytime.”
-                    </p>
+                <div className="card-container col-8 col-lg-4 ">
+                  <div className="card-testimonial card m-15 m-lg-3 h-100">
+                    <div className="card-body p-5 text-center">
+                      <p className="lh-sm">
+                        “Jivan is one of the most professional, forward thinking
+                        guys I have met. Will continue to do business at
+                        anytime.”
+                      </p>
+                    </div>
+                    <div className="card-footer">Christopher Cavalier</div>
                   </div>
-                  <div className="card-footer">Christopher Cavalier</div>
                 </div>
-              </div>
-              <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card m-15 m-lg-3 h-100">
-                  <div className="card-body p-5 text-center">
-                    <p className="p-5">
-                      “Gurjivan Singh is the best realtor I have ever dealt
-                      with. Very professional, experienced, and helpful. Highly
-                      recommend.”
-                    </p>
+                <div className="card-container col-8 col-lg-4 ">
+                  <div className="card-testimonial card m-15 m-lg-3 h-100">
+                    <div className="card-body p-5 text-center">
+                      <p className="lh-sm">
+                        “Gurjivan Singh is the best realtor I have ever dealt
+                        with. Very professional, experienced, and helpful.
+                        Highly recommend.”
+                      </p>
+                    </div>
+                    <div className="card-footer">Kelen Maria</div>
                   </div>
-                  <div className="card-footer">Kelen Maria</div>
                 </div>
-              </div>
-              <div className="card-container col-8 col-lg-4 ">
-                <div className="card-testimonial card m-15 m-lg-3 h-100">
-                  <div className="card-body p-5 text-center">
-                    <p className="p-5">
-                      “Really pleasant interaction with this service. Helped
-                      make my move from the island to the mainland so much
-                      smoother. They were friendly and seemed very genuine.
-                      Highly recommend.”
-                    </p>
+                <div className="card-container col-8 col-lg-4 ">
+                  <div className="card-testimonial card m-15 m-lg-3 h-100">
+                    <div className="card-body p-5 text-center">
+                      <p className="lh-sm">
+                        “Really pleasant interaction with this service. Helped
+                        make my move from the island to the mainland so much
+                        smoother. They were friendly and seemed very genuine.
+                        Highly recommend.”
+                      </p>
+                    </div>
+                    <div className="card-footer">Patrick Holland</div>
                   </div>
-                  <div className="card-footer">Patrick Holland</div>
                 </div>
               </div>
             </div>
@@ -188,7 +192,15 @@ export default function Home() {
         </section>
         <section className="request container-fluid text-lg-start pb-10 pt-lg-6 align-items-center pt-10">
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
-            <form className="g-3 text-center justify-content-center">
+            <form
+              method="post"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+              name="contact"
+              className="g-3 text-center justify-content-center"
+            >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
               <h2 className="book-icon">
                 <FontAwesomeIcon className="font-awesome" icon={faBook} />
               </h2>
@@ -200,8 +212,8 @@ export default function Home() {
                 <br /> a buyer in your hands.
               </p>
 
-              <div className="form-data row justify-content-center align-center g-3 px-10">
-                <div className="col-9 col-lg-3">
+              <div className="form-data row justify-content-center d-flex align-items-center g-3 px-10">
+                <div className="col-9 col-lg-3 ">
                   <input
                     type="text"
                     className="form-control text-warning bg-white bg-opacity-50 border-0"
@@ -225,8 +237,10 @@ export default function Home() {
                     aria-label="Email Address"
                   />
                 </div>
-                <div className="arrow-icon col-9 col-lg-1 mt-0">
-                  <FontAwesomeIcon icon={farArrow} className="fa-icon" />
+                <div className="arrow-icon col-9 col-lg-1 ">
+                  <button className="py-0" type="submit">
+                    <FontAwesomeIcon icon={farArrow} className="fa-icon" />
+                  </button>
                 </div>
               </div>
             </form>
