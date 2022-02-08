@@ -219,7 +219,7 @@ export default function Home() {
             </span>
           </h2>
         </div>
-        <section className="phases container-fluid text-lg-start align-items-center pt-20 pb-40">
+        <section className="phases container-fluid text-lg-start align-items-center pb-40">
           <div className="container container-fluid ">
             {/* PART: Getting Preapproved */}
             <div className="pt-20 row align-items-start justify-content-center ">

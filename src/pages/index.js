@@ -74,8 +74,8 @@ export default function Home() {
                 </p>
                 <div className="d-flex justify-content-end">
                   <Link
-                    to="#"
-                    className="btn btn-lg btn-primary bg-yellow-500 border-none shadow-sm mx-2 px-lg-8"
+                    to="/about"
+                    className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8"
                   >
                     More about Gurj
                   </Link>
@@ -95,7 +95,11 @@ export default function Home() {
           <div className="about-container border-0 p-0 container-lg max-w-screen-xl mt-10 rounded-5">
             <div className="row align-items-center">
               <div className="col-lg-5">
-                <img src={coupleTogether} alt="couple happy next to a house" className="img-fluid w-100" />
+                <img
+                  src={coupleTogether}
+                  alt="couple happy next to a house"
+                  className="img-fluid w-100"
+                />
               </div>
               <div className="col-lg-7">
                 <div className="container pb-10 pb-lg-0">
@@ -109,7 +113,7 @@ export default function Home() {
                   </p>
                   <Link
                     to="/first-time-buyers"
-                    className="btn btn-lg btn-primary bg-yellow-500 border-none shadow-sm mx-2 px-lg-8"
+                    className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8"
                   >
                     First Time Home Buyers Center
                   </Link>
@@ -242,7 +246,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="arrow-icon col-9 col-lg-1 ">
-                  <button className="py-0" type="submit">
+                  <button className="py-0 primary" type="submit">
                     <FontAwesomeIcon icon={farArrow} className="fa-icon" />
                   </button>
                 </div>

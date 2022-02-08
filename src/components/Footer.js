@@ -3,6 +3,7 @@ import React from "react"
 import logo from "./../images/gurjsingh-logo.png"
 import mls_logo from "./../images/mls.png"
 import footerImg from "./../images/footer_image.png"
+import gurjivanSinghLogo from "./../images/gurjivan-singh-logo.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -40,52 +41,52 @@ export default function Footer() {
               <Link className="text-reset" to="/">
                 <div className="row row-cols-auto">
                   <div className="col-3 pe-0 ">
-                    <img src={logo} className="w-10" alt="" />
+                    <img src={logo} className="h-14" alt="" />
                   </div>
-                  <div className="col">
-                    <span className="navbar-text">
-                      {title}
-                      <br />
-                      {description}
-                    </span>
+                  <div className="col d-flex flex-column text-white ">
+                    <img src={gurjivanSinghLogo} className="h-8 pb-0" alt="" />
+                    <span className="navbar-text pt-0">{description}</span>
                   </div>
                 </div>
               </Link>
-              <p className="cite">
+              <p className="cite pt-2">
                 Whether it being finding a new home or selling your existing
                 home, I'm here to help you every step of the way.
               </p>
               <div className="row pt-4">
-                <div className="col-8 d-flex justify-content-around">
-                  <a className="text-reset" href="tel:778-951-8275">
+                <div className="col-8 ">
+                  <a className="text-reset footer-icon" href="tel:778-951-8275">
                     <FontAwesomeIcon icon={faPhoneAlt} />
                   </a>
-                  <a className="text-reset" href="mailto:gurj@gurjsingh.ca">
+                  <a
+                    className="text-reset footer-icon"
+                    href="mailto:gurj@gurjsingh.ca"
+                  >
                     <FontAwesomeIcon icon={faEnvelope} />
                   </a>
                   <a
-                    className="text-reset"
+                    className="text-reset footer-icon"
                     href="https://www.facebook.com/GetGurj"
                     target="_blank"
                   >
                     <FontAwesomeIcon icon={faFacebook} />
                   </a>
                   <a
-                    className="text-reset"
+                    className="text-reset footer-icon"
                     href="https://www.instagram.com/getgurj/"
                     target="_blank"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
-                    className="text-reset"
+                    className="text-reset footer-icon"
                     href="https://twitter.com/getgurj"
                     target="_blank"
                   >
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
                   <a
-                    className="text-reset"
+                    className="text-reset footer-icon"
                     href="https://www.linkedin.com/in/getgurj/"
                     target="_blank"
                   >
@@ -103,25 +104,30 @@ export default function Footer() {
               >
                 <p className="pt-2 pb-5">RE/MAX 2000 REALTY</p>
               </a>
-              <div className="row g-0 ">
+              <div className="row g-0 text-start">
                 <div className="col-1">
                   <a
-                    className="text-reset"
+                    className="text-reset text-start footer-icon"
                     href="https://goo.gl/maps/5jnt94uo3t56WFsz9"
                     target="_blank"
                   >
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
                   </a>
                 </div>
-                <div className="col-11">
+                <div className="col-11 footer-address">
                   #103-15127 100th Avenue, Surrey, BC V3R 0N9
                 </div>
-                <p className="pt-3">
-                  <a className="text-reset pe-2" href="tel:778-951-8275">
-                    <FontAwesomeIcon icon={faPhoneAlt} />
-                  </a>{" "}
+                <div className="col-1 text-start pt-2">
+                  <a
+                    className="text-reset text-start pe-2 footer-icon"
+                    href="tel:778-951-8275"
+                  >
+                    <FontAwesomeIcon icon={faPhoneAlt} />{" "}
+                  </a>
+                </div>
+                <div className="col-11 pt-2">
                   778-951-8275
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -132,17 +138,26 @@ export default function Footer() {
                 <p className="header">Services</p>
                 <ul className="list-unstyled">
                   <li>
-                    <Link className="text-reset" to="/services/buyers">
+                    <Link
+                      className="text-reset footer-link"
+                      to="/services/buyers"
+                    >
                       Buyers
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-reset" to="/services/sellers">
+                    <Link
+                      className="text-reset footer-link"
+                      to="/services/sellers"
+                    >
                       Sellers
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-reset" to="/services/investors">
+                    <Link
+                      className="text-reset footer-link"
+                      to="/services/investors"
+                    >
                       Investors
                     </Link>
                   </li>
@@ -152,13 +167,16 @@ export default function Footer() {
                 <p className="header">Resources</p>
                 <ul className="list-unstyled">
                   <li>
-                    <Link className="text-reset" to="/first-time-buyers">
+                    <Link
+                      className="text-reset footer-link"
+                      to="/first-time-buyers"
+                    >
                       First Time Buyers
                     </Link>
                   </li>
                   <li>
                     <a
-                      className="text-reset"
+                      className="text-reset footer-link"
                       href="https://www.ratehub.ca/mortgage-payment-calculator"
                       target="_blank"
                       rel="noreferrer"
@@ -167,7 +185,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <Link className="text-reset" to="#">
+                    <Link className="text-reset footer-link" to="#">
                       Featured Listings
                     </Link>
                   </li>
@@ -177,23 +195,23 @@ export default function Footer() {
                 <p className="header">Know Gurj</p>
                 <ul className="list-unstyled">
                   <li>
-                    <Link className="text-reset" to="#">
+                    <Link className="text-reset footer-link" to="#">
                       Our Process
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-reset" to="#">
+                    <Link className="text-reset footer-link" to="/about">
                       About
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-reset" to="#">
+                    <Link className="text-reset footer-link" to="#">
                       Community{" "}
                       <span className="d-none d-lg-inline">Investing</span>
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-reset" to="#">
+                    <Link className="text-reset footer-link" to="#">
                       <span className="d-none d-lg-inline">Reviews & </span>
                       Testimonials
                     </Link>
@@ -212,7 +230,7 @@ export default function Footer() {
             <p className="footer-license">
               Made with ♥ by{" "}
               <a
-                className="text-reset"
+                className="text-reset footer-link"
                 href="https://stalliondigital.ca"
                 target="_blank"
               >

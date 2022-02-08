@@ -27,10 +27,11 @@ export default function Navbar() {
             <div className="col">
               <img src={logo} className="h-14" alt="" />
             </div>
-            <div className="col">
+            <div className="col d-flex flex-column ">
               <img src={gurjivanSinghLogo} className="h-8 pb-0" alt="" />
-              <br />
-              <span className="navbar-text fs-7 fw-light lh-0 pt-0">{description}</span>
+              <span className="navbar-text fs-7 fw-light lh-0 pt-0">
+                {description}
+              </span>
             </div>
           </div>
         </Link>
@@ -129,7 +130,7 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/about">
                 Know Gurj
               </Link>
             </li>
@@ -137,7 +138,7 @@ export default function Navbar() {
           <div className="d-flex justify-content-start align-items-lg-center mt-3 mt-lg-0">
             <Link
               to="/contact"
-              className="btn btn-sm btn-neutral bg-yellow-500 border-none text-light w-auto w-lg-auto"
+              className="btn btn-sm primary border-none text-light w-auto w-lg-auto"
             >
               Contact
             </Link>

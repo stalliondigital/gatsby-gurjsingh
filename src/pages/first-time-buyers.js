@@ -94,6 +94,7 @@ export default function Home() {
                   (commonly referred to as PTT) when you purchase your first
                   home. Find out more and see if you qualify{" "}
                   <a
+                    className="text-reset first-time-link"
                     target="_blank"
                     href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
                   >
@@ -115,6 +116,7 @@ export default function Home() {
                   up to $750. TO find out if you are eligible, speak to your
                   accountant and see additional information{" "}
                   <a
+                    className="text-reset first-time-link"
                     target="_blank"
                     href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/first-time-home-buyers"
                   >
@@ -138,6 +140,7 @@ export default function Home() {
                   (RRSP) to be used towards the purchase of a qualifying
                   property. Find more information and see if you can qualify{" "}
                   <a
+                    className="text-reset first-time-link"
                     target="_blank"
                     href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans/what-home-buyers-plan.html"
                   >
@@ -159,9 +162,12 @@ export default function Home() {
                   to discuss their situation one-on-one. Having a conversation
                   with an experienced industry professional will only help you
                   organize and plan success in our market.{" "}
-                  <Link to="/contact">Click here</Link> to get in contact with
-                  Gurj as well as to receive a full first-time buyers kit with
-                  additional details regarding the info on this page.
+                  <Link className="text-reset first-time-link" to="/contact">
+                    Click here
+                  </Link>{" "}
+                  to get in contact with Gurj as well as to receive a full
+                  first-time buyers kit with additional details regarding the
+                  info on this page.
                 </p>
               </div>
             </div>
@@ -385,6 +391,7 @@ export default function Home() {
                     the amount of property taxes you pay on an annual basis on
                     your principal residence. View more information,{" "}
                     <a
+                      className="text-reset first-time-link"
                       target="_blank"
                       href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/home-owner-grant"
                     >
@@ -406,6 +413,7 @@ export default function Home() {
                     property transfer tax you’re required to pay when you’re
                     buying a newly build home $750,000 or less. Find out more{" "}
                     <a
+                      className="text-reset first-time-link"
                       target="_blank"
                       href="https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
                     >
@@ -427,6 +435,7 @@ export default function Home() {
                     residential, industrial). To find out how PTT is calculated,
                     please see{" "}
                     <a
+                      className="text-reset first-time-link"
                       target="_blank"
                       href="https://forms2.gov.bc.ca/forms/content?id=EEE44ACAC0DB4212BB616D7BD233F2A6"
                     >
