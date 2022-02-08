@@ -15,7 +15,8 @@ nav {
   @include media-breakpoint-down(lg) {
     background-color: #181819;
   }
-  .nav-button:focus {
+  .nav-button:focus,
+  .nav-button:hover {
     background-color: #222222 !important;
   }
   .nav-dropdown {
@@ -33,14 +34,24 @@ section.home {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
-  .primary {
-    background-color: #eab308;
-    color: white;
-  }
-  .secondary {
-    background-color: #9797a0;
-    color: white;
-  }
+}
+
+// buttons
+.primary {
+  background-color: #eab308;
+  color: white;
+}
+.primary:hover {
+  background-color: #d19a00;
+  color: white;
+}
+.secondary {
+  background-color: #9797a0;
+  color: white;
+}
+.secondary:hover {
+  background-color: #7e7e87;
+  color: white;
 }
 
 // obout section index page
@@ -150,7 +161,7 @@ section.footer {
     line-height: normal;
   }
   .cite {
-    font-size: 1.1875em;
+    font-size: 0.9em;
   }
 
   .links {
@@ -210,10 +221,7 @@ section.solution {
 .break {
   background: #181819;
   h2 {
-    width: 100%;
     text-align: center;
-    border-bottom: 8px solid #27272c;
-    line-height: 0.1em;
     span {
       background: #181819;
       color: #27272c;
@@ -269,4 +277,82 @@ p.description {
       }
     }
   }
+  .contact-card {
+    transition: 0.5s all;
+  }
+  .contact-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.footer-link:link {
+  text-decoration: none;
+}
+
+.footer-link:visited {
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-link:active {
+  text-decoration: underline;
+}
+
+a.footer-icon {
+  text-decoration: none;
+  color: white;
+  margin-right: 12px;
+  transition: 300ms all;
+}
+
+a.footer-icon:hover {
+  color: grey !important;
+}
+
+a.footer-icon:active {
+  color: grey !important;
+}
+.footer-address {
+  max-width: 23ch;
+}
+
+.first-time-link {
+  border-bottom: rgba(255, 255, 255, 0.75) 2px solid;
+}
+.first-time-link:hover {
+  border-bottom: none;
+}
+
+section.contact-request {
+  background-color: #181819;
+
+  .container-request {
+    background-color: #37373d;
+
+    .form-data {
+      .arrow-icon button {
+        font-size: 45px;
+        color: #a8a8a8;
+        background-color: #37373d;
+        .fa-icon {
+          background-color: #202022;
+          border-radius: 50%;
+          background-size: 40px 40px;
+          border: none;
+        }
+      }
+
+      ::placeholder {
+        color: #171719;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+.contact-description {
+  max-width: 75ch;
 }
