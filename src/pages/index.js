@@ -204,11 +204,11 @@ export default function Home() {
               method="post"
               netlify-honeypot="bot-field"
               data-netlify="true"
-              name="contact"
+              name="buyerkit"
               className="g-3 text-center justify-content-center"
             >
               <input type="hidden" name="bot-field" />
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name" value="buyerkit" />
               <h2 className="book-icon">
                 <FontAwesomeIcon className="font-awesome" icon={faBook} />
               </h2>
