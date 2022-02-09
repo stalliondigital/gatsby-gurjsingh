@@ -3,6 +3,10 @@
 
 // NAVBAR
 
+body {
+  background-color: #181819;
+}
+
 nav {
   .logo-text {
     font-family: "ITC Cheltenham Std", sans-serif;
@@ -132,6 +136,10 @@ section.request {
     }
 
     .form-data {
+      input {
+        color: #ae860b;
+        font-size: 1.1em;
+      }
       .arrow-icon button {
         font-size: 45px;
         color: #f5d779;
@@ -162,6 +170,7 @@ section.footer {
   }
   .cite {
     font-size: 0.9em;
+    max-width: 40ch;
   }
 
   .links {
@@ -316,7 +325,7 @@ a.footer-icon:active {
   color: grey !important;
 }
 .footer-address {
-  max-width: 23ch;
+  max-width: 25ch;
 }
 
 .first-time-link {
@@ -333,6 +342,10 @@ section.contact-request {
     background-color: #37373d;
 
     .form-data {
+      input {
+        color: #171719;
+        font-size: 1.1em;
+      }
       .arrow-icon button {
         font-size: 45px;
         color: #a8a8a8;
