@@ -224,7 +224,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3 ">
                   <input
                     type="text"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Name"
                     aria-label="Name"
                   />
@@ -232,7 +232,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="number"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Phone Number"
                     aria-label="Phone Number"
                   />
@@ -240,7 +240,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="email"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />

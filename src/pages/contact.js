@@ -96,7 +96,6 @@ export default function Contact() {
           </div>
         </section>
         <section className="contact-request container-fluid text-lg-start pb-10 align-items-center ">
-
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
             <form
               method="post"
@@ -114,11 +113,11 @@ export default function Contact() {
                   </h2>
                 </div>
               </div>
-              <div className="form-data row justify-content-center  d-flex align-items-center  g-3 px-10">
+              <div className="form-data row justify-content-center d-flex align-items-center  g-3 px-10">
                 <div className="col-9 col-lg-3">
                   <input
                     type="text"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Name"
                     aria-label="Name"
                   />
@@ -126,7 +125,7 @@ export default function Contact() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="number"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Phone Number"
                     aria-label="Phone Number"
                   />
@@ -134,7 +133,7 @@ export default function Contact() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="email"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />
