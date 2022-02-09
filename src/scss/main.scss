@@ -1,1 +1,358 @@
 @import "@webpixels/css";
+@import url("http://fonts.cdnfonts.com/css/itc-cheltenham-std");
+
+// NAVBAR
+
+nav {
+  .logo-text {
+    font-family: "ITC Cheltenham Std", sans-serif;
+    font-weight: 400;
+    font-size: 34px;
+    // font-stretch: expanded;
+    // form FILL IT, SENDS AN EMAIL TO SPECIFIC EMAIL ADDRESS
+    // deploy to netlify->
+  }
+  @include media-breakpoint-down(lg) {
+    background-color: #181819;
+  }
+  .nav-button:focus,
+  .nav-button:hover {
+    background-color: #222222 !important;
+  }
+  .nav-dropdown {
+    background-color: #333333;
+  }
+}
+// use svg
+// copy the markup code, d-flex strech and shrink
+section {
+  padding-bottom: 60px;
+}
+
+section.home {
+  .header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+// buttons
+.primary {
+  background-color: #eab308;
+  color: white;
+}
+.primary:hover {
+  background-color: #d19a00;
+  color: white;
+}
+.secondary {
+  background-color: #9797a0;
+  color: white;
+}
+.secondary:hover {
+  background-color: #7e7e87;
+  color: white;
+}
+
+// obout section index page
+section.about {
+  background-color: #181819;
+
+  .about-container {
+    background-color: #222222;
+    border-left: #eab308 solid 9px;
+    padding-right: 0;
+    @include media-breakpoint-down(lg) {
+      border-left: none;
+    }
+  }
+}
+
+section.experience {
+  background-color: #181819;
+  .experience-inside {
+    background: radial-gradient(
+      circle,
+      rgba(234, 179, 8, 0.3) -10%,
+      rgba(79, 67, 28, 0.3) 17%,
+      rgba(34, 34, 34, 0.3) 32%,
+      rgba(24, 24, 25, 0.3) 40%
+    );
+
+    .card-container {
+      .card-testimonial {
+        background-color: #222222;
+        border: none !important;
+        .card-body {
+          border: none;
+          color: white;
+        }
+        .card-footer {
+          background-color: rgba(228, 170, 46, 0.1);
+          color: #eab308;
+          border-radius: 0 0 15px 15px;
+        }
+        @include media-breakpoint-down(lg) {
+          font-size: rfs-fluid-value(1.5rem);
+        }
+      }
+      .card:focus {
+        border: none !important;
+      }
+    }
+  }
+}
+
+section.request {
+  background-color: #181819;
+
+  .container-request {
+    background-color: #eab308;
+    .book-icon {
+      background-color: rgba(245, 215, 121, 0.75);
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 27px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      transform: rotate(-7.3deg);
+    }
+    .phone-icon {
+      color: rgba(245, 215, 121, 0.75);
+    }
+    .primary {
+      color: #eab308;
+    }
+    p {
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .form-data {
+      .arrow-icon button {
+        font-size: 45px;
+        color: #f5d779;
+        background-color: #eab308;
+
+        .fa-icon {
+          background-color: #ae860b;
+          border-radius: 50%;
+          background-size: 40px 40px;
+          border: none;
+        }
+      }
+
+      ::placeholder {
+        color: #ae860b;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+section.footer {
+  background-color: #222222;
+
+  .contact {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .cite {
+    font-size: 0.9em;
+  }
+
+  .links {
+    p.header {
+      font-weight: bold;
+      padding-bottom: 1em;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: rfs-fluid-value(2rem);
+    }
+  }
+
+  .footer-name {
+    font-size: 1.1875em;
+  }
+  .footer-license {
+    font-size: 0.9325em;
+  }
+  .footer-mls {
+    font-size: 0.625em;
+    opacity: 0.5;
+  }
+}
+
+section.solution {
+  background-color: #181819;
+  .card-container {
+    .card {
+      background-color: #37373d;
+      color: white;
+      .card-img {
+        background-color: #27272c;
+        display: flex;
+        justify-content: center;
+        img {
+          height: 145px;
+          width: fit-content;
+        }
+      }
+      .number {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        background: #979797;
+        border: none;
+        color: white;
+        text-align: center;
+        font: 32px Arial, sans-serif;
+        display: inline-block;
+        line-height: 85%;
+      }
+    }
+  }
+}
+
+.break {
+  background: #181819;
+  h2 {
+    text-align: center;
+    span {
+      background: #181819;
+      color: #27272c;
+      padding: 0 10px;
+    }
+  }
+}
+
+section.phases {
+  background-color: #181819;
+  h2.phase {
+    color: #eab308;
+  }
+}
+
+p.description {
+  color: white;
+  opacity: 0.75;
+}
+
+.contact-page {
+  background-color: #181819;
+  padding-top: 100px;
+  section.solution {
+    // background-color: #eab308;
+    background: linear-gradient(180deg, #eab308 70%, #181819 30%);
+    .card-container {
+      .card {
+        background-color: #37373d;
+        color: white;
+        .card-img {
+          background-color: #27272c;
+          display: flex;
+          justify-content: center;
+          img {
+            height: 145px;
+            width: fit-content;
+          }
+        }
+        .number {
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          padding: 10px;
+          background: #979797;
+          border: none;
+          color: white;
+          text-align: center;
+          font: 32px Arial, sans-serif;
+          display: inline-block;
+          line-height: 85%;
+        }
+      }
+    }
+  }
+  .contact-card {
+    transition: 0.5s all;
+  }
+  .contact-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.footer-link:link {
+  text-decoration: none;
+}
+
+.footer-link:visited {
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-link:active {
+  text-decoration: underline;
+}
+
+a.footer-icon {
+  text-decoration: none;
+  color: white;
+  margin-right: 12px;
+  transition: 300ms all;
+}
+
+a.footer-icon:hover {
+  color: grey !important;
+}
+
+a.footer-icon:active {
+  color: grey !important;
+}
+.footer-address {
+  max-width: 23ch;
+}
+
+.first-time-link {
+  border-bottom: rgba(255, 255, 255, 0.75) 2px solid;
+}
+.first-time-link:hover {
+  border-bottom: none;
+}
+
+section.contact-request {
+  background-color: #181819;
+
+  .container-request {
+    background-color: #37373d;
+
+    .form-data {
+      .arrow-icon button {
+        font-size: 45px;
+        color: #a8a8a8;
+        background-color: #37373d;
+        .fa-icon {
+          background-color: #202022;
+          border-radius: 50%;
+          background-size: 40px 40px;
+          border: none;
+        }
+      }
+
+      ::placeholder {
+        color: #171719;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+.contact-description {
+  max-width: 75ch;
+}
