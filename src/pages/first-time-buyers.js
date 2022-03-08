@@ -15,16 +15,16 @@ export default function Home() {
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
           style={{ background: `url(${backgroundimage})` }}
         >
-          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6 pe-lg-0 me-lg-0 justify-content-lg-end">
-            <div className="row row-grid align-items-center justify-content-center justify-content-lg-end text-center">
-              <div className="header rounded-4 rounded-lg-end-0 bg-black bg-opacity-50 p-10 col-8 justify-content-lg-end col-lg-6 text-start">
+          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6 ps-lg-0 ms-lg-0 justify-content-lg-start">
+            <div className="row row-grid align-items-center justify-content-center justify-content-lg-start text-center">
+              <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 col-8 justify-content-lg-end col-lg-5 text-start">
                 <h1 className="ls-tight font-bolder display-5 text-white ">
                   First Time Home
                 </h1>
                 <h1 className="ls-tight font-bolder display-5 text-white mb-5">
                   Buyers in BC
                 </h1>
-                <p className="lead text-white text-opacity-80 fs-5 lh-sm">
+                <p className="text-white text-opacity-80 fs-3 lh-sm">
                   Helping You Make it Make Sense
                 </p>
                 <div className="row justify-content-start">

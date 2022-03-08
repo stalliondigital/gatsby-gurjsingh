@@ -11,7 +11,10 @@ import sellers_7 from "./../../images/sol-3.png"
 import sellers_8 from "./../../images/sellers-8.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons"
+import {
+  faArrowAltCircleDown,
+  faCaretLeft,
+} from "@fortawesome/free-solid-svg-icons"
 
 export default function Home() {
   return (
@@ -223,124 +226,262 @@ export default function Home() {
           <div className="container container-fluid ">
             {/* PART: Getting Preapproved */}
             <div className="pt-20 row align-items-start justify-content-center ">
-              <div className="col-12 col-lg-9">
-                <h3 className="text-white fs-4 pb-3 ">Onboarding & Strategy</h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  When you’re ready to sit down and discuss the elements that go
-                  into getting you the most out of your home, Gurjivan will take
-                  time to go through all your personal needs and expectations to
-                  best address real estate goals. Apart of this process is
-                  discussing logistics regarding selling your existing home.
-                  This includes doing a full assessment of your property and
-                  then creating a pricing plan aimed to create optimal
-                  competition and interest in your home.
-                </p>
+              <div className="col-12 collapse-card">
+                <a
+                  className="text-white fs-4 accordion-button collapsed d-grid"
+                  data-bs-toggle="collapse"
+                  href="#collapseOnboarding"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseOnboarding"
+                >
+                  <div className="row ">
+                    <div className="col">Onboarding & Strategy</div>
+                    <div className="col-1">
+                      <FontAwesomeIcon
+                        className="font-awesome fs-1 icon"
+                        icon={faCaretLeft}
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div className="collapse " id="collapseOnboarding">
+                  <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                    When you’re ready to sit down and discuss the elements that
+                    go into getting you the most out of your home, Gurjivan will
+                    take time to go through all your personal needs and
+                    expectations to best address real estate goals. Apart of
+                    this process is discussing logistics regarding selling your
+                    existing home. This includes doing a full assessment of your
+                    property and then creating a pricing plan aimed to create
+                    optimal competition and interest in your home.
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* PART: Home Staging & Décor */}
-            <div className="pt-20 row align-items-start justify-content-center ">
-              <div className="col-12 col-lg-9">
-                <h3 className="text-white fs-4 pb-3 ">Home Staging & Décor</h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  After we plan the fine details of getting your home ready for
-                  the market, the next steps is to put the gears in motion. The
-                  immediate next step would be to do any necessary improvements
-                  that would allow us to show and capture the home as best as it
-                  can. This may include bringing in a professional designer to
-                  rework the space as optimally as possible to best show the
-                  quality of your home, the potential of the space and create a
-                  sense of awe that buyers will fall in love with!
-                </p>
+            <div className="pt-5 row align-items-start justify-content-center ">
+              <div className="col-12 collapse-card">
+                <a
+                  className="text-white fs-4 accordion-button collapsed d-grid"
+                  data-bs-toggle="collapse"
+                  href="#collapseHome"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseHome"
+                >
+                  <div className="row ">
+                    <div className="col">Home Staging & Décor</div>
+                    <div className="col-1">
+                      <FontAwesomeIcon
+                        className="font-awesome fs-1 icon"
+                        icon={faCaretLeft}
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div className="collapse " id="collapseHome">
+                  <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                    After we plan the fine details of getting your home ready
+                    for the market, the next steps is to put the gears in
+                    motion. The immediate next step would be to do any necessary
+                    improvements that would allow us to show and capture the
+                    home as best as it can. This may include bringing in a
+                    professional designer to rework the space as optimally as
+                    possible to best show the quality of your home, the
+                    potential of the space and create a sense of awe that buyers
+                    will fall in love with!
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* PART: Exterior Facelifts */}
-            <div className="pt-20 row align-items-start justify-content-center ">
-              <div className="col-12 col-lg-9">
-                <h3 className="text-white fs-4 pb-3 ">Exterior Facelifts</h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  In addition to the interior, we will plan to have the exterior
-                  of the home in tip-top shape to attract as much excitement as
-                  possible from prospective buyers. A home owner with a well
-                  looked after lawn, exterior walls, home entry amongst other
-                  things indicates a true sense of care for their home and that
-                  it’s been well taken care of. To wow all of our prospective
-                  buyers, we need to make sure their first impression of the
-                  home – the exterior, is a masterful one.
-                </p>
+            <div className="pt-5 row align-items-start justify-content-center ">
+              <div className="col-12 collapse-card">
+                <a
+                  className="text-white fs-4 accordion-button collapsed d-grid"
+                  data-bs-toggle="collapse"
+                  href="#collapseExterior"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExterior"
+                >
+                  <div className="row ">
+                    <div className="col">Exterior Facelifts</div>
+                    <div className="col-1">
+                      <FontAwesomeIcon
+                        className="font-awesome fs-1 icon"
+                        icon={faCaretLeft}
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div className="collapse " id="collapseExterior">
+                  <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                    In addition to the interior, we will plan to have the
+                    exterior of the home in tip-top shape to attract as much
+                    excitement as possible from prospective buyers. A home owner
+                    with a well looked after lawn, exterior walls, home entry
+                    amongst other things indicates a true sense of care for
+                    their home and that it’s been well taken care of. To wow all
+                    of our prospective buyers, we need to make sure their first
+                    impression of the home – the exterior, is a masterful one.
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* PART: Professional Photography & Videography */}
-            <div className="pt-20 row align-items-start justify-content-center ">
-              <div className="col-12 col-lg-9">
-                <h3 className="text-white fs-4 pb-3 ">
-                  Professional Photography & Videography
-                </h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  After we having your home looking better than the ones we see
-                  in design catalogues; the next step is to bring in our
-                  professional photographers who will further highlight and
-                  capture your home at it’s best. Our professional partners will
-                  work magic when working with lighting, angles which will for
-                  certain boost the appeal and desire of your home.
-                </p>
+            <div className="pt-5 row align-items-start justify-content-center ">
+              <div className="col-12 collapse-card">
+                <a
+                  className="text-white fs-4 accordion-button collapsed d-grid"
+                  data-bs-toggle="collapse"
+                  href="#collapseProfessional"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseProfessional"
+                >
+                  <div className="row ">
+                    <div className="col">
+                      Professional Photography & Videography
+                    </div>
+                    <div className="col-1">
+                      <FontAwesomeIcon
+                        className="font-awesome fs-1 icon"
+                        icon={faCaretLeft}
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div className="collapse " id="collapseProfessional">
+                  <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                    After we having your home looking better than the ones we
+                    see in design catalogues; the next step is to bring in our
+                    professional photographers who will further highlight and
+                    capture your home at it’s best. Our professional partners
+                    will work magic when working with lighting, angles which
+                    will for certain boost the appeal and desire of your home.
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* PART: Marketing & Design */}
-            <div className="pt-20 row align-items-start justify-content-center ">
-              <div className="col-12 col-lg-9">
-                <h3 className="text-white fs-4 pb-3 ">Marketing & Design</h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  After your home has been highlighted and shown to its fullest
-                  potential, we then need to execute our marketing plan to get
-                  it in front of as many people as we can. Besides the
-                  traditional marketing materials (feature sheets, postings,
-                  etc.) we will get word of your listing out by utilizing social
-                  media, realtor meetings and pages, online classifieds, media
-                  outlets, and more to drive as much interest as we can to your
-                  home.
-                </p>
+            <div className="pt-5 row align-items-start justify-content-center ">
+              <div className="col-12 collapse-card">
+                <a
+                  className="text-white fs-4 accordion-button collapsed d-grid"
+                  data-bs-toggle="collapse"
+                  href="#collapseMarketing"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseMarketing"
+                >
+                  <div className="row ">
+                    <div className="col">Marketing & Design</div>
+                    <div className="col-1">
+                      <FontAwesomeIcon
+                        className="font-awesome fs-1 icon"
+                        icon={faCaretLeft}
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div className="collapse " id="collapseMarketing">
+                  <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                    After your home has been highlighted and shown to its
+                    fullest potential, we then need to execute our marketing
+                    plan to get it in front of as many people as we can. Besides
+                    the traditional marketing materials (feature sheets,
+                    postings, etc.) we will get word of your listing out by
+                    utilizing social media, realtor meetings and pages, online
+                    classifieds, media outlets, and more to drive as much
+                    interest as we can to your home.
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* PART: The Paperwork */}
-            <div className="pt-20 row align-items-start justify-content-center ">
-              <div className="col-12 col-lg-9">
-                <h3 className="text-white fs-4 pb-3 ">The Paperwork</h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  All the hard work going into showcasing your home is always
-                  going to be worth it when it comes to reviewing the formal
-                  paperwork and offers that come in post showings. With Gurj,
-                  you’ll have a seasoned, experienced professional each step of
-                  the way with you to help you go through every offer, identify
-                  the strengths and weaknesses in any formal writing and to make
-                  it make sense for you and your personal situation.
-                </p>
+            <div className="pt-5 row align-items-start justify-content-center ">
+              <div className="col-12 collapse-card">
+                <a
+                  className="text-white fs-4 accordion-button collapsed d-grid"
+                  data-bs-toggle="collapse"
+                  href="#collapsePaperwork"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapsePaperwork"
+                >
+                  <div className="row ">
+                    <div className="col">The Paperwork</div>
+                    <div className="col-1">
+                      <FontAwesomeIcon
+                        className="font-awesome fs-1 icon"
+                        icon={faCaretLeft}
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div className="collapse " id="collapsePaperwork">
+                  <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                    All the hard work going into showcasing your home is always
+                    going to be worth it when it comes to reviewing the formal
+                    paperwork and offers that come in post showings. With Gurj,
+                    you’ll have a seasoned, experienced professional each step
+                    of the way with you to help you go through every offer,
+                    identify the strengths and weaknesses in any formal writing
+                    and to make it make sense for you and your personal
+                    situation.
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* PART: Post Sales Benefits */}
-            <div className="pt-20 row align-items-start justify-content-center ">
-              <div className="col-12 col-lg-9">
-                <h3 className="text-white fs-4 pb-3 ">Post Sales Benefits</h3>
-                <p className="description text-white fw-light lh-sm fs-5 pb-5">
-                  With that hard work done, and after accepting the best offer
-                  for you, we can start shift our energy from working hard, to
-                  celebrating our success!
-                </p>
-                <p className="description text-white fw-light lh-sm fs-5">
-                  When we get confirmation that your deal goes through and your
-                  home is sold, Gurj will assist with additional tools and
-                  benefits to make post-sale transition seamless as possible.
-                  Some benefits include but are not limited to, a full move-out
-                  checklist, professional cleaning services ensuring the new
-                  owners come to a beautiful & clean home, and a thorough follow
-                  up to ensure you and yours are satisfied of the sale of the
-                  property and are moving forward with your next chapter.
-                </p>
+            <div className="pt-5 row align-items-start justify-content-center ">
+              <div className="col-12 collapse-card">
+                <a
+                  className="text-white fs-4 accordion-button collapsed d-grid"
+                  data-bs-toggle="collapse"
+                  href="#collapsePost"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapsePost"
+                >
+                  <div className="row ">
+                    <div className="col">Post Sales Benefits</div>
+                    <div className="col-1">
+                      <FontAwesomeIcon
+                        className="font-awesome fs-1 icon"
+                        icon={faCaretLeft}
+                      />
+                    </div>
+                  </div>
+                </a>
+                <div className="collapse " id="collapsePost">
+                  <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                    <p className="fw-light lh-sm fs-5 pb-5">
+                      With that hard work done, and after accepting the best
+                      offer for you, we can start shift our energy from working
+                      hard, to celebrating our success!
+                    </p>
+                    <p className="fw-light lh-sm fs-5">
+                      When we get confirmation that your deal goes through and
+                      your home is sold, Gurj will assist with additional tools
+                      and benefits to make post-sale transition seamless as
+                      possible. Some benefits include but are not limited to, a
+                      full move-out checklist, professional cleaning services
+                      ensuring the new owners come to a beautiful & clean home,
+                      and a thorough follow up to ensure you and yours are
+                      satisfied of the sale of the property and are moving
+                      forward with your next chapter.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 

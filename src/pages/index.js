@@ -8,7 +8,11 @@ import backgroundimage from "./../images/background.png"
 
 // font awesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBook } from "@fortawesome/free-solid-svg-icons"
+import {
+  faBook,
+  faCircleRight,
+  faCircle,
+} from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 
 export default function Home() {
@@ -17,7 +21,9 @@ export default function Home() {
       <div>
         <section
           className="home position-relative pt-48 pb-40  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          style={{
+            backgroundImage: `url(${backgroundimage})`,
+          }}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center text-lg-start pt-5 pb-5 pt-lg-6">
             <div className="row row-grid align-items-center">
@@ -50,20 +56,20 @@ export default function Home() {
           </div>
         </section>
         <section className="about reason-why container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="about-container container-lg max-w-screen-xl text-lg mb-5 p-0 rounded-5 rounded-start-2 ">
-            <div className="row row-cols-auto align-items-center">
-              <div className="d-block d-lg-none">
+          <div className="about-container container-lg text-lg mb-5 p-0 rounded-5 ">
+            <div className="d-flex flex-column flex-lg-row justify-content-between ">
+              <div className="d-block d-lg-none pt-5 px-7">
                 <img
-                  className="img-fluid rounded-top-5"
+                  className="img-fluid rounded-4"
                   src={gurjivanImageCut}
                   alt="Portrait of Gurjivan Singh"
                 />
               </div>
-              <div className="col-lg-8 p-10">
+              <div className="col-lg-6 p-10 pb-0 d-flex flex-column justify-content-around">
                 <h2 className="ls-tight font-bolder display-5 text-white mb-5 ">
                   Why Gurjivan?
                 </h2>
-                <p className="lead text-white text-opacity-80 mb-10 ">
+                <p className="lead text-white text-opacity-80 mb-5 lh-sm">
                   With a professional history in service & operations, there are
                   few who can match Gurj's ability of transparently getting
                   things done all while prioritizing the needs of his clients.
@@ -72,7 +78,7 @@ export default function Home() {
                   process ensuring & instilling confidence within all of his
                   clients and their deals.
                 </p>
-                <div className="d-flex justify-content-end">
+                <div className="d-flex justify-content-lg-start justify-content-end pb-5">
                   <Link
                     to="/about"
                     className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8"
@@ -81,18 +87,18 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="d-none d-lg-block col-lg-4 justify-content-end">
-                <div className="d-flex flex-row-reverse">
+              <div className="d-none d-lg-block col-6 col-lg-5 justify-content-end h-auto pe-0">
+                <div className="d-flex flex-row-reverse ">
                   <img
                     src={gurjivanImage}
                     alt="Portrait of Gurjivan Singh"
-                    className="img-fluid "
+                    className="portrait rounded-end-4 large"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className="about-container border-0 p-0 container-lg max-w-screen-xl mt-10 rounded-5">
+          <div className="about-container border-0 p-0 container-lg mt-10 rounded-5">
             <div className="row align-items-center">
               <div className="col-lg-5">
                 <img
@@ -215,7 +221,7 @@ export default function Home() {
               <h2 className="ls-tight font-bolder display-5 text-white ">
                 Request a Detailed Buyers Kit
               </h2>
-              <p className="lead mb-10 ls-tight text-white">
+              <p className="lead mb-10 text-white lh-sm">
                 All the information you need as
                 <br /> a buyer in your hands.
               </p>
@@ -224,7 +230,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3 ">
                   <input
                     type="text"
-                    className="form-control bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Name"
                     aria-label="Name"
                   />
@@ -232,7 +238,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="number"
-                    className="form-control bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Phone Number"
                     aria-label="Phone Number"
                   />
@@ -240,7 +246,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="email"
-                    className="form-control bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />

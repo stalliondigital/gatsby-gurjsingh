@@ -140,12 +140,12 @@ export default function Home() {
                     <FontAwesomeIcon
                       className="font-awesome"
                       icon={faPhoneAlt}
-                      size="5x"
+                      size="3x"
                     />
                   </h2>
                 </div>
                 <div className="col-8 px-0 d-flex align-items-center">
-                  <h2 className="ls-tight font-bolder fs-1 text-white ps-0">
+                  <h2 className="ls-tight fs-1 text-white ps-0">
                     Get in contact with Gurj today and be added to his investor
                     client list
                   </h2>
@@ -153,7 +153,7 @@ export default function Home() {
                 <div className="col-4 col-lg-3 d-flex align-items-center justify-content-center">
                   <Link
                     to="/contact"
-                    className="primary btn btn-block border-none bg-white fs-5"
+                    className="secondary-button btn btn-block border-none bg-white fs-4"
                   >
                     Contact Gurjivan
                   </Link>
