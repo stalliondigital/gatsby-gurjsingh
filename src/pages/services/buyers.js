@@ -297,7 +297,7 @@ export default function Home() {
         <section className="phases container-fluid align-items-center ">
           <div className="container-fluid container-instructions">
             {/* PART: Our Onboarding Consultation */}
-            <div className="py-20 row d-flex align-items-stretch justify-content-center g-5">
+            <div className="pt-20 row d-flex align-items-stretch justify-content-center g-5">
               <div className="col-10 col-lg-5 p-10 pe-5">
                 <h3 className="instruction-title fs-4 pb-3 lead">
                   <span className="pe-4">
@@ -387,7 +387,7 @@ export default function Home() {
           </div>
         </section>
         {/* PHASE THREE */}
-        <section className="phases container-fluid text-lg-start pb-5 pt-20 align-items-center ">
+        <section className="phases container-fluid text-lg-start pb-5 align-items-center ">
           <div className=" container-lg max-w-screen-xl   mb-5 ">
             <div className="container container-phase rounded-4 pt-10 d-flex justify-content-center flex-column align-items-center ">
               <h2 className="phase text-center fs-5 fw-light pt-5">
