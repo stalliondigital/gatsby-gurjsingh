@@ -10,6 +10,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 import Stars from "../components/Stars"
+
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 3%, transparent 30% ),
+      url(${backgroundimage})`,
+}
 export default function Home() {
   return (
     <Layout>
@@ -20,15 +25,15 @@ export default function Home() {
       <div>
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          style={sectionBackground}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-15 pt-lg-6 ps-lg-0 ms-lg-0 justify-content-lg-start">
             <div className="row row-grid align-items-center justify-content-center justify-content-lg-start text-center pb-20">
               <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 col-8 justify-content-lg-end col-lg-5 text-start">
-                <h1 className="ls-tight font-bolder display-5 text-white ">
+                <h1 className="font-bolder display-5 text-white ">
                   First Time Home
                 </h1>
-                <h1 className="ls-tight font-bolder display-5 text-white mb-5">
+                <h1 className="font-bolder display-5 text-white mb-5">
                   Buyers in BC
                 </h1>
                 <p className="text-white text-opacity-80 fs-3 lh-sm">
@@ -71,7 +76,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="phases container-fluid text-lg-start align-items-center pt-10">
+        <section className="phases container-fluid text-lg-start align-items-center pt-10 pb-0">
           <div className="container align-items-center">
             <div className="row justify-content-center align-items-center">
               <div className="first-time col-10 col-lg-5 rounded-5 mb-3">
@@ -259,21 +264,18 @@ export default function Home() {
           </div>
         </section>
         {/* break line */}
-        <div className="break container-fluid">
-          <h2></h2>
-        </div>
-        <section className="experience container-fluid text-lg-start pt-lg-6 align-items-center py-10 pb-10">
-          <div className="experience-inside container-fluid text-lg-start">
+        <section className="experience container-fluid text-lg-start align-items-center py-0 my-0">
+          <div className="experience-inside container-fluid text-lg-start py-20">
             <div className="experience-container container-lg mb-5 ">
               <div className="row d-flex justify-content-center">
                 <div className="col col-lg-6 ">
-                  <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
+                  <h2 className="display-5 text-white mb-5 text-center pb-5">
                     Words from some of Gurj’s First Time Buyers
                   </h2>
                 </div>
               </div>
               <div className="container-sm row my-5 g-4 justify-content-center lh-sm">
-                <div className="row justify-content-center col-12 col-lg-10">
+                <div className="row justify-content-center col-12 col-lg-11">
                   <div className="card-container col-8 col-lg-5 mb-5">
                     <div className="card-testimonial card m-15 m-lg-3 h-100">
                       <div className="card-body p-5 text-start">
@@ -353,9 +355,9 @@ export default function Home() {
                 <p className="description text-white fw-light lh-sm fs-5 pe-7 pb-5">
                   Gurjivan specializes in working with both first time buyers
                   and investors. Much of Gurj’s realty work falls in two
-                  categories: Helping you maximize your opportunities for his
-                  first time buyers and helping his investors maximize their
-                  return on their capital.
+                  categories: Helping maximize opportunities for his first time
+                  buyers and helping his investors maximize their return on
+                  their capital.
                 </p>
                 <p className="description text-white fw-light lh-sm fs-5 pe-7 ">
                   This combination has allowed Gurjivan to develop his skillset

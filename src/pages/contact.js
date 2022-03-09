@@ -13,6 +13,10 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons"
 import Helmet from "react-helmet"
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 3%, transparent 30% ),
+      url(${backgroundimage})`,
+}
 export default function Contact() {
   return (
     <Layout>
@@ -23,14 +27,12 @@ export default function Contact() {
       <div className="contact-page">
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          style={sectionBackground}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6">
             <div className="row row-grid align-items-center justify-content-center text-center pt-20">
               <div className="header rounded-4 bg-black bg-opacity-50 p-10 col-9 col-lg-7 text-center ms-10">
-                <h1 className="ls-tight font-bolder display-5 text-white mb-5">
-                  Get In Touch
-                </h1>
+                <h1 className="display-5 text-white mb-5">Get In Touch</h1>
                 <p className="lead text-white text-opacity-80 fs-4 lh-sm pb-5">
                   Interested in working with Gurj? Get in touch with him right
                   away using any of the contact methods below

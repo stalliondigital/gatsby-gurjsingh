@@ -19,7 +19,10 @@ import {
   faFileInvoice,
 } from "@fortawesome/free-solid-svg-icons"
 import Helmet from "react-helmet"
-
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 5%, transparent 30% ),
+      url(${backgroundimage})`,
+}
 export default function Home() {
   return (
     <Layout>
@@ -30,12 +33,12 @@ export default function Home() {
       <div>
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          style={sectionBackground}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6">
             <div className="row row-grid align-items-center justify-content-center text-center">
               <div className="header rounded-4 bg-black bg-opacity-50 p-10 col-9 col-lg-7 text-center ms-10">
-                <h1 className="ls-tight font-bolder display-5 text-white mb-5">
+                <h1 className="display-5 text-white mb-5">
                   Guiding you to your
                   <br />
                   dream home

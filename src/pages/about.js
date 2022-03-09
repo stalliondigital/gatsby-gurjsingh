@@ -5,6 +5,10 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 import Helmet from "react-helmet"
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 1%, transparent 30% ),
+      url(${backgroundimage})`,
+}
 export default function About() {
   return (
     <Layout>
@@ -15,12 +19,12 @@ export default function About() {
       <div className="contact-page">
         <section
           className="home position-relative pt-48 pb-20 mb-10  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          style={sectionBackground}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-20 pt-lg-6 ps-lg-0 ms-lg-0 justify-content-lg-start">
             <div className="row row-grid align-items-center justify-content-center justify-content-lg-start text-center pb-20">
               <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 col-8 justify-content-lg-end col-lg-5 text-start">
-                <h1 className="ls-tight font-bolder display-5 text-white pb-5 ps-10">
+                <h1 className="display-5 text-white pb-5 ps-10">
                   Gurjivan Singh
                 </h1>
                 <p className="text-white text-opacity-80 lead lh-sm ps-10">
@@ -100,7 +104,7 @@ export default function About() {
                   working as a consultant in the industry, being involved with
                   community development committees and sitting on the boards of
                   local organizations who focus on building our communities up
-                  and giving back
+                  and giving back.
                 </p>
               </div>
             </div>

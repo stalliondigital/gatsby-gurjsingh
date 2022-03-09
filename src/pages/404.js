@@ -12,7 +12,7 @@ export default function NotFound() {
       <div>
         <section className="bg-dark position-relative pt-48 pb-40   bg-size--cover">
           <div className="container">
-            <h1 className="ls-tight font-bolder display-5 text-white mb-5">
+            <h1 className="display-5 text-white mb-5">
               Sorry, the page you are looking for is private or does not exist.
             </h1>
           </div>

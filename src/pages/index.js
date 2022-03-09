@@ -13,6 +13,11 @@ import { faBook } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 import Stars from "../components/Stars"
 
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 3%, transparent 30% ),
+      url(${backgroundimage})`,
+}
+
 export default function Home() {
   return (
     <Layout>
@@ -23,14 +28,12 @@ export default function Home() {
       <div>
         <section
           className="home position-relative pt-48 pb-40  bg-cover bg-size--cover"
-          style={{
-            backgroundImage: `url(${backgroundimage})`,
-          }}
+          style={sectionBackground}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center text-lg-start pt-5 pb-5 pt-lg-6">
             <div className="row row-grid align-items-center">
               <div className="header rounded-4 bg-black bg-opacity-50 p-10 col-9 col-lg-7 text-start ms-10">
-                <h1 className="ls-tight font-bolder display-5 text-white mb-5">
+                <h1 className="font-bolder display-5 text-white mb-5">
                   Bridging the Gap Between Unimaginable and Possible
                 </h1>
                 <p className="lead text-white text-opacity-80 mb-10">
@@ -57,7 +60,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="about reason-why container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
+        <section className="about reason-why container-fluid text-lg-start pb-0 pt-lg-6 align-items-center pt-10">
           <div className="about-container container-lg text-lg mb-5 p-0 rounded-5 ">
             <div className="d-flex flex-column flex-lg-row justify-content-between ">
               <div className="d-block d-lg-none pt-5 px-7">
@@ -133,10 +136,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="experience container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="experience-inside container-lg p-0 text-lg-start">
+        <section className="experience container-fluid text-lg-start pb-0 align-items-center ">
+          <div className="experience-inside container-lg p-0 py-10 text-lg-start">
             <div className="experience-container  mb-5 ">
-              <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
+              <h2 className="ls-tight font-bolder display-5 pt-10 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
               <div className="row my-5 justify-content-center row-cols-1 ">
@@ -232,7 +235,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="request container-fluid text-lg-start pb-10 pt-lg-6 align-items-center pt-10">
+        <section className="request container-fluid text-lg-start pb-10 align-items-center">
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
             <form
               method="post"

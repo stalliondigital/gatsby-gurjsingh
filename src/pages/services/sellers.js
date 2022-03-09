@@ -7,7 +7,7 @@ import sellers_3 from "./../../images/sellers-3.png"
 import sellers_4 from "./../../images/sellers-4.png"
 import sellers_5 from "./../../images/sellers-5.png"
 import sellers_6 from "./../../images/sellers-6.png"
-import sellers_7 from "./../../images/sol-3.png"
+import sellers_7 from "./../../images/prep-5.png"
 import sellers_8 from "./../../images/sellers-8.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -17,8 +17,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import Helmet from "react-helmet"
 
-const sectionStyle = {
-  background: `url(${backgroundimage})`,
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 3%, transparent 30% ),
+      url(${backgroundimage})`,
 }
 
 export default function Home() {
@@ -31,13 +32,13 @@ export default function Home() {
       <div>
         <section
           className="home position-relative pt-48 pb-40 me-0 pe-0 bg-cover bg-size--cover"
-          style={sectionStyle}
+          style={sectionBackground}
         >
           <div className="container-fluid position-relative overlap-10 text-center pt-5 pb-5 pb-lg-20 pt-lg-6 pe-lg-0 me-lg-0 justify-content-lg-end">
             <div className="row align-items-center justify-content-center justify-content-lg-end text-center me-0 my-20 pt-lg-20 pe-0 pb-lg-10">
               <div className="header rounded-4 rounded-end-lg-0 bg-black bg-opacity-50 p-10 me-0 col-12 col-lg-6 d-flex flex-column justify-content-center col-lg-7 text-center">
                 <div className="d-flex justify-content-center ">
-                  <h1 className="seller-title ls-tight font-bolder display-5 text-white mb-5">
+                  <h1 className="seller-title display-5 text-white mb-5">
                     How We Help You Realize Your Home's Potential
                   </h1>
                 </div>
