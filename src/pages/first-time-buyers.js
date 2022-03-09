@@ -1,17 +1,22 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import backgroundimage from "./../images/background_ftbuyers.png"
 import inv_1 from "./../images/first-time-1.png"
 import inv_2 from "./../images/first-time-2.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCaretLeft, faStar } from "@fortawesome/free-solid-svg-icons"
+import { faCaretLeft } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 import Stars from "../components/Stars"
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan | First Time Buyers</title>
+      </Helmet>
       <div>
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"

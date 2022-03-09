@@ -6,16 +6,20 @@ import sol_3 from "./../images/contact-3.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 import backgroundimage from "./../images/background_contact.png"
-import { Link } from "gatsby"
 import {
   faFacebook,
   faInstagram,
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons"
+import Helmet from "react-helmet"
 export default function Contact() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan | Contact</title>
+      </Helmet>
       <div className="contact-page">
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"

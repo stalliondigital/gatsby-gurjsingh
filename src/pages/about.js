@@ -1,13 +1,17 @@
 import React from "react"
 import Layout from "../components/Layout"
-import contactImage from "./../images/contact-gurjivan-image.png"
 import backgroundimage from "./../images/background_about.png"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
+import Helmet from "react-helmet"
 export default function About() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan | About</title>
+      </Helmet>
       <div className="contact-page">
         <section
           className="home position-relative pt-48 pb-20 mb-10  bg-cover bg-size--cover"

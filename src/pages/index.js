@@ -6,15 +6,20 @@ import reviewGoogle from "./../images/review-google.png"
 import gurjivanImageCut from "./../images/gurjivan-image-cut.png"
 import coupleTogether from "./../images/couple-together.png"
 import backgroundimage from "./../images/background.png"
-
+import { Helmet } from "react-helmet"
 // font awesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBook, faStar } from "@fortawesome/free-solid-svg-icons"
+import { faBook } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
+import Stars from "../components/Stars"
 
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan Singh</title>
+      </Helmet>
       <div>
         <section
           className="home position-relative pt-48 pb-40  bg-cover bg-size--cover"
@@ -84,14 +89,17 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="d-none d-lg-block col-6 col-lg-5 justify-content-end h-auto pe-0">
-                <div className="d-flex flex-row-reverse ">
-                  <img
-                    src={gurjivanImage}
-                    alt="Portrait of Gurjivan Singh"
-                    className="portrait rounded-end-4 large"
-                  />
-                </div>
+              <div className="d-none d-lg-block col-6 col-lg-5 justify-content-end pe-0">
+                <div
+                  className="bg-cover bg-size--cover rounded-end-4"
+                  style={{
+                    backgroundImage: `url(${gurjivanImage})`,
+                    backgroundSize: "100%",
+                    backgroundRepeat: "no-repeat",
+                    height: "100%",
+                    backgroundPosition: "center center",
+                  }}
+                ></div>
               </div>
             </div>
           </div>
@@ -137,7 +145,7 @@ export default function Home() {
                     <div className="card-body p-5 text-center">
                       <img
                         src={reviewGoogle}
-                        alt="Google review image with five stars"
+                        alt="Google review logo with five stars"
                         className="img-fluid pt-10 mb-5"
                       />
                       <p className="fs-3 text-white lh-sm pb-10">
@@ -168,28 +176,7 @@ export default function Home() {
                       </div>
                       <div className="card-footer d-flex justify-content-between">
                         <span>Vince M.</span>
-                        <span className="text-end pe-3">
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>
-                        </span>
+                        <Stars />
                       </div>
                     </div>
                   </div>
@@ -206,28 +193,7 @@ export default function Home() {
                       </div>
                       <div className="card-footer d-flex justify-content-between">
                         <span>Daniel R.</span>
-                        <span className="text-end pe-3">
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>
-                        </span>
+                        <Stars />
                       </div>
                     </div>
                   </div>
@@ -242,28 +208,7 @@ export default function Home() {
                       </div>
                       <div className="card-footer d-flex justify-content-between">
                         <span>Christopher C.</span>
-                        <span className="text-end pe-3">
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>
-                        </span>
+                        <Stars />
                       </div>
                     </div>
                   </div>
@@ -278,28 +223,7 @@ export default function Home() {
                       </div>
                       <div className="card-footer d-flex justify-content-between">
                         <span>Kelen M.</span>
-                        <span className="text-end pe-3">
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>{" "}
-                          <FontAwesomeIcon
-                            className="font-awesome"
-                            icon={faStar}
-                          ></FontAwesomeIcon>
-                        </span>
+                        <Stars />
                       </div>
                     </div>
                   </div>

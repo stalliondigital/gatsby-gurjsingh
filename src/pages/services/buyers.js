@@ -8,24 +8,25 @@ import sol_3 from "./../../images/sol-3.png"
 import prep_1 from "./../../images/prep-1.png"
 import prep_2 from "./../../images/prep-2.png"
 import prep_3 from "./../../images/prep-3.png"
-import prep_4 from "./../../images/prep-4.png"
-import prep_5 from "./../../images/prep-5.png"
 import prep_6 from "./../../images/prep-6.png"
 import prep_7 from "./../../images/prep-7.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faArrowAltCircleDown,
   faSearch,
   faHome,
   faChartLine,
-  faFile,
   faFileInvoice,
 } from "@fortawesome/free-solid-svg-icons"
+import Helmet from "react-helmet"
 
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan | Buyers</title>
+      </Helmet>
       <div>
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
@@ -142,17 +143,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="break container-fluid">
-          <h2>
-            <span>
-              <FontAwesomeIcon
-                className="font-awesome fs-1"
-                icon={faArrowAltCircleDown}
-              />
-            </span>
-          </h2>
-        </div>
-        <section className="phases container-fluid text-lg-start align-items-center pt-20">
+        <section className="phases container-fluid text-lg-start align-items-center ">
           <div className=" container-lg max-w-screen-xl   mb-5 ">
             <div className="container container-phase rounded-4 pt-10 d-flex flex-column align-items-center">
               <h2 className="phase  fs-5 fw-light pt-5">PHASE ONE</h2>
@@ -259,10 +250,6 @@ export default function Home() {
             {/* end phases */}
           </div>
         </section>
-        {/* break line */}
-        <div className="break container-fluid">
-          <h2></h2>
-        </div>
 
         {/* PHASE TWO */}
         <section className="phases container-fluid text-lg-start align-items-center ">
@@ -399,12 +386,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* break line */}
-        <div className="break container-fluid">
-          <h2></h2>
-        </div>
-
         {/* PHASE THREE */}
         <section className="phases container-fluid text-lg-start pb-5 pt-20 align-items-center ">
           <div className=" container-lg max-w-screen-xl   mb-5 ">

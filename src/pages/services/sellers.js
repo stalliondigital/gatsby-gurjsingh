@@ -15,21 +15,32 @@ import {
   faArrowAltCircleDown,
   faCaretLeft,
 } from "@fortawesome/free-solid-svg-icons"
+import Helmet from "react-helmet"
+
+const sectionStyle = {
+  background: `url(${backgroundimage})`,
+}
 
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan | Sellers</title>
+      </Helmet>
       <div>
         <section
-          className="home position-relative pt-48 pb-40  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          className="home position-relative pt-48 pb-40 me-0 pe-0 bg-cover bg-size--cover"
+          style={sectionStyle}
         >
-          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6 pe-lg-0 me-lg-0 justify-content-lg-end">
-            <div className="row row-grid align-items-center justify-content-center justify-content-lg-end text-center my-20">
-              <div className="header rounded-4 rounded-lg-end-0 bg-black bg-opacity-50 p-10 col-9 justify-content-lg-end col-lg-7 text-center">
-                <h1 className="ls-tight font-bolder display-5 text-white mb-5">
-                  How We Help You Realize Your Home's Potential
-                </h1>
+          <div className="container-fluid position-relative overlap-10 text-center pt-5 pb-5 pb-lg-20 pt-lg-6 pe-lg-0 me-lg-0 justify-content-lg-end">
+            <div className="row align-items-center justify-content-center justify-content-lg-end text-center me-0 my-20 pt-lg-20 pe-0 pb-lg-10">
+              <div className="header rounded-4 rounded-end-lg-0 bg-black bg-opacity-50 p-10 me-0 col-12 col-lg-6 d-flex flex-column justify-content-center col-lg-7 text-center">
+                <div className="d-flex justify-content-center ">
+                  <h1 className="seller-title ls-tight font-bolder display-5 text-white mb-5">
+                    How We Help You Realize Your Home's Potential
+                  </h1>
+                </div>
                 <p className="lead text-white text-opacity-80 fs-5 lh-sm">
                   When it comes to getting you ready for your next chapter, we
                   go above and beyond to ensure every detail is accounted for.

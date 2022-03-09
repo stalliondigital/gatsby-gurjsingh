@@ -6,10 +6,15 @@ import diff_img from "./../../images/prep-3.png"
 import inv_1 from "./../../images/investors-1.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
+import Helmet from "react-helmet"
 
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan | Investors</title>
+      </Helmet>
       <div>
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
