@@ -102,7 +102,8 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="request container-fluid text-lg-start pt-20 pb-15 align-items-center ">
+        <div className="container-fluid container-divisor mb-20 mx-0"></div>
+        <section className="contact-request container-fluid text-lg-start pb-10 align-items-center mb-20 ">
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
             <form
               method="post"
@@ -114,17 +115,17 @@ export default function About() {
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact" />
               <div className="row justify-content-center pb-5">
-                <div className="col col-lg-7">
-                  <h2 className="ls-tight font-bolder display-5 text-white ">
+                <div className="col col-lg-7 d-flex justify-content-center">
+                  <h2 className="ls-tight font-bolder fs-1 text-white text-center">
                     Book your first meeting with Gurjivan
                   </h2>
                 </div>
               </div>
-              <div className="form-data row justify-content-center  d-flex align-items-center  g-3 px-10">
+              <div className="form-data row justify-content-center d-flex align-items-center  g-3 px-10">
                 <div className="col-9 col-lg-3">
                   <input
                     type="text"
-                    className="form-control border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Name"
                     aria-label="Name"
                   />
@@ -132,7 +133,7 @@ export default function About() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="number"
-                    className="form-control border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Phone Number"
                     aria-label="Phone Number"
                   />
@@ -140,7 +141,7 @@ export default function About() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="email"
-                    className="form-control border-0"
+                    className="form-control bg-white bg-opacity-50 border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />
