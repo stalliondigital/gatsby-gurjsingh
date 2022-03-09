@@ -2,17 +2,14 @@ import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import gurjivanImage from "./../images/gurjivan-image.png"
+import reviewGoogle from "./../images/review-google.png"
 import gurjivanImageCut from "./../images/gurjivan-image-cut.png"
 import coupleTogether from "./../images/couple-together.png"
 import backgroundimage from "./../images/background.png"
 
 // font awesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faBook,
-  faCircleRight,
-  faCircle,
-} from "@fortawesome/free-solid-svg-icons"
+import { faBook, faStar } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 
 export default function Home() {
@@ -129,75 +126,182 @@ export default function Home() {
           </div>
         </section>
         <section className="experience container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="experience-inside container-fluid text-lg-start">
-            <div className="experience-container container-lg max-w-screen-xl   mb-5 ">
+          <div className="experience-inside container-lg p-0 text-lg-start">
+            <div className="experience-container  mb-5 ">
               <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
-              <div className="row my-5 g-4 justify-content-center row-cols-1 row-cols-lg-3">
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
+              <div className="row my-5 justify-content-center row-cols-1 ">
+                <div className="col-8 col-lg-4 card-container review h-100 mb-5 mb-lg-2">
+                  <div className="card-testimonial card h-100 ">
                     <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Jivan has been able to quickly indentify shifting
-                        market trends and investment opportunities that many
-                        others have missed. Using proprietary analysis tools
-                        Jivan is able to back up his leads and finds with
-                        concrete facts.”
+                      <img
+                        src={reviewGoogle}
+                        alt="Google review image with five stars"
+                        className="img-fluid pt-10 mb-5"
+                      />
+                      <p className="fs-3 text-white lh-sm pb-10">
+                        Don’t just take our word for it. See what others have to
+                        say. We have a five star rating on Google.
                       </p>
+                      <a
+                        href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
+                        target="_blank"
+                        className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8 mt-10 py-3 lh-sm mb-10"
+                      >
+                        View All Google Reviews
+                      </a>
                     </div>
-                    <div className="card-footer">Vince McGurik</div>
                   </div>
                 </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Wow! I got referred to Gurj from a family friend and I
-                        honestly didn't have high expectations after dealing
-                        with my last realtor. But Gurj was so good!
-                        Communication, responsiveness and ability to get things
-                        done was surreal.”
-                      </p>
+                <div className="col-8 row ">
+                  <div className="card-container col-lg-6 col-12 mb-3  ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body text-center">
+                        <p className="lh-sm">
+                          “Jivan has been able to quickly indentify shifting
+                          market trends and investment opportunities that many
+                          others have missed. Using proprietary analysis tools
+                          Jivan is able to back up his leads and finds with
+                          concrete facts.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Vince M.</span>
+                        <span className="text-end pe-3">
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>
+                        </span>
+                      </div>
                     </div>
-                    <div className="card-footer">Daniel Randley</div>
                   </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Jivan is one of the most professional, forward thinking
-                        guys I have met. Will continue to do business at
-                        anytime.”
-                      </p>
+                  <div className="card-container col-12 col-lg-6 mb-3 ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body p-5 text-center">
+                        <p className="lh-sm">
+                          “Wow! I got referred to Gurj from a family friend and
+                          I honestly didn't have high expectations after dealing
+                          with my last realtor. But Gurj was so good!
+                          Communication, responsiveness and ability to get
+                          things done was surreal.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Daniel R.</span>
+                        <span className="text-end pe-3">
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>
+                        </span>
+                      </div>
                     </div>
-                    <div className="card-footer">Christopher Cavalier</div>
                   </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Gurjivan Singh is the best realtor I have ever dealt
-                        with. Very professional, experienced, and helpful.
-                        Highly recommend.”
-                      </p>
+                  <div className="card-container col-12 col-lg-6 mb-3 ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body p-5 text-center">
+                        <p className="lh-sm">
+                          “Jivan is one of the most professional, forward
+                          thinking guys I have met. Will continue to do business
+                          at anytime.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Christopher C.</span>
+                        <span className="text-end pe-3">
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>
+                        </span>
+                      </div>
                     </div>
-                    <div className="card-footer">Kelen Maria</div>
                   </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Really pleasant interaction with this service. Helped
-                        make my move from the island to the mainland so much
-                        smoother. They were friendly and seemed very genuine.
-                        Highly recommend.”
-                      </p>
+                  <div className="card-container col-12 col-lg-6 mb-3 ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body p-5 text-center">
+                        <p className="lh-sm">
+                          “Gurjivan Singh is the best realtor I have ever dealt
+                          with. Very professional, experienced, and helpful.
+                          Highly recommend.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Kelen M.</span>
+                        <span className="text-end pe-3">
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>{" "}
+                          <FontAwesomeIcon
+                            className="font-awesome"
+                            icon={faStar}
+                          ></FontAwesomeIcon>
+                        </span>
+                      </div>
                     </div>
-                    <div className="card-footer">Patrick Holland</div>
                   </div>
                 </div>
               </div>

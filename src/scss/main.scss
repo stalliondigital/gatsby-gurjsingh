@@ -142,11 +142,6 @@ section.request {
         font-size: 1.1em;
         background-color: #5e4700;
       }
-      // .arrow-icon button {
-      //   font-size: 45px;
-      //   color: #f5d779;
-      //   background-color: #eab308;
-
       .fa-icon {
         background: #5e4700;
         color: #806510;
@@ -159,7 +154,6 @@ section.request {
         padding: 0px;
         margin: -11px;
       }
-      // }
 
       ::placeholder {
         color: #c2a138;
@@ -248,6 +242,38 @@ section.solution {
 }
 
 section.phases {
+  .first-time {
+    color: #ffffff;
+    background-color: #7a5d00;
+  }
+  .accordion {
+    border: none;
+    .accordion-item {
+      border: none;
+      background-color: #37373d;
+      .accordion-button {
+        .icon {
+          transition: all 0.15s;
+        }
+      }
+      .accordion-button::after {
+        display: none !important;
+      }
+      .accordion-button {
+        box-shadow: none;
+      }
+      .accordion-body {
+        border: none;
+        padding-bottom: 2rem;
+        box-shadow: none;
+      }
+      .accordion-button:not(.collapsed) {
+        .icon {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
   h2.phase {
     color: #eab308;
   }
@@ -296,6 +322,21 @@ section.phases {
     //   transform: rotate(0deg);
     // }
   }
+
+  .container-info {
+    background-color: #7a5d00;
+  }
+
+  .container-phase {
+    background-color: rgba(128, 101, 16, 0.4);
+    h2 {
+      max-width: 18ch;
+      text-align: center;
+    }
+  }
+}
+.container-discover {
+  background-color: #37373d;
 }
 
 p.description {

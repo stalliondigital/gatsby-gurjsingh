@@ -21,11 +21,11 @@ export default function Home() {
     <Layout>
       <div>
         <section
-          className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
+          className="home position-relative pt-48 pb-40  bg-cover bg-size--cover"
           style={{ background: `url(${backgroundimage})` }}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6 pe-lg-0 me-lg-0 justify-content-lg-end">
-            <div className="row row-grid align-items-center justify-content-center justify-content-lg-end text-center">
+            <div className="row row-grid align-items-center justify-content-center justify-content-lg-end text-center my-20">
               <div className="header rounded-4 rounded-lg-end-0 bg-black bg-opacity-50 p-10 col-9 justify-content-lg-end col-lg-7 text-center">
                 <h1 className="ls-tight font-bolder display-5 text-white mb-5">
                   How We Help You Realize Your Home's Potential

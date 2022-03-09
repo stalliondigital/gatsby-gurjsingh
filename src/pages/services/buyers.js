@@ -146,14 +146,14 @@ export default function Home() {
         </div>
         <section className="phases container-fluid text-lg-start align-items-center pt-20">
           <div className=" container-lg max-w-screen-xl   mb-5 ">
-            <div className="container">
-              <h2 className="phase text-center fs-5 fw-light">PHASE ONE</h2>
-              <h2 className="ls-tight font-bolder display-5 text-white text-center mb-2 ">
+            <div className="container container-phase rounded-4 pt-10 d-flex flex-column align-items-center">
+              <h2 className="phase  fs-5 fw-light pt-5">PHASE ONE</h2>
+              <h2 className="ls-tight font-bolder display-5 text-white mb-2 ">
                 Preparing You to Buy
               </h2>
-              <div className="row justify-content-center">
-                <div className="col-8 col-lg-6">
-                  <p className="description text-white fw-light text-center lh-sm fs-5 ">
+              <div className="row justify-content-center pb-5">
+                <div className="col-8 col-lg-8">
+                  <p className="description text-white fw-light text-center lh-sm fs-4 pb-10">
                     Our first step toward success will be to discuss & plan
                     exactly what you need from your home to best position you
                     when exploring Greater Vancouver's real estate market.
@@ -162,26 +162,29 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+        <div className="container-discover container-fluid row d-flex align-items-center justify-content-center mx-0 p-10 ps-20">
+          <div className="col-9 col-lg-5 pb-7 pt-5 pb-lg-2">
+            <img
+              src={prep_1}
+              className="img-fluid pe-lg-7"
+              alt="three people discussing"
+            />
+          </div>
+          <div className="col-12 col-lg-7">
+            <p className="description text-white fw-light lh-sm fs-4 ">
+              We will discover exactly what you are looking for, go through,
+              plan and discuss expecting closing costs when buying a home,
+              ensure you are taken care of with a preapproval and set up
+              everything we need for success when we are ready to enter the
+              market.
+            </p>
+          </div>
+        </div>
+        <section className="phases container-fluid text-lg-start align-items-center ">
           <div className="container container-fluid ">
             {/* PART: We will discover  */}
-            <div className="row d-flex align-items-center justify-content-center ">
-              <div className="col-9 col-lg-5 pb-7 pb-lg-2">
-                <img
-                  src={prep_1}
-                  className="img-fluid pe-lg-7"
-                  alt="three people discussing"
-                />
-              </div>
-              <div className="col-12 col-lg-7">
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  We will discover exactly what you are looking for, go through,
-                  plan and discuss expecting closing costs when buying a home,
-                  ensure you are taken care of with a preapproval and set up
-                  everything we need for success when we are ready to enter the
-                  market.
-                </p>
-              </div>
-            </div>
+
             {/* PART: Our Onboarding Consultation */}
             <div className="py-20 row row align-items-center justify-content-center">
               <div className="col-12 col-lg-9">
@@ -251,14 +254,16 @@ export default function Home() {
         {/* PHASE TWO */}
         <section className="phases container-fluid text-lg-start align-items-center pt-20">
           <div className=" container-lg max-w-screen-xl  mb-5 ">
-            <div className="container">
-              <h2 className="phase text-center fs-5 fw-light">PHASE TWO</h2>
+            <div className="container container-phase rounded-4 pt-10 d-flex flex-column align-items-center">
+              <h2 className="phase text-center fs-5 fw-light pt-5">
+                PHASE TWO
+              </h2>
               <h2 className="ls-tight font-bolder display-5 text-white text-center mb-2 ">
                 Preparing You to Buy
               </h2>
-              <div className="row justify-content-center">
-                <div className="col-8 col-lg-6">
-                  <p className="description text-white fw-light text-center lh-sm fs-5 ">
+              <div className="row justify-content-center pb-5">
+                <div className="col-8 ">
+                  <p className="description text-white fw-light text-center lh-sm fs-4 pb-10 ">
                     The Difference lays within our process of serving you.
                     Gurjivan takes pride in his ability to adapt his services
                     and share information in ways that's most convenient and
@@ -268,27 +273,31 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="container container-fluid pt-20">
+        </section>
+        <div className="container-discover container-fluid row d-flex align-items-center justify-content-center mx-0 p-10 ps-20">
+          <div className="col-9 col-lg-5 pb-7 pt-5 pb-lg-2 d-flex justify-content-center">
+            <img
+              src={prep_3}
+              className="img-fluid pe-lg-8"
+              alt="a person writing on a board"
+            />
+          </div>
+          <div className="col-12 col-lg-7">
+            <p className="description text-white fw-light lh-sm fs-4 pe-10 ">
+              Everything within the scope of your home search including home
+              tours, in-depth market analysis, explaining contracts,
+              negotiations and the entire home transaction process will have
+              Gurj there to explain and walk through the entire process to
+              ensure you, the client always understand what is going on while
+              instilling confidence throughout.
+            </p>
+          </div>
+        </div>
+
+        <section className="phases container-fluid text-lg-start align-items-center ">
+          <div className="container-fluid ">
             {/* PART: We will discover  */}
-            <div className="row align-items-center justify-content-center ">
-              <div className="d-flex align-items-center justify-content-center col-9 col-lg-5 pb-7 pb-lg-2">
-                <img
-                  src={prep_3}
-                  className="img-fluid pe-lg-5"
-                  alt="a person writing on a board"
-                />
-              </div>
-              <div className="col-12 col-lg-7">
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  Everything within the scope of your home search including home
-                  tours, in-depth market analysis, explaining contracts,
-                  negotiations and the entire home transaction process will have
-                  Gurj there to explain and walk through the entire process to
-                  ensure you, the client always understand what is going on
-                  while instilling confidence throughout.
-                </p>
-              </div>
-            </div>
+
             {/* PART: Our Onboarding Consultation */}
             <div className="py-20 row align-items-start justify-content-start ">
               <div className="col-12 col-lg-9">
@@ -402,14 +411,16 @@ export default function Home() {
         {/* PHASE THREE */}
         <section className="phases container-fluid text-lg-start pb-5 pt-20 align-items-center ">
           <div className=" container-lg max-w-screen-xl   mb-5 ">
-            <div className="container">
-              <h2 className="phase text-center fs-5 fw-light">PHASE THREE</h2>
+            <div className="container container-phase rounded-4 pt-10 d-flex justify-content-center flex-column align-items-center ">
+              <h2 className="phase text-center fs-5 fw-light pt-5">
+                PHASE THREE
+              </h2>
               <h2 className="ls-tight font-bolder display-5 text-white text-center mb-2 ">
                 Welcoming You to Your New Home
               </h2>
-              <div className="row justify-content-center">
-                <div className="col-8 col-lg-6">
-                  <p className="description text-white fw-light text-center lh-sm fs-5 ">
+              <div className="row justify-content-center pb-5">
+                <div className="col-8">
+                  <p className="description text-white fw-light text-center lh-sm fs-4 pb-10 ">
                     The most difficult and stressful part of the process is
                     over. Now we can start shift our energy from finding you the
                     house you love, to making your new property your perfect
