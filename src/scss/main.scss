@@ -33,6 +33,9 @@ section.home {
   .header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    .seller-title {
+      max-width: 20ch;
+    }
   }
 }
 
