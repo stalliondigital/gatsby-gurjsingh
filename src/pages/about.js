@@ -1,41 +1,49 @@
 import React from "react"
 import Layout from "../components/Layout"
 import contactImage from "./../images/contact-gurjivan-image.png"
+import backgroundimage from "./../images/background_about.png"
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 export default function About() {
   return (
     <Layout>
       <div className="contact-page">
-        <section className="solution container-fluid text-lg-start align-items-center pt-20 ">
-          <div className=" container-lg max-w-screen-xl   mb-5 d-flex justify-content-between">
-            <div className="row pb-8  align-items-center justify-content-center">
-              <div className="col-10 col-lg-6 justify-content-center">
-                <h2 className="ls-tight font-bolder display-5 text-white text-start mb-2 ">
+        <section
+          className="home position-relative pt-48 pb-20 mb-10  bg-cover bg-size--cover"
+          style={{ background: `url(${backgroundimage})` }}
+        >
+          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-20 pt-lg-6 ps-lg-0 ms-lg-0 justify-content-lg-start">
+            <div className="row row-grid align-items-center justify-content-center justify-content-lg-start text-center pb-20">
+              <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 col-8 justify-content-lg-end col-lg-5 text-start">
+                <h1 className="ls-tight font-bolder display-5 text-white pb-5 ps-10">
                   Gurjivan Singh
-                </h2>
-                <p className="contact-text description text-white fw-light text-start lh-sm fs-5 pb-10">
+                </h1>
+                <p className="text-white text-opacity-80 lead lh-sm ps-10">
                   It’s going to be a tough task finding a more studied,
                   reliable, personable, well-connected and hard-working realtor
                   in the Lower Mainland.
                 </p>
-              </div>
-              <div className="col-7 col-lg-4 justify-content-end">
-                <img
-                  className="img-fluid"
-                  src={contactImage}
-                  alt="Portrait of Gurjivan Singh"
-                />
+                <div className="row justify-content-start ps-10">
+                  <div className="col-6 mt-10 pe-0">
+                    <Link
+                      to="/contact"
+                      className="primary btn border-none shadow-sm mx-2"
+                    >
+                      Contact Gurjivan
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section className="phases container-fluid text-lg-start align-items-center">
-          <div className="container container-fluid ">
+          <div className="container-fluid ">
             {/* PART: First Time Home Buyer’s Tax Credit (HBTC) */}
-            <div className=" row align-items-start justify-content-center ">
-              <div className="col-10 justify-content-center">
-                <h3 className="text-white display-6 pb-5 ">About Gurj</h3>
+            <div className="d-flex flex-column flex-lg-row justify-content-between ">
+              <div className="justify-content-center container-discover  rounded-4 m-5 p-10 pt-3  pe-20">
+                <h3 className="text-white display-6 pb-5 pt-5 ">About Gurj</h3>
                 <p className="contact-description description text-white fw-light lh-sm fs-5 pb-5 ">
                   Gurj’s entire professional service philosophy forever revolves
                   around the Three Tee’s: Truth, Trust and Transparency. Gurj,
@@ -58,7 +66,7 @@ export default function About() {
                   already wowed so many members of our communities.
                 </p>
               </div>
-              <div className="col-10 justify-content-center pt-10">
+              <div className="justify-content-center container-discover rounded-4 m-5 p-10 pt-3 pe-20">
                 <h3 className="text-white display-6 pb-5 pt-5 ">
                   Professional History
                 </h3>
@@ -116,7 +124,7 @@ export default function About() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="text"
-                    className="form-control bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Name"
                     aria-label="Name"
                   />
@@ -124,7 +132,7 @@ export default function About() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="number"
-                    className="form-control bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Phone Number"
                     aria-label="Phone Number"
                   />
@@ -132,7 +140,7 @@ export default function About() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="email"
-                    className="form-control bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />

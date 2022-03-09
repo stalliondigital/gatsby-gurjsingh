@@ -334,6 +334,31 @@ section.phases {
       text-align: center;
     }
   }
+  .container-instructions {
+    h3.instruction-title {
+      color: #eab308;
+    }
+    // span {
+    //   background-color: rgba(234, 179, 8, 0.1);
+    //   border-radius: 50%;
+    //   background-size: 56px 56px;
+    // }
+    .fa-icon {
+      background-color: rgba(234, 179, 8, 0.1);
+      border-radius: 50%;
+      width: 43px;
+      height: 43px;
+      font-size: 112px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: #eab308;
+      padding: 12px;
+    }
+    .fa-increase {
+      padding: 10px;
+    }
+  }
 }
 .container-discover {
   background-color: #37373d;
