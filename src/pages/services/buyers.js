@@ -146,8 +146,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="phases container-fluid text-lg-start align-items-center ">
-          <div className=" container-lg max-w-screen-xl   mb-5 ">
+        <section className="phases container-fluid container-text-lg-start align-items-center ">
+          <div className=" container-lg mb-5 ">
             <div className="container container-phase rounded-4 pt-10 d-flex flex-column align-items-center">
               <h2 className="phase  fs-5 fw-light pt-5">PHASE ONE</h2>
               <h2 className="ls-tight font-bolder display-5 text-white mb-2 ">
@@ -165,25 +165,27 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="container-discover container-fluid row d-flex align-items-center justify-content-center mx-0 p-10 ps-20 mb-10">
-          <div className="col-9 col-lg-5 pb-7 pt-5 pb-lg-2">
-            <img
-              src={prep_1}
-              className="img-fluid pe-lg-7"
-              alt="three people discussing"
-            />
-          </div>
-          <div className="col-12 col-lg-7">
-            <p className="description text-white fw-light lh-sm fs-4 ">
-              We will discover exactly what you are looking for, go through,
-              plan and discuss expecting closing costs when buying a home,
-              ensure you are taken care of with a preapproval and set up
-              everything we need for success when we are ready to enter the
-              market.
-            </p>
+        <div className="container-discover container-fluid d-flex align-items-center justify-content-center mx-0 p-10 ps-20 mb-10">
+          <div className="container-xl row d-flex align-items-center justify-content-center">
+            <div className="col-9 col-lg-5 pb-7 pt-5 pb-lg-2">
+              <img
+                src={prep_1}
+                className="img-fluid pe-lg-7"
+                alt="three people discussing"
+              />
+            </div>
+            <div className="col-12 col-lg-7 ">
+              <p className="description text-white fw-light lh-sm fs-4 ">
+                We will discover exactly what you are looking for, go through,
+                plan and discuss expecting closing costs when buying a home,
+                ensure you are taken care of with a preapproval and set up
+                everything we need for success when we are ready to enter the
+                market.
+              </p>
+            </div>
           </div>
         </div>
-        <section className="phases container-fluid text-lg-start align-items-center mx-0 pe-0">
+        <section className="phases container-xl text-lg-start d-grid justify-content-center align-items-center pe-0">
           <div className="row align-items-center justify-content-center mx-0">
             {/* PART: Our Onboarding Consultation */}
             <div className="col-12 col-lg-7 my-5 py-10 px-5 pe-20">
@@ -199,7 +201,7 @@ export default function Home() {
                 for success!
               </p>
             </div>
-            <div className="col-8 col-lg-5 py-10 ps-5 mb-10 container-discover d-flex justify-content-center me-0 rounded-4 rounded-end-lg-0 rounded-start-lg-4">
+            <div className="col-8 col-lg-5 py-10 ps-5 mb-10 container-discover d-flex justify-content-center me-0 rounded-4 rounded-end-lg-0 rounded-end-xl-4 rounded-start-lg-4">
               <img
                 src={sol_1}
                 className="img-fluid"
@@ -221,7 +223,7 @@ export default function Home() {
                 can make the entire process be as smooth as possible.
               </p>
             </div>
-            <div className="col-8 col-lg-5 py-10 ps-5 mb-10 container-discover d-flex justify-content-center me-0 rounded-4 rounded-end-lg-0 rounded-start-lg-4">
+            <div className="col-8 col-lg-5 py-10 ps-5 mb-10 container-discover d-flex justify-content-center me-0 rounded-4 rounded-end-lg-0 rounded-end-xl-4 rounded-start-lg-4">
               <img
                 src={prep_2}
                 className="img-fluid"
@@ -243,7 +245,7 @@ export default function Home() {
                 can make the entire process be as smooth as possible.
               </p>
             </div>
-            <div className="col-8 col-lg-5 py-10 ps-5 container-discover d-flex justify-content-center me-0 rounded-4 rounded-end-lg-0 rounded-start-lg-4">
+            <div className="col-8 col-lg-5 py-10 ps-5 container-discover d-flex justify-content-center me-0 rounded-4 rounded-end-lg-0 rounded-end-xl-4 rounded-start-lg-4">
               <img
                 src={prep_7}
                 className="img-fluid"
@@ -277,28 +279,30 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="container-discover container-fluid row d-flex align-items-center justify-content-center mx-0 p-10 ps-20">
-          <div className="col-9 col-lg-5 pb-7 pt-5 pb-lg-2 d-flex justify-content-center">
-            <img
-              src={prep_3}
-              className="img-fluid pe-lg-8"
-              alt="a person writing on a board"
-            />
-          </div>
-          <div className="col-12 col-lg-7">
-            <p className="description text-white fw-light lh-sm fs-4 pe-10 ">
-              Everything within the scope of your home search including home
-              tours, in-depth market analysis, explaining contracts,
-              negotiations and the entire home transaction process will have
-              Gurj there to explain and walk through the entire process to
-              ensure you, the client always understand what is going on while
-              instilling confidence throughout.
-            </p>
+        <div className="container-discover container-fluid d-flex align-items-center justify-content-center mx-0 p-10 ps-20 mb-10">
+          <div className="container-xl row d-flex align-items-center justify-content-center">
+            <div className="col-9 col-lg-5 pb-7 pt-5 pb-lg-2 d-flex justify-content-center">
+              <img
+                src={prep_3}
+                className="img-fluid pe-lg-8"
+                alt="a person writing on a board"
+              />
+            </div>
+            <div className="col-12 col-lg-7">
+              <p className="description text-white fw-light lh-sm fs-4 pe-10 ">
+                Everything within the scope of your home search including home
+                tours, in-depth market analysis, explaining contracts,
+                negotiations and the entire home transaction process will have
+                Gurj there to explain and walk through the entire process to
+                ensure you, the client always understand what is going on while
+                instilling confidence throughout.
+              </p>
+            </div>
           </div>
         </div>
 
         <section className="phases container-fluid align-items-center ">
-          <div className="container-fluid container-instructions">
+          <div className="container-xl container-instructions">
             {/* PART: Our Onboarding Consultation */}
             <div className="pt-20 row d-flex align-items-stretch justify-content-center g-5">
               <div className="col-10 col-lg-5 p-10 pe-5">
@@ -391,7 +395,7 @@ export default function Home() {
         </section>
         {/* PHASE THREE */}
         <section className="phases container-fluid text-lg-start pb-5 align-items-center ">
-          <div className=" container-lg max-w-screen-xl   mb-5 ">
+          <div className=" container-xl max-w-screen-xl   mb-5 ">
             <div className="container container-phase rounded-4 pt-10 d-flex justify-content-center flex-column align-items-center ">
               <h2 className="phase text-center fs-5 fw-light pt-5">
                 PHASE THREE
@@ -413,7 +417,7 @@ export default function Home() {
           </div>
           <div className="container container-fluid py-20">
             {/* PART: Estimation of Expenses & Closing Costs */}
-            <div className="row align-items-center justify-content-center ">
+            <div className="container-xl row align-items-center justify-content-center ">
               <div className="col-9 col-lg-4 pb-7 pb-lg-2 d-flex align-items-center justify-content-center ">
                 <img
                   src={prep_6}
