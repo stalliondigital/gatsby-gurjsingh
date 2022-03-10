@@ -75,7 +75,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="container container-fluid ">
+          <div className="container container-fluid pb-0">
             {/* PART: Why Information is King. */}
             <div className="pt-20 pb-10 row align-items-start justify-content-start ">
               <div className="col-12 col-lg-10">
@@ -120,7 +120,7 @@ export default function Home() {
               </div>
             </div>
             {/* PART: Our Onboarding Consultation */}
-            <div className="py-20 row row align-items-start justify-content-start">
+            <div className=" row row align-items-start justify-content-start pb-0">
               <div className="col-12 col-lg-10">
                 <h3 className="text-white fs-4 pb-3 ">
                   Bringing it Full Circle
@@ -143,7 +143,7 @@ export default function Home() {
 
         <section className="experience container-fluid text-lg-start align-items-center">
           <div className="experience-inside container-fluid text-lg-start py-20">
-            <div className="experience-container container-lg max-w-screen-xl   mb-5 pb-20">
+            <div className="experience-container container-lg max-w-screen-xl   mb-5 py-20">
               <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
