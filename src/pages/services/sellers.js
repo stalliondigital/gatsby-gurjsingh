@@ -9,11 +9,12 @@ import sellers_5 from "./../../images/sellers-5.png"
 import sellers_6 from "./../../images/sellers-6.png"
 import sellers_7 from "./../../images/prep-5.png"
 import sellers_8 from "./../../images/sellers-8.png"
-
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faArrowAltCircleDown,
   faCaretLeft,
+  faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons"
 import Helmet from "react-helmet"
 
@@ -234,8 +235,8 @@ export default function Home() {
             </span>
           </h2>
         </div>
-        <section className="phases container-fluid text-lg-start align-items-center pb-40">
-          <div className="container container-fluid ">
+        <section className="phases container-fluid text-lg-start align-items-center pb-20">
+          <div className="container container-fluid p-0">
             {/* PART: Getting Preapproved */}
             <div className="pt-20 row align-items-start justify-content-center ">
               <div className="col-12 collapse-card">
@@ -498,6 +499,37 @@ export default function Home() {
             </div>
 
             {/* end phases */}
+          </div>
+        </section>
+        <section className="request text-lg-start container-fluid pb-0 pt-lg-6 align-items-center pt-10 pb-20">
+          <div className="container-request container mb-0 rounded-3 py-10 ">
+            <form className="g-3 text-center justify-content-center py-5">
+              <div className="row justify-content-center">
+                <div className="col-1 d-flex align-items-center justify-content-start">
+                  <h2 className="phone-icon">
+                    <FontAwesomeIcon
+                      className="font-awesome"
+                      icon={faPhoneAlt}
+                      size="3x"
+                    />
+                  </h2>
+                </div>
+                <div className="col-10 col-lg-8 px-0 d-flex align-items-center">
+                  <h2 className="ls-tight fs-1 text-white ps-0 pb-5">
+                    Get in contact with Gurj today and be added to his investor
+                    client list
+                  </h2>
+                </div>
+                <div className="col-6 col-lg-3 d-flex align-items-center justify-content-center">
+                  <Link
+                    to="/contact"
+                    className="secondary-button btn btn-block border-none bg-white fs-4"
+                  >
+                    Contact Gurjivan
+                  </Link>
+                </div>
+              </div>
+            </form>
           </div>
         </section>
       </div>

@@ -140,41 +140,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="request text-lg-start container-fluid pb-10 pt-lg-6 align-items-center pt-10">
-          <div className="container-request container mb-5 rounded-3 py-10 ">
-            <form className="g-3 text-center justify-content-center py-5">
-              <div className="row justify-content-center">
-                <div className="col-1 d-flex align-items-center justify-content-start">
-                  <h2 className="phone-icon">
-                    <FontAwesomeIcon
-                      className="font-awesome"
-                      icon={faPhoneAlt}
-                      size="3x"
-                    />
-                  </h2>
-                </div>
-                <div className="col-10 col-lg-8 px-0 d-flex align-items-center">
-                  <h2 className="ls-tight fs-1 text-white ps-0 pb-5">
-                    Get in contact with Gurj today and be added to his investor
-                    client list
-                  </h2>
-                </div>
-                <div className="col-6 col-lg-3 d-flex align-items-center justify-content-center">
-                  <Link
-                    to="/contact"
-                    className="secondary-button btn btn-block border-none bg-white fs-4"
-                  >
-                    Contact Gurjivan
-                  </Link>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
 
-        <section className="experience container-fluid text-lg-start pt-lg-6 align-items-center py-10 pb-40">
-          <div className="experience-inside container-fluid text-lg-start">
-            <div className="experience-container container-lg max-w-screen-xl   mb-5 ">
+        <section className="experience container-fluid text-lg-start align-items-center">
+          <div className="experience-inside container-fluid text-lg-start py-20">
+            <div className="experience-container container-lg max-w-screen-xl   mb-5 pb-20">
               <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
@@ -260,6 +229,37 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className="request text-lg-start container-fluid pb-0 pt-lg-6 align-items-center pt-10 pb-20">
+          <div className="container-request container mb-0 rounded-3 py-10 ">
+            <form className="g-3 text-center justify-content-center py-5">
+              <div className="row justify-content-center">
+                <div className="col-1 d-flex align-items-center justify-content-start">
+                  <h2 className="phone-icon">
+                    <FontAwesomeIcon
+                      className="font-awesome"
+                      icon={faPhoneAlt}
+                      size="3x"
+                    />
+                  </h2>
+                </div>
+                <div className="col-10 col-lg-8 px-0 d-flex align-items-center">
+                  <h2 className="ls-tight fs-1 text-white ps-0 pb-5">
+                    Get in contact with Gurj today and be added to his investor
+                    client list
+                  </h2>
+                </div>
+                <div className="col-6 col-lg-3 d-flex align-items-center justify-content-center">
+                  <Link
+                    to="/contact"
+                    className="secondary-button btn btn-block border-none bg-white fs-4"
+                  >
+                    Contact Gurjivan
+                  </Link>
+                </div>
+              </div>
+            </form>
           </div>
         </section>
       </div>

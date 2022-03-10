@@ -79,7 +79,7 @@ export default function Home() {
         <section className="phases container-fluid text-lg-start align-items-center pt-10 pb-0">
           <div className="container align-items-center">
             <div className="row justify-content-center align-items-center">
-              <div className="first-time col-10 col-lg-5 rounded-5 mb-3">
+              <div className="first-time col-10 col-lg-5 rounded-5">
                 <h2 className="text-white p-5 pt-10 text-center fs-3 lh-sm">
                   WHAT ARE THE INCENTIVES AND WHAT DO THEY DO?
                 </h2>
