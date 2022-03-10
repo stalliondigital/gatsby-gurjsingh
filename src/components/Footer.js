@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="col-7 ">
               <Link className="text-reset" to="/">
                 <div className="row row-cols-auto">
-                  <div className="col-3 pe-0 ">
+                  <div className="col pe-0 ">
                     <img src={logo} className="h-14" alt="" />
                   </div>
                   <div className="col d-flex flex-column text-white ">
@@ -104,7 +104,7 @@ export default function Footer() {
               >
                 <p className="pt-2 pb-5">RE/MAX 2000 REALTY</p>
               </a>
-              <div className="row g-0 text-start">
+              <div className="row text-start lh-sm">
                 <div className="col-1">
                   <a
                     className="text-reset text-start footer-icon"
@@ -114,20 +114,20 @@ export default function Footer() {
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
                   </a>
                 </div>
-                <div className="col-11 footer-address">
+                <div className="col footer-address">
                   #103-15127 100th Avenue, Surrey, BC V3R 0N9
                 </div>
-                <div className="col-1 text-start pt-2">
+              </div>
+              <div className="row text-start">
+                <div className="col-1 text-start lh-sm pt-2">
                   <a
                     className="text-reset text-start pe-2 footer-icon"
                     href="tel:778-951-8275"
                   >
-                    <FontAwesomeIcon icon={faPhoneAlt} />{" "}
+                    <FontAwesomeIcon icon={faPhoneAlt} />
                   </a>
                 </div>
-                <div className="col-11 pt-2">
-                  778-951-8275
-                </div>
+                <div className="col pt-2">778-951-8275</div>
               </div>
             </div>
           </div>

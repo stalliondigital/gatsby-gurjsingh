@@ -2,27 +2,38 @@ import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import gurjivanImage from "./../images/gurjivan-image.png"
+import reviewGoogle from "./../images/review-google.png"
 import gurjivanImageCut from "./../images/gurjivan-image-cut.png"
 import coupleTogether from "./../images/couple-together.png"
 import backgroundimage from "./../images/background.png"
-
+import { Helmet } from "react-helmet"
 // font awesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBook } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
+import Stars from "../components/Stars"
+
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 3%, transparent 30% ),
+      url(${backgroundimage})`,
+}
 
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan Singh</title>
+      </Helmet>
       <div>
         <section
           className="home position-relative pt-48 pb-40  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          style={sectionBackground}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center text-lg-start pt-5 pb-5 pt-lg-6">
             <div className="row row-grid align-items-center">
               <div className="header rounded-4 bg-black bg-opacity-50 p-10 col-9 col-lg-7 text-start ms-10">
-                <h1 className="ls-tight font-bolder display-5 text-white mb-5">
+                <h1 className="font-bolder display-5 text-white mb-5">
                   Bridging the Gap Between Unimaginable and Possible
                 </h1>
                 <p className="lead text-white text-opacity-80 mb-10">
@@ -49,21 +60,21 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="about reason-why container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="about-container container-lg max-w-screen-xl text-lg mb-5 p-0 rounded-5 rounded-start-2 ">
-            <div className="row row-cols-auto align-items-center">
-              <div className="d-block d-lg-none">
+        <section className="about reason-why container-fluid text-lg-start pb-0 pt-lg-6 align-items-center pt-10">
+          <div className="about-container container-lg text-lg mb-5 p-0 rounded-5 ">
+            <div className="d-flex flex-column flex-lg-row justify-content-between ">
+              <div className="d-block d-lg-none pt-5 px-7">
                 <img
-                  className="img-fluid rounded-top-5"
+                  className="img-fluid rounded-4"
                   src={gurjivanImageCut}
                   alt="Portrait of Gurjivan Singh"
                 />
               </div>
-              <div className="col-lg-8 p-10">
+              <div className="col-lg-6 p-10 pb-0 d-flex flex-column justify-content-around">
                 <h2 className="ls-tight font-bolder display-5 text-white mb-5 ">
                   Why Gurjivan?
                 </h2>
-                <p className="lead text-white text-opacity-80 mb-10 ">
+                <p className="lead text-white text-opacity-80 mb-5 lh-sm">
                   With a professional history in service & operations, there are
                   few who can match Gurj's ability of transparently getting
                   things done all while prioritizing the needs of his clients.
@@ -72,7 +83,7 @@ export default function Home() {
                   process ensuring & instilling confidence within all of his
                   clients and their deals.
                 </p>
-                <div className="d-flex justify-content-end">
+                <div className="d-flex justify-content-lg-start justify-content-end pb-5">
                   <Link
                     to="/about"
                     className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8"
@@ -81,18 +92,21 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="d-none d-lg-block col-lg-4 justify-content-end">
-                <div className="d-flex flex-row-reverse">
-                  <img
-                    src={gurjivanImage}
-                    alt="Portrait of Gurjivan Singh"
-                    className="img-fluid "
-                  />
-                </div>
+              <div className="d-none d-lg-block col-6 col-lg-5 justify-content-end pe-0">
+                <div
+                  className="bg-cover bg-size--cover rounded-end-4"
+                  style={{
+                    backgroundImage: `url(${gurjivanImage})`,
+                    backgroundSize: "100%",
+                    backgroundRepeat: "no-repeat",
+                    height: "100%",
+                    backgroundPosition: "center center",
+                  }}
+                ></div>
               </div>
             </div>
           </div>
-          <div className="about-container border-0 p-0 container-lg max-w-screen-xl mt-10 rounded-5">
+          <div className="about-container border-0 p-0 container-lg mt-10 rounded-5">
             <div className="row align-items-center">
               <div className="col-lg-5">
                 <img
@@ -122,83 +136,106 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="experience container-fluid text-lg-start pb-5 pt-lg-6 align-items-center pt-10">
-          <div className="experience-inside container-fluid text-lg-start">
-            <div className="experience-container container-lg max-w-screen-xl   mb-5 ">
-              <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
+        <section className="experience container-fluid text-lg-start pb-0 align-items-center ">
+          <div className="experience-inside container-lg p-0 py-10 text-lg-start">
+            <div className="experience-container  mb-5 ">
+              <h2 className="ls-tight font-bolder display-5 pt-10 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
-              <div className="row my-5 g-4 justify-content-center row-cols-1 row-cols-lg-3">
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
+              <div className="row my-5 justify-content-center row-cols-1 ">
+                <div className="col-8 col-lg-4 card-container review h-100 mb-5 mb-lg-2">
+                  <div className="card-testimonial card h-100 ">
                     <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Jivan has been able to quickly indentify shifting
-                        market trends and investment opportunities that many
-                        others have missed. Using proprietary analysis tools
-                        Jivan is able to back up his leads and finds with
-                        concrete facts.”
+                      <img
+                        src={reviewGoogle}
+                        alt="Google review logo with five stars"
+                        className="img-fluid pt-10 mb-5"
+                      />
+                      <p className="fs-3 text-white lh-sm pb-10">
+                        Don’t just take our word for it. See what others have to
+                        say. We have a five star rating on Google.
                       </p>
+                      <a
+                        href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
+                        target="_blank"
+                        className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8 mt-10 py-3 lh-sm mb-10"
+                      >
+                        View All Google Reviews
+                      </a>
                     </div>
-                    <div className="card-footer">Vince McGurik</div>
                   </div>
                 </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Wow! I got referred to Gurj from a family friend and I
-                        honestly didn't have high expectations after dealing
-                        with my last realtor. But Gurj was so good!
-                        Communication, responsiveness and ability to get things
-                        done was surreal.”
-                      </p>
+                <div className="col-8 row ">
+                  <div className="card-container col-lg-6 col-12 mb-3  ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body text-center">
+                        <p className="lh-sm">
+                          “Jivan has been able to quickly indentify shifting
+                          market trends and investment opportunities that many
+                          others have missed. Using proprietary analysis tools
+                          Jivan is able to back up his leads and finds with
+                          concrete facts.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Vince M.</span>
+                        <Stars />
+                      </div>
                     </div>
-                    <div className="card-footer">Daniel Randley</div>
                   </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Jivan is one of the most professional, forward thinking
-                        guys I have met. Will continue to do business at
-                        anytime.”
-                      </p>
+                  <div className="card-container col-12 col-lg-6 mb-3 ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body p-5 text-center">
+                        <p className="lh-sm">
+                          “Wow! I got referred to Gurj from a family friend and
+                          I honestly didn't have high expectations after dealing
+                          with my last realtor. But Gurj was so good!
+                          Communication, responsiveness and ability to get
+                          things done was surreal.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Daniel R.</span>
+                        <Stars />
+                      </div>
                     </div>
-                    <div className="card-footer">Christopher Cavalier</div>
                   </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Gurjivan Singh is the best realtor I have ever dealt
-                        with. Very professional, experienced, and helpful.
-                        Highly recommend.”
-                      </p>
+                  <div className="card-container col-12 col-lg-6 mb-3 ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body p-5 text-center">
+                        <p className="lh-sm">
+                          “Jivan is one of the most professional, forward
+                          thinking guys I have met. Will continue to do business
+                          at anytime.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Christopher C.</span>
+                        <Stars />
+                      </div>
                     </div>
-                    <div className="card-footer">Kelen Maria</div>
                   </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-center">
-                      <p className="lh-sm">
-                        “Really pleasant interaction with this service. Helped
-                        make my move from the island to the mainland so much
-                        smoother. They were friendly and seemed very genuine.
-                        Highly recommend.”
-                      </p>
+                  <div className="card-container col-12 col-lg-6 mb-3 ">
+                    <div className="card-testimonial card h-100 mb-3">
+                      <div className="card-body p-5 text-center">
+                        <p className="lh-sm">
+                          “Gurjivan Singh is the best realtor I have ever dealt
+                          with. Very professional, experienced, and helpful.
+                          Highly recommend.”
+                        </p>
+                      </div>
+                      <div className="card-footer d-flex justify-content-between">
+                        <span>Kelen M.</span>
+                        <Stars />
+                      </div>
                     </div>
-                    <div className="card-footer">Patrick Holland</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="request container-fluid text-lg-start pb-10 pt-lg-6 align-items-center pt-10">
+        <section className="request container-fluid text-lg-start pb-10 align-items-center">
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
             <form
               method="post"
@@ -215,7 +252,7 @@ export default function Home() {
               <h2 className="ls-tight font-bolder display-5 text-white ">
                 Request a Detailed Buyers Kit
               </h2>
-              <p className="lead mb-10 ls-tight text-white">
+              <p className="lead mb-10 text-white lh-sm">
                 All the information you need as
                 <br /> a buyer in your hands.
               </p>
@@ -224,7 +261,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3 ">
                   <input
                     type="text"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Name"
                     aria-label="Name"
                   />
@@ -232,7 +269,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="number"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Phone Number"
                     aria-label="Phone Number"
                   />
@@ -240,7 +277,7 @@ export default function Home() {
                 <div className="col-9 col-lg-3">
                   <input
                     type="email"
-                    className="form-control text-warning bg-white bg-opacity-50 border-0"
+                    className="form-control border-0"
                     placeholder="Email Address"
                     aria-label="Email Address"
                   />

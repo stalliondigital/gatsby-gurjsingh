@@ -6,19 +6,28 @@ import diff_img from "./../../images/prep-3.png"
 import inv_1 from "./../../images/investors-1.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
-
+import Helmet from "react-helmet"
+import Stars from "../../components/Stars"
+const sectionBackground = {
+  background: `linear-gradient(0deg, #181819 5%, transparent 30% ),
+      url(${backgroundimage})`,
+}
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Gurjivan | Investors</title>
+      </Helmet>
       <div>
         <section
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
-          style={{ background: `url(${backgroundimage})` }}
+          style={sectionBackground}
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6">
             <div className="row row-grid align-items-center justify-content-center text-center">
               <div className="header rounded-4 bg-black bg-opacity-50 p-10 col-9 col-lg-7 text-center ms-10">
-                <h1 className="ls-tight font-bolder display-5 text-white mb-5">
+                <h1 className="display-5 text-white mb-5">
                   How We Discover Value Where Others Can’t
                 </h1>
                 <p className="lead text-white text-opacity-80 fs-4 lh-sm">
@@ -66,7 +75,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="container container-fluid ">
+          <div className="container container-fluid pb-0">
             {/* PART: Why Information is King. */}
             <div className="pt-20 pb-10 row align-items-start justify-content-start ">
               <div className="col-12 col-lg-10">
@@ -111,7 +120,7 @@ export default function Home() {
               </div>
             </div>
             {/* PART: Our Onboarding Consultation */}
-            <div className="py-20 row row align-items-start justify-content-start">
+            <div className=" row row align-items-start justify-content-start pb-0">
               <div className="col-12 col-lg-10">
                 <h3 className="text-white fs-4 pb-3 ">
                   Bringing it Full Circle
@@ -131,41 +140,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="request text-lg-start pb-10 pt-lg-6 align-items-center pt-10">
-          <div className="container-request container max-w-screen-lg mb-5 rounded-3 py-10 ">
-            <form className="g-3 text-center justify-content-center py-5">
-              <div className="row justify-content-center">
-                <div className="col-1 d-flex align-items-center justify-content-start">
-                  <h2 className="phone-icon">
-                    <FontAwesomeIcon
-                      className="font-awesome"
-                      icon={faPhoneAlt}
-                      size="5x"
-                    />
-                  </h2>
-                </div>
-                <div className="col-8 px-0 d-flex align-items-center">
-                  <h2 className="ls-tight font-bolder fs-1 text-white ps-0">
-                    Get in contact with Gurj today and be added to his investor
-                    client list
-                  </h2>
-                </div>
-                <div className="col-4 col-lg-3 d-flex align-items-center justify-content-center">
-                  <Link
-                    to="/contact"
-                    className="primary btn btn-block border-none bg-white fs-5"
-                  >
-                    Contact Gurjivan
-                  </Link>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
 
-        <section className="experience container-fluid text-lg-start pt-lg-6 align-items-center py-10 pb-40">
-          <div className="experience-inside container-fluid text-lg-start">
-            <div className="experience-container container-lg max-w-screen-xl   mb-5 ">
+        <section className="experience container-fluid text-lg-start align-items-center">
+          <div className="experience-inside container-fluid text-lg-start py-20">
+            <div className="experience-container container-lg max-w-screen-xl   mb-5 py-20">
               <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
@@ -180,7 +158,10 @@ export default function Home() {
                         met anyone more professional before!”
                       </p>
                     </div>
-                    <div className="card-footer">Adam Tran</div>
+                    <div className="card-footer d-flex justify-content-between">
+                      <span>Adam T.</span>
+                      <Stars />
+                    </div>
                   </div>
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
@@ -192,7 +173,10 @@ export default function Home() {
                         professional and outstanding person.”
                       </p>
                     </div>
-                    <div className="card-footer">Kenneth Juang</div>
+                    <div className="card-footer d-flex justify-content-between">
+                      <span>Kenneth J.</span>
+                      <Stars />
+                    </div>
                   </div>
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
@@ -206,7 +190,10 @@ export default function Home() {
                         Gurj will be practicing when we move again.”
                       </p>
                     </div>
-                    <div className="card-footer">Tommy Le</div>
+                    <div className="card-footer d-flex justify-content-between">
+                      <span>Tommy L.</span>
+                      <Stars />
+                    </div>
                   </div>
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
@@ -218,7 +205,10 @@ export default function Home() {
                         Highly recommend.”
                       </p>
                     </div>
-                    <div className="card-footer">Kelen Maria</div>
+                    <div className="card-footer d-flex justify-content-between">
+                      <span>Kelen M.</span>
+                      <Stars />
+                    </div>
                   </div>
                 </div>
                 <div className="card-container col-8 col-lg-4 ">
@@ -231,11 +221,45 @@ export default function Home() {
                         Highly recommend.”
                       </p>
                     </div>
-                    <div className="card-footer">Patrick Holland</div>
+                    <div className="card-footer d-flex justify-content-between">
+                      <span>Patrick H.</span>
+                      <Stars />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className="request text-lg-start container-fluid pb-0 pt-lg-6 align-items-center pt-10 pb-20">
+          <div className="container-request container mb-0 rounded-3 py-10 ">
+            <form className="g-3 text-center justify-content-center py-5">
+              <div className="row justify-content-center">
+                <div className="col-1 d-flex align-items-center justify-content-start">
+                  <h2 className="phone-icon">
+                    <FontAwesomeIcon
+                      className="font-awesome"
+                      icon={faPhoneAlt}
+                      size="3x"
+                    />
+                  </h2>
+                </div>
+                <div className="col-10 col-lg-8 px-0 d-flex align-items-center">
+                  <h2 className="ls-tight fs-1 text-white ps-0 pb-5">
+                    Get in contact with Gurj today and be added to his investor
+                    client list
+                  </h2>
+                </div>
+                <div className="col-6 col-lg-3 d-flex align-items-center justify-content-center">
+                  <Link
+                    to="/contact"
+                    className="secondary-button btn btn-block border-none bg-white fs-4"
+                  >
+                    Contact Gurjivan
+                  </Link>
+                </div>
+              </div>
+            </form>
           </div>
         </section>
       </div>

@@ -4,6 +4,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-react-helmet`,
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -18,5 +19,7 @@ module.exports = {
   siteMetadata: {
     title: "Gurjivan Singh",
     description: "PROFESSIONAL REALTOR ©",
+    url: "https://gurjsingh.ca",
+    twitterUsername: "@getgurj",
   },
 }

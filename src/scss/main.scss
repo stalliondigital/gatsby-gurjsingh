@@ -1,16 +1,16 @@
 @import "@webpixels/css";
 @import url("http://fonts.cdnfonts.com/css/itc-cheltenham-std");
 
-// NAVBAR
+$enable-negative-margins: true; // NAVBAR
+body {
+  background-color: #181819;
+}
 
 nav {
   .logo-text {
     font-family: "ITC Cheltenham Std", sans-serif;
     font-weight: 400;
     font-size: 34px;
-    // font-stretch: expanded;
-    // form FILL IT, SENDS AN EMAIL TO SPECIFIC EMAIL ADDRESS
-    // deploy to netlify->
   }
   @include media-breakpoint-down(lg) {
     background-color: #181819;
@@ -33,6 +33,9 @@ section.home {
   .header {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    .seller-title {
+      max-width: 23ch;
+    }
   }
 }
 
@@ -60,10 +63,11 @@ section.about {
 
   .about-container {
     background-color: #222222;
-    border-left: #eab308 solid 9px;
-    padding-right: 0;
-    @include media-breakpoint-down(lg) {
-      border-left: none;
+    border-radius: 27px;
+    border: 11px solid #37373d;
+    img.large {
+      min-height: 432px;
+      min-width: 510px;
     }
   }
 }
@@ -71,13 +75,7 @@ section.about {
 section.experience {
   background-color: #181819;
   .experience-inside {
-    background: radial-gradient(
-      circle,
-      rgba(234, 179, 8, 0.3) -10%,
-      rgba(79, 67, 28, 0.3) 17%,
-      rgba(34, 34, 34, 0.3) 32%,
-      rgba(24, 24, 25, 0.3) 40%
-    );
+    background: radial-gradient(circle, rgba(234, 179, 8, 0.3) 0%, #181819 55%);
 
     .card-container {
       .card-testimonial {
@@ -107,9 +105,9 @@ section.request {
   background-color: #181819;
 
   .container-request {
-    background-color: #eab308;
+    background-color: #806510;
     .book-icon {
-      background-color: rgba(245, 215, 121, 0.75);
+      background-color: #644d05;
       border-radius: 50%;
       width: 70px;
       height: 70px;
@@ -121,10 +119,14 @@ section.request {
       transform: rotate(-7.3deg);
     }
     .phone-icon {
-      color: rgba(245, 215, 121, 0.75);
+      color: rgba(234, 179, 8, 0.5);
+      transform: rotate(15.5deg);
     }
     .primary {
       color: #eab308;
+    }
+    .secondary-button {
+      color: #816610;
     }
     p {
       font-size: 28px;
@@ -132,21 +134,26 @@ section.request {
     }
 
     .form-data {
-      .arrow-icon button {
-        font-size: 45px;
-        color: #f5d779;
-        background-color: #eab308;
-
-        .fa-icon {
-          background-color: #ae860b;
-          border-radius: 50%;
-          background-size: 40px 40px;
-          border: none;
-        }
+      input {
+        color: #c2a138;
+        font-size: 1.1em;
+        background-color: #5e4700;
+      }
+      .fa-icon {
+        background: #5e4700;
+        color: #806510;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        vertical-align: middle;
+        padding: 0px;
+        margin: -11px;
       }
 
       ::placeholder {
-        color: #ae860b;
+        color: #c2a138;
         font-size: 1.1em;
       }
     }
@@ -162,6 +169,7 @@ section.footer {
   }
   .cite {
     font-size: 0.9em;
+    max-width: 40ch;
   }
 
   .links {
@@ -231,10 +239,131 @@ section.solution {
 }
 
 section.phases {
-  background-color: #181819;
+  .first-time {
+    color: #ffffff;
+    background-color: #7a5d00;
+  }
+  .accordion {
+    border: none;
+    .accordion-item {
+      border: none;
+      background-color: #37373d;
+      .accordion-button {
+        .icon {
+          transition: all 0.15s;
+        }
+      }
+      .accordion-button::after {
+        display: none !important;
+      }
+      .accordion-button {
+        box-shadow: none;
+      }
+      .accordion-body {
+        border: none;
+        padding-bottom: 2rem;
+        box-shadow: none;
+      }
+      .accordion-button:not(.collapsed) {
+        .icon {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
   h2.phase {
     color: #eab308;
   }
+  .collapse-card {
+    color: rgb(255, 255, 255);
+
+    .accordion-button {
+      transition: all 0.1s cubic-bezier(0.05, 0.64, 0.88, 0.43);
+      .icon {
+        transition: all 0.15s cubic-bezier(0.05, 0.64, 0.88, 0.43);
+      }
+    }
+    .accordion-button.collapsed {
+      box-shadow: none;
+      background-color: #37373d;
+      border-radius: 1rem;
+      padding: 1.75rem;
+      padding-right: 1.75rem;
+      padding-left: 2.5rem;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: rgba(234, 179, 8, 0.5);
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      box-shadow: none;
+      padding-top: 1.75rem;
+      padding-right: 1.75rem;
+      padding-left: 2.5rem;
+      padding-bottom: 1rem;
+      .icon {
+        transform: rotate(-90deg);
+      }
+    }
+
+    .accordion-description {
+      color: rgba(255, 255, 255, 0.75);
+      background-color: rgba(234, 179, 8, 0.5);
+      box-shadow: none;
+      border-bottom-right-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+
+    .accordion-button::after {
+      display: none !important;
+    }
+    // .accordion-button.collapsed:after {
+    //   transform: rotate(0deg);
+    // }
+  }
+
+  .container-info {
+    background-color: #7a5d00;
+  }
+
+  .container-phase {
+    background-color: rgba(128, 101, 16, 0.4);
+    h2 {
+      max-width: 18ch;
+      text-align: center;
+    }
+  }
+  .container-instructions {
+    h3.instruction-title {
+      color: #eab308;
+    }
+    // span {
+    //   background-color: rgba(234, 179, 8, 0.1);
+    //   border-radius: 50%;
+    //   background-size: 56px 56px;
+    // }
+    .fa-icon {
+      background-color: rgba(234, 179, 8, 0.1);
+      border-radius: 50%;
+      width: 2.688rem;
+      height: 2.688rem;
+      font-size: 7rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: #eab308;
+      padding: 0.75rem;
+    }
+    .fa-increase {
+      padding: 0.625rem;
+    }
+  }
+}
+.container-discover {
+  background-color: #37373d;
+}
+.container-divisor {
+  background-color: #766532;
+  height: 260px;
 }
 
 p.description {
@@ -243,11 +372,8 @@ p.description {
 }
 
 .contact-page {
-  background-color: #181819;
-  padding-top: 100px;
   section.solution {
     // background-color: #eab308;
-    background: linear-gradient(180deg, #eab308 70%, #181819 30%);
     .card-container {
       .card {
         background-color: #37373d;
@@ -316,7 +442,7 @@ a.footer-icon:active {
   color: grey !important;
 }
 .footer-address {
-  max-width: 23ch;
+  max-width: 25ch;
 }
 
 .first-time-link {
@@ -331,8 +457,14 @@ section.contact-request {
 
   .container-request {
     background-color: #37373d;
-
+    h2 {
+      max-width: 18ch;
+    }
     .form-data {
+      input {
+        color: #171719;
+        font-size: 1.1em;
+      }
       .arrow-icon button {
         font-size: 45px;
         color: #a8a8a8;
