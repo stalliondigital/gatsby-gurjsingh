@@ -278,8 +278,9 @@ section.phases {
     color: rgb(255, 255, 255);
 
     .accordion-button {
+      transition: all 0.1s cubic-bezier(0.05, 0.64, 0.88, 0.43);
       .icon {
-        transition: all 0.15s;
+        transition: all 0.15s cubic-bezier(0.05, 0.64, 0.88, 0.43);
       }
     }
     .accordion-button.collapsed {
