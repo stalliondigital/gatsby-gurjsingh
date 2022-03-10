@@ -236,7 +236,7 @@ export default function Home() {
           </h2>
         </div>
         <section className="phases container-fluid text-lg-start align-items-center pb-20">
-          <div className="container container-fluid p-0">
+          <div className="container p-0">
             {/* PART: Getting Preapproved */}
             <div className="pt-20 row align-items-start justify-content-center ">
               <div className="col-12 collapse-card">
