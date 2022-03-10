@@ -23,7 +23,7 @@ export default function About() {
         >
           <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-20 pt-lg-6 ps-lg-0 ms-lg-0 justify-content-lg-start">
             <div className="row row-grid align-items-center justify-content-center justify-content-lg-start text-center pb-20">
-              <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 col-8 justify-content-lg-end col-lg-5 text-start">
+              <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 pb-lg-20 col-8 justify-content-lg-end col-lg-5 col-xl-6 text-start text-lg-center">
                 <h1 className="display-5 text-white pb-5 ps-10">
                   Gurjivan Singh
                 </h1>
@@ -32,7 +32,7 @@ export default function About() {
                   reliable, personable, well-connected and hard-working realtor
                   in the Lower Mainland.
                 </p>
-                <div className="row justify-content-start ps-10">
+                <div className="row justify-content-start justify-content-lg-center ps-10">
                   <div className="col-6 mt-10 pe-0">
                     <Link
                       to="/contact"

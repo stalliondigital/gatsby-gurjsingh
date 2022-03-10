@@ -27,9 +27,9 @@ export default function Home() {
           className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
           style={sectionBackground}
         >
-          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-15 pt-lg-6 ps-lg-0 ms-lg-0 justify-content-lg-start">
+          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-15 pb-lg-20 pt-lg-6 ps-lg-0 ms-lg-0 justify-content-lg-start">
             <div className="row row-grid align-items-center justify-content-center justify-content-lg-start text-center pb-20">
-              <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 col-8 justify-content-lg-end col-lg-5 text-start">
+              <div className="header rounded-4 rounded-lg-start-0 bg-black bg-opacity-50 p-10 pb-lg-20 col-8 justify-content-lg-end col-lg-5 col-xl-7 text-start text-lg-center">
                 <h1 className="font-bolder display-5 text-white ">
                   First Time Home
                 </h1>
@@ -39,7 +39,7 @@ export default function Home() {
                 <p className="text-white text-opacity-80 fs-3 lh-sm">
                   Helping You Make it Make Sense
                 </p>
-                <div className="row justify-content-start">
+                <div className="row justify-content-start justify-content-lg-center">
                   <div className="col-6 mt-10 pe-0">
                     <Link
                       to="/contact"
@@ -264,9 +264,9 @@ export default function Home() {
           </div>
         </section>
         {/* break line */}
-        <section className="experience container-fluid text-lg-start align-items-center py-0 my-0">
-          <div className="experience-inside container-fluid text-lg-start py-20">
-            <div className="experience-container container-lg mb-5 ">
+        <section className="experience container-fluid text-lg-start align-items-center p-0 my-0 mx-0">
+          <div className="experience-inside container-lg text-lg-start py-20">
+            <div className="experience-container container-lg mb-5 mb-20">
               <div className="row d-flex justify-content-center">
                 <div className="col col-lg-6 ">
                   <h2 className="display-5 text-white mb-5 text-center pb-5">
@@ -344,10 +344,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="phases container-fluid text-lg-start align-items-center pt-20">
-          <div className="container container-fluid ">
+        <section className="phases container-fluid text-lg-start align-items-center pt-0 mt-0">
+          <div className="container container-fluid pt-0 mt-0">
             {/* PART: Better Data, Better Results, Better Returns */}
-            <div className="row align-items-center justify-content-start pt-10">
+            <div className="row align-items-center justify-content-start ">
               <div className="col-12 col-lg-8">
                 <h3 className="text-white display-5 pb-7 ">
                   Why go with Gurj?

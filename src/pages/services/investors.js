@@ -141,9 +141,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="experience container-fluid text-lg-start align-items-center">
-          <div className="experience-inside container-fluid text-lg-start py-20">
-            <div className="experience-container container-lg max-w-screen-xl   mb-5 py-20">
+        <section className="experience container-fluid text-lg-start align-items-center px-0 pb-0">
+          <div className="experience-inside container-lg text-lg-start py-20 pb-5 pb-lg-20">
+            <div className="experience-container container-lg max-w-screen-xl   mb-5 py-20 pb-5 pb-lg-20">
               <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
@@ -231,7 +231,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="request text-lg-start container-fluid pb-0 pt-lg-6 align-items-center pt-10 pb-20">
+        <section className="request text-lg-start container-fluid pb-0 align-items-center pb-20">
           <div className="container-request container mb-0 rounded-3 py-10 ">
             <form className="g-3 text-center justify-content-center py-5">
               <div className="row justify-content-center">

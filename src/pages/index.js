@@ -136,7 +136,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="experience container-fluid text-lg-start pb-0 align-items-center ">
+        <section className="experience container-fluid text-lg-start pb-0 px-0 align-items-center ">
           <div className="experience-inside container-lg p-0 py-10 text-lg-start">
             <div className="experience-container  mb-5 ">
               <h2 className="ls-tight font-bolder display-5 pt-10 text-white mb-5 text-center pb-5">
