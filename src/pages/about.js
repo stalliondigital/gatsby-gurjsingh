@@ -46,7 +46,7 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="phases container-fluid text-lg-start align-items-center">
+        <section className="phases container-xl text-lg-start align-items-center">
           <div className="container-fluid ">
             {/* PART: First Time Home Buyer’s Tax Credit (HBTC) */}
             <div className="d-flex flex-column flex-lg-row justify-content-between ">
@@ -110,7 +110,6 @@ export default function About() {
             </div>
           </div>
         </section>
-        <div className="container-fluid container-divisor mb-20 mx-0"></div>
         <section className="contact-request container-fluid text-lg-start pb-10 align-items-center mb-20 ">
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
             <form
