@@ -33,10 +33,10 @@ export default function Footer() {
   const { title, description } = data.site.siteMetadata
 
   return (
-    <section className="footer pt-10 container-fluid text-white">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="contact col-12 col-lg-7 row pb-10 pb-lg-0">
+    <section className="footer pt-10 container-fluid text-white p-0 m-0">
+      <div className="container-lg justify-content-center">
+        <div className="row p-0">
+          <div className="contact col-12 col-lg-7 d-flex justify-content-center  align-items-center row pb-10 pb-lg-0 px-0 mx-0">
             <div className="col-7 ">
               <Link className="text-reset" to="/">
                 <div className="row row-cols-auto">
@@ -45,7 +45,7 @@ export default function Footer() {
                   </div>
                   <div className="col d-flex flex-column text-white ">
                     <img src={gurjivanSinghLogo} className="h-8 pb-0" alt="" />
-                    <span className="navbar-text pt-0">{description}</span>
+                    <span className="pt-0 description-text">{description}</span>
                   </div>
                 </div>
               </Link>
@@ -54,7 +54,7 @@ export default function Footer() {
                 home, I'm here to help you every step of the way.
               </p>
               <div className="row pt-4">
-                <div className="col-8 ">
+                <div className="col col-sm-8 ">
                   <a className="text-reset footer-icon" href="tel:778-951-8275">
                     <FontAwesomeIcon icon={faPhoneAlt} />
                   </a>
@@ -95,46 +95,48 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="col-5">
-              <img src={footerImg} className="h-4" alt="" />
+            <div className="col-5 pt-0">
+              <img src={footerImg} className="img-fluid h-4" alt="" />
               <a
                 className="text-reset"
                 href="https://www.remax.ca"
                 target="_blank"
               >
-                <p className="pt-2 pb-5">RE/MAX 2000 REALTY</p>
+                <p className="pt-0 pb-5">RE/MAX 2000 REALTY</p>
               </a>
-              <div className="row text-start lh-sm">
-                <div className="col-1">
-                  <a
-                    className="text-reset text-start footer-icon"
-                    href="https://goo.gl/maps/5jnt94uo3t56WFsz9"
-                    target="_blank"
-                  >
+              <div className="row text-start lh-sm pe-0">
+                <a
+                  className="text-reset text-start footer-icon row pe-0"
+                  href="https://goo.gl/maps/5jnt94uo3t56WFsz9"
+                  target="_blank"
+                >
+                  <div className="col-1 d-none d-sm-inline">
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
-                  </a>
-                </div>
-                <div className="col footer-address">
-                  #103-15127 100th Avenue, Surrey, BC V3R 0N9
-                </div>
+                  </div>
+                  <div className="col text-reset text-start footer-address ">
+                    #103-15127 100th Avenue, Surrey, BC V3R 0N9
+                  </div>
+                </a>
               </div>
               <div className="row text-start">
-                <div className="col-1 text-start lh-sm pt-2">
-                  <a
-                    className="text-reset text-start pe-2 footer-icon"
-                    href="tel:778-951-8275"
-                  >
+                <a
+                  className="text-reset text-start pe-2 footer-icon row"
+                  href="tel:778-951-8275"
+                >
+                  <div className="col-1 d-none d-sm-inline text-start lh-sm pt-2">
                     <FontAwesomeIcon icon={faPhoneAlt} />
-                  </a>
-                </div>
-                <div className="col pt-2">778-951-8275</div>
+                  </div>
+                  <div className="col pt-2 text-reset text-start footer-address">
+                    778-951-8275
+                  </div>
+                </a>
               </div>
             </div>
           </div>
 
           <div className="col-12 col-lg-5">
             <div className="links row">
-              <div className="col-3 col-lg-3">
+              <div className="col-3">
                 <p className="header">Services</p>
                 <ul className="list-unstyled">
                   <li>
@@ -238,13 +240,13 @@ export default function Footer() {
               </a>
             </p>
           </div>
-          <div className="col-12 col-lg-6 order-1 order-lg-2">
-            <div className="container justify-content-center align-items-center">
-              <div className="row justify-content-center align-items-center">
-                <div className="col-2">
+          <div className="col-12 col-lg-6 order-1 order-lg-2 mx-0 px-0">
+            <div className="container justify-content-center align-items-center ">
+              <div className="row justify-content-center align-items-center ">
+                <div className="col-5 col-md-2 pb-5">
                   <img src={mls_logo} className="img-fluid w-auto" alt="" />
                 </div>
-                <div className="footer-mls col-10 small text-start lh-sm">
+                <div className="footer-mls col-12 col-md-10 small text-start lh-sm ">
                   The data relating to real estate on this web site comes in
                   part from the MLS® Reciprocity program of the Real Estate
                   Board of Greater Vancouver or the Fraser Valley Real Estate

@@ -170,6 +170,9 @@ section.footer {
   .cite {
     font-size: 0.9em;
     max-width: 40ch;
+    @include media-breakpoint-down(sm) {
+      font-size: rfs-fluid-value(0.7rem);
+    }
   }
 
   .links {
@@ -179,6 +182,9 @@ section.footer {
     }
     @include media-breakpoint-down(lg) {
       font-size: rfs-fluid-value(2rem);
+    }
+    @include media-breakpoint-down(md) {
+      font-size: rfs-fluid-value(1rem);
     }
   }
 
@@ -443,6 +449,18 @@ a.footer-icon:active {
 }
 .footer-address {
   max-width: 25ch;
+  color: rgb(255, 255, 255);
+  @include media-breakpoint-down(md) {
+    font-size: rfs-fluid-value(1rem);
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: rfs-fluid-value(0.8rem);
+  }
+}
+.description-text {
+  @include media-breakpoint-down(sm) {
+    font-size: rfs-fluid-value(0.9rem);
+  }
 }
 
 .first-time-link {
