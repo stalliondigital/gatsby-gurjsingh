@@ -26,6 +26,7 @@
     "gatsby-plugin-sass": "^5.5.0",
     "gatsby-plugin-sharp": "^4.5.2",
     "gatsby-source-filesystem": "^4.5.2",
+    "gatsby-transformer-remark": "^5.11.1",
     "gatsby-transformer-sharp": "^4.5.0",
     "react": "^17.0.1",
     "react-bootstrap": "^2.1.1",
