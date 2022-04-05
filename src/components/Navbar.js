@@ -18,18 +18,18 @@ export default function Navbar() {
   const { title, description } = data.site.siteMetadata
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3 position-absolute top-0 start-0 w-full bg-lg-transparent">
-      <div className="container-xl max-w-screen-xl">
+    <nav className="navbar navbar-expand-lg w-full">
+      <div className="container-lg">
         {/* <!-- Logo --> */}
         {/* <div className="container-fluid"> */}
         <Link className="navbar-brand ms-10" to="/">
           <div className="row row-cols-auto">
-            <div className="col">
+            <div className="col ">
               <img src={logo} className="h-14" alt="" />
             </div>
-            <div className="col d-flex flex-column ">
-              <img src={gurjivanSinghLogo} className="h-8 pb-0" alt="" />
-              <span className="navbar-text fs-7 fw-light lh-0 pt-0">
+            <div className="col d-flex flex-column logo-text pt-0">
+              <span>{title}</span>
+              <span className="description-text fs-7 lh-0 pt-0">
                 {description}
               </span>
             </div>
@@ -55,7 +55,7 @@ export default function Navbar() {
           <ul className="navbar-nav ms-auto navbar-end ">
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle fw-light"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -70,7 +70,7 @@ export default function Navbar() {
               >
                 <li>
                   <Link
-                    className="dropdown-item text-white"
+                    className="dropdown-item fw-light"
                     to="/services/buyers"
                   >
                     Buyers
@@ -78,7 +78,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item text-white"
+                    className="dropdown-item fw-light"
                     to="/services/sellers"
                   >
                     Sellers
@@ -86,7 +86,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    className="dropdown-item text-white"
+                    className="dropdown-item fw-light"
                     to="/services/investors"
                   >
                     Investors
@@ -96,7 +96,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle fw-light"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -111,7 +111,7 @@ export default function Navbar() {
               >
                 <li>
                   <Link
-                    className="dropdown-item text-white"
+                    className="dropdown-item  fw-light "
                     to="/first-time-buyers"
                   >
                     First Time Buyers Center
@@ -119,7 +119,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    className="dropdown-item text-white"
+                    className="dropdown-item  fw-light "
                     href="https://www.ratehub.ca/mortgage-payment-calculator"
                     target="_blank"
                     rel="noreferrer"
@@ -130,7 +130,7 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link fw-light " to="/about">
                 Know Gurj
               </Link>
             </li>
@@ -138,7 +138,7 @@ export default function Navbar() {
           <div className="d-flex justify-content-start align-items-lg-center mt-3 mt-lg-0">
             <Link
               to="/contact"
-              className="btn btn-sm primary border-none text-light w-auto w-lg-auto"
+              className="btn btn-sm border-none w-auto w-lg-auto rounded-0  fw-light"
             >
               Contact
             </Link>
