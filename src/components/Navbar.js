@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg w-full">
-      <div className="container-lg">
+      <div className="container">
         {/* <!-- Logo --> */}
         {/* <div className="container-fluid"> */}
         <Link className="navbar-brand ms-10" to="/">
