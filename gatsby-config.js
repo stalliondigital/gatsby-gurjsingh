@@ -4,6 +4,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -17,6 +18,13 @@ module.exports = {
       options: {
         name: `experience`,
         path: `${__dirname}/src/experience`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `services`,
+        path: `${__dirname}/src/services`,
       },
     },
     `gatsby-plugin-sass`,
