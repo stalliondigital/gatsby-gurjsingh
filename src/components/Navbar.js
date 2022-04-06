@@ -1,7 +1,6 @@
 import { Link, graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import logo from "./../images/gurjsingh-logo.png"
-import gurjivanSinghLogo from "./../images/gurjivan-singh-logo.png"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Navbar() {
   const data = useStaticQuery(graphql`
@@ -25,11 +24,18 @@ export default function Navbar() {
         <Link className="navbar-brand ms-10" to="/">
           <div className="row row-cols-auto">
             <div className="col ">
-              <img src={logo} className="h-14" alt="" />
+              <StaticImage
+                src="./../images/gurjsingh-logo.png"
+                alt="Enterprise logo"
+                className="logo"
+                imgClassName="logo"
+                height={65}
+                width={65}
+              />
             </div>
             <div className="col d-flex flex-column logo-text pt-0">
               <span>{title}</span>
-              <span className="description-text fs-7 lh-0 pt-0">
+              <span className="description-text fs-7 lh-0 mt-n1">
                 {description}
               </span>
             </div>
