@@ -25,7 +25,6 @@ body {
 /*********************************************/
 /*          NAVBAR         */
 /*********************************************/
-
 nav {
   background-color: #ffffff;
   .logo-text {
@@ -37,7 +36,17 @@ nav {
       color: #202020;
       font-size: 0.85875rem;
       font-family: "Inter", sans-serif;
+      font-weight: 300;
     }
+  }
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-brand img {
+      height: 65px !important;
+    }
+  }
+  .logo {
+    height: 65px !important;
+    width: 65px !important;
   }
   .nav-button:focus,
   .nav-button:hover {
@@ -283,6 +292,74 @@ section.home-request {
     background-color: $primary-400;
   }
 }
+
+/*********************************************/
+/*          FOOTER         */
+/*********************************************/
+section.footer {
+  background-color: $primary-100;
+  color: $secondary-400;
+  .logo-text {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.51340625rem;
+  }
+  .description-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.85905625rem;
+  }
+  .cite {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9375rem;
+    max-width: 31ch;
+  }
+  .footer-icon {
+    color: $primary-400;
+  }
+  .remax-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1866375rem;
+  }
+  .footer-address {
+    max-width: 25ch;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9375rem;
+  }
+  .header {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  .footer-link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9375rem;
+  }
+  .footer-name {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .footer-mls {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.625rem;
+  }
+}
+
 // buttons
 // .primary {
 //   background-color: #eab308;
