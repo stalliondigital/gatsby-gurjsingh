@@ -7,8 +7,7 @@ import backgroundimage from "./../images/home/background.png"
 import { Helmet } from "react-helmet"
 // font awesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBook, faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons"
-import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
+import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons"
 import Stars from "../components/Stars"
 import JSONData from "../../content/qanda.json"
 
@@ -17,6 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 
 import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 // Import Swiper styles
 import "swiper/css"
@@ -31,7 +31,6 @@ const sectionBackground = {
 export default function Home({ data }) {
   const experiences = data.experiences.nodes
   const services = data.services.nodes
-  console.log(data)
 
   return (
     <Layout>
@@ -307,57 +306,74 @@ export default function Home({ data }) {
         </section>
 
         {/* FAQ section */}
-        <section className="home-faq container-fluid">
-          <div className="container">
+        <section className="home-qanda container-fluid ">
+          <div className="container mx-lg-auto px-lg-auto ">
             <div className="row">
-              <div className="col-12 col-lg-5 d-flex flex-column align-items-center justify-content-start">
-                <h2 className="text-center title ls-tight my-5 ">
+              <div className="col-12 col-lg-5 d-flex flex-column align-items-center align-items-lg-start ">
+                <h2 className="text-center text-lg-start title ls-tight my-5 ">
                   Frequently Asked Questions
                 </h2>
-                <p className="subtitle text-center title lh-sm px-5">
+                <p className="subtitle text-center text-lg-start title lh-sm pb-5">
                   Here are some of the most frequent questions we receive from
                   clients. Hopefully these answers can be of help to you.
                 </p>
-                <p className="subtitle text-center title lh-sm px-5">
+                <p className="d-none d-lg-block subtitle text-start title lh-sm ">
                   To request more information or further discuss any questions
-                  with Gurj, click here to book your one on one meeting today!
+                  with Gurj,{" "}
+                  <Link className="link" to="/contact">
+                    click here
+                  </Link>{" "}
+                  to book your one on one meeting today!
+                </p>
+                <p className="d-block d-lg-none subtitle text-center title lh-sm mx-0 px-0 pb-5">
+                  If you have any further questions, feel free to{" "}
+                  <Link className="link" to="/contact">
+                    contact Gurjivan.
+                  </Link>
                 </p>
               </div>
-              <div className="col-12 col-lg-7 d-flex flex-column justify-content-center">
-                {JSONData.content.map((data, index) => {
-                  return (
-                    <div className="pt-5 row align-items-start ">
-                      <div className="col-12 collapse-card">
-                        <a
-                          className="accordion-button collapsed d-grid"
-                          data-bs-toggle="collapse"
-                          href="#collapseOnboarding"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="collapseOnboarding"
+              <div className="justify-content-center col-12 col-lg-7 p-0 m-0">
+                <div className="accordion  d-flex flex-column justify-content-center mx-0 px-0">
+                  {JSONData.content.map((data, index) => {
+                    return (
+                      <div className="accordion-item align-items-start rounded-0 mx-0 px-0 my-2">
+                        <h2
+                          class="accordion-header"
+                          id={"panelsStayOpen-heading" + index}
                         >
-                          <div className="row ">
-                            <div className="col text-start subtitle">
-                              {data.Q}
+                          <a
+                            className="accordion-button collapsed "
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target={"#panelsStayOpen-collapse" + index}
+                            aria-expanded="true"
+                            aria-controls={"#panelsStayOpen-collapse" + index}
+                          >
+                            <div className="text-start qanda">{data.Q}</div>
+                          </a>
+                        </h2>
+                        <div
+                          id={"panelsStayOpen-collapse" + index}
+                          className="accordion-collapse collapse"
+                          aria-labelledby={"panelsStayOpen-heading" + index}
+                        >
+                          <div className="accordion-body">
+                            <div className="qanda lh-sm text-start">
+                              {data.A}
                             </div>
-                          </div>
-                        </a>
-                        <div className="collapse " id="collapseOnboarding">
-                          <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
-                            {data.A}
                           </div>
                         </div>
                       </div>
-                    </div>
-                  )
-                })}
+                    )
+                  })}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="request container-fluid text-lg-start pb-10 align-items-center">
-          <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
+        <section className="home-request container-fluid pb-10 align-items-center">
+          <div className="container-request container mb-5 py-10 ">
             <form
               method="post"
               netlify-honeypot="bot-field"
@@ -367,46 +383,53 @@ export default function Home({ data }) {
             >
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="buyerkit" />
-              <h2 className="book-icon">
-                <FontAwesomeIcon className="font-awesome" icon={faBook} />
-              </h2>
-              <h2 className="ls-tight font-bolder display-5 text-white ">
-                Request a Detailed Buyers Kit
-              </h2>
-              <p className="lead mb-10 text-white lh-sm">
-                All the information you need as
-                <br /> a buyer in your hands.
-              </p>
-
-              <div className="form-data row justify-content-center d-flex align-items-center g-3 px-10">
-                <div className="col-9 col-lg-3 ">
-                  <input
-                    type="text"
-                    className="form-control border-0"
-                    placeholder="Name"
-                    aria-label="Name"
-                  />
+              <div className="row py-5">
+                <div className="col">
+                  <div className="px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">
+                    <h2 className="title text-center text-lg-start pb-5">
+                      Request a Detailed Buyers Kit
+                    </h2>
+                    <p className="subtitle text-center text-lg-start mb-10 lh-sm">
+                      All the information you need as a buyer in your hands.
+                    </p>
+                  </div>
+                  <div className="form-data row row-cols-1 justify-content-center d-flex align-items-center g-3 px-10">
+                    <div className="col ">
+                      <input
+                        type="text"
+                        className="form-control rounded-0 border-0"
+                        placeholder="Name"
+                        aria-label="Name"
+                      />
+                    </div>
+                    <div className="col">
+                      <input
+                        type="number"
+                        className="form-control rounded-0 border-0"
+                        placeholder="Phone Number"
+                        aria-label="Phone Number"
+                      />
+                    </div>
+                    <div className="col">
+                      <input
+                        type="email"
+                        className="form-control rounded-0 border-0"
+                        placeholder="Email Address"
+                        aria-label="Email Address"
+                      />
+                    </div>
+                    <div className="col d-grid">
+                      <button className="button link py-2 " type="submit">
+                        Request Kit
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className="col-9 col-lg-3">
-                  <input
-                    type="number"
-                    className="form-control border-0"
-                    placeholder="Phone Number"
-                    aria-label="Phone Number"
+                <div className="col d-none d-lg-block pe-5">
+                  <StaticImage
+                    src="./../images/home/request-image.png"
+                    alt="A woman reading a guide"
                   />
-                </div>
-                <div className="col-9 col-lg-3">
-                  <input
-                    type="email"
-                    className="form-control border-0"
-                    placeholder="Email Address"
-                    aria-label="Email Address"
-                  />
-                </div>
-                <div className="arrow-icon col-9 col-lg-1">
-                  <button className="py-0 primary" type="submit">
-                    <FontAwesomeIcon icon={farArrow} className="fa-icon" />
-                  </button>
                 </div>
               </div>
             </form>

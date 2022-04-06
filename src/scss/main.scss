@@ -74,7 +74,7 @@ section {
 /*********************************************/
 .title {
   font-family: "Playfair Display", sans-serif;
-  color: rgb(64, 62, 62);
+  color: #403e3e;
   font-size: 2.38125rem;
 }
 .subtitle {
@@ -229,6 +229,58 @@ section.home-first-time-buyer {
       font-weight: 400;
       background-color: $primary-400;
     }
+  }
+}
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 640px;
+section.home-qanda {
+  .link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.31870625rem;
+    text-decoration: underline;
+    color: $primary-400;
+  }
+  .qanda {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: rgb($secondary-400, 0.85);
+    font-size: 1.31875rem;
+    max-width: 52ch;
+    text-align: center;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 0.94375rem;
+    }
+  }
+
+  .accordion-item {
+    background-color: $primary-100;
+  }
+}
+
+section.home-request {
+  .container-request {
+    background-color: $primary-100;
+  }
+  .subtitle {
+    font-size: 1.63125rem;
+    max-width: 24ch;
+  }
+  .form-control {
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: $secondary-400;
+    box-shadow: 3px 4px 4px -2px rgba(0, 0, 0, 0.06);
+  }
+  .link {
+    color: $default-button;
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: $primary-400;
   }
 }
 // buttons
