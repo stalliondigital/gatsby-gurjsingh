@@ -2,14 +2,25 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import reviewGoogle from "./../images/review-google.png"
-import gurjivanImageCut from "./../images/gurjivan-image-cut.png"
-import backgroundimage from "./../images/background.png"
+import gurjivanImageCut from "./../images/home/gurjivan-image-cut.png"
+import backgroundimage from "./../images/home/background.png"
 import { Helmet } from "react-helmet"
 // font awesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBook, faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons"
 import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 import Stars from "../components/Stars"
+import JSONData from "../../content/qanda.json"
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination } from "swiper"
+
+import Img from "gatsby-image"
+
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/pagination"
 
 const sectionBackground = {
   background: `linear-gradient(90.22deg, rgba(206, 170, 84, 0.72) 0.17%, rgba(206, 170, 84, 0) 100.39%),
@@ -18,7 +29,10 @@ const sectionBackground = {
 }
 
 export default function Home({ data }) {
-  const experiences = data.allMarkdownRemark.nodes
+  const experiences = data.experiences.nodes
+  const services = data.services.nodes
+  console.log(data)
+
   return (
     <Layout>
       <Helmet>
@@ -26,6 +40,7 @@ export default function Home({ data }) {
         <title>Gurjivan Singh</title>
       </Helmet>
       <div>
+        {/* HOME SECTION */}
         <section
           className="home-header pt-48 pb-20 bg-cover"
           style={sectionBackground}
@@ -45,13 +60,13 @@ export default function Home({ data }) {
                 <div className="mt-10 align-items-start rounded-0">
                   <Link
                     to="/services/buyers"
-                    className="header-buttom btn btn-lg primary mx-2 px-lg-8 rounded-0 py-3"
+                    className="header-buttom btn btn-lg mx-2 px-lg-8 rounded-0 py-3"
                   >
                     I am a buyer
                   </Link>
                   <Link
                     to="/services/sellers"
-                    className="header-buttom-secondary btn btn-lg secondary border-none mx-2 px-lg-8 rounded-0 py-3"
+                    className="header-buttom-secondary btn btn-lg border-none mx-2 px-lg-8 rounded-0 py-3"
                   >
                     I am a seller
                   </Link>
@@ -60,6 +75,7 @@ export default function Home({ data }) {
             </div>
           </div>
         </section>
+        {/* Meet Gurjivan SECTION */}
         <section className="home-meet reason-why text-lg-start pb-20 pt-lg-6 align-items-center pt-10">
           <div className="container-lg mb-5 ">
             <h2 className="text-center title ls-tight my-5 ">Meet Gurjivan</h2>
@@ -98,7 +114,8 @@ export default function Home({ data }) {
             </div>
           </div>
         </section>
-        <section className="home-experience container-fluid text-lg-start pb-0 px-0 align-items-center ">
+        {/* CLIENT EXPERIENCE SECTION */}
+        <section className="home-experience container-fluid text-lg-start pb-10 px-0 align-items-center ">
           <div
             className="experience-inside text-center justify-content-center
           container-lg p-0 py-10 text-lg-start"
@@ -117,29 +134,45 @@ export default function Home({ data }) {
                 What Others Say
               </h2>
               <div className="row my-5 justify-content-center row-cols-1 ">
-                {/* <div className="col-8 col-lg-4 card-container review h-100 mb-5 mb-lg-2">
-                  <div className="card-testimonial card h-100 ">
-                    <div className="card-body p-5 text-center">
-                      <img
-                        src={reviewGoogle}
-                        alt="Google review logo with five stars"
-                        className="img-fluid pt-10 mb-5"
-                      />
-                      <p className="fs-3 text-white lh-sm pb-10">
-                        Don’t just take our word for it. See what others have to
-                        say. We have a five star rating on Google.
-                      </p>
-                      <a
-                        href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
-                        target="_blank"
-                        className="btn btn-lg primary border-none shadow-sm mx-2 px-lg-8 mt-10 py-3 lh-sm mb-10"
-                      >
-                        View All Google Reviews
-                      </a>
-                    </div>
-                  </div>
-                </div> */}
-                <div className="card-container col-10 row row-cols-1 row-cols-lg-3 ">
+                <Swiper
+                  slidesPerView={1}
+                  spaceBetween={10}
+                  breakpoints={{
+                    // when window width is >= 640px
+                    640: {
+                      slidesPerView: 2,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                      slidesPerView: 2,
+                    },
+                  }}
+                  centeredSlides={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination]}
+                  className="my-swiper d-block d-lg-none card-container"
+                >
+                  {experiences.map(experience => (
+                    <SwiperSlide className="swiper-card h-100 ">
+                      <div className="swiper-body mx-5 col h-100 d-flex align-items-stretch">
+                        <div className="card-testimonial card mb-3 d-flex align-self-stretch">
+                          <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
+                            <p className="lh-sm">
+                              {experience.frontmatter.description}
+                            </p>
+                          </div>
+                          <div className="card-footer d-flex ps-8 pe-5 justify-content-between">
+                            <Stars />
+                            <span>{experience.frontmatter.name}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <div className="d-none d-lg-flex card-container col-10 row row-cols-1 row-cols-lg-3 ">
                   {experiences.map(experience => (
                     <div className="col h-100 d-flex align-items-stretch">
                       <div className="card-testimonial card mb-3 d-flex align-self-stretch">
@@ -160,6 +193,169 @@ export default function Home({ data }) {
             </div>
           </div>
         </section>
+        {/* SECTION GOOGLE REVIEWS */}
+        <section className="home-google-review d-flex align-items-center container-fluid justify-content-center ">
+          <div className="container row justify-content-center align-items-center py-20 px-0 ">
+            <div className="col-12 col-lg-5 d-flex align-items-center justify-content-center pb-10">
+              <img
+                src={reviewGoogle}
+                alt="Google review logo with five stars"
+                className="img-fluid "
+              />
+            </div>
+            <div className="col d-flex flex-column d-lg-row align-items-center justify-content-center">
+              <p className="paragrah lh-sm ">
+                Gurjivan always upholds a high standard and it shows. 5 Stars on
+                Google!
+              </p>
+              <a
+                href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
+                target="_blank"
+                className="btn btn-lg border-none mt-10 ps-0 ms-0 py-3 lh-sm"
+              >
+                Read what people are saying
+                <FontAwesomeIcon
+                  icon={faLongArrowAltRight}
+                  className="fa-icon d-none d-lg-inline"
+                  transform="grow-8 right-15"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+        {/* Services section */}
+        <section className="home-services container-fluid">
+          <div className="container text-center pt-20">
+            <h2 className="text-center title ls-tight my-5 ">Services</h2>
+            <div className="d-flex justify-content-center align-items-center mb-10">
+              <p className="subtitle text-center title lh-sm">
+                Gurjivan offers a variety of services tailored for each
+                individuals needs. View more details by clicking on any of the
+                services below.
+              </p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
+              {services.map(service => (
+                <Link
+                  to={"/services/" + service.frontmatter.slug}
+                  key={service.id}
+                >
+                  <div class="col">
+                    <div class="card rounded-0">
+                      <Img
+                        fluid={
+                          service.frontmatter.imgWide.childImageSharp.fluid
+                        }
+                        className="d-none d-md-block d-lg-none"
+                      />
+                      <Img
+                        fluid={service.frontmatter.img.childImageSharp.fluid}
+                        className="d-block d-md-none d-lg-block"
+                      />
+                      <div class="card-body d-flex justify-content-between align-items-end mb-0 pb-0">
+                        <h5 class="card-title text-start ps-3 ">
+                          {service.frontmatter.title}
+                        </h5>
+                        <div className="card-title text-end d-inline-block pe-3 ">
+                          <FontAwesomeIcon
+                            icon={faLongArrowAltRight}
+                            className="fa-icon"
+                            transform="grow-8"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="d-flex flex-column justify-content-center align-items-center mt-10 mb-10">
+              <p className="subtitle text-center title lh-sm">
+                Something you need not listed?
+              </p>
+              <p className="subtitle text-center title lh-sm">
+                <Link className="link" to="/contact">
+                  Contact Gurjivan
+                </Link>{" "}
+                and he might be able to help out.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* FirstTimeBuyer Section */}
+        <section className="home-first-time-buyer container-fluid">
+          <div className="container inside-container text-center py-10 ">
+            <h2 className="text-center title ls-tight my-5 ">
+              Are you a first time home buyer?
+            </h2>
+            <div className="d-flex justify-content-center align-items-center mb-10">
+              <p className="subtitle text-center title lh-sm px-5">
+                Purchasing your first home can be a confusing and difficult
+                process. Gurjivan has put together a set of resources to help
+                you through this.
+              </p>
+            </div>
+            <div className="d-flex justify-content-center align-items-center mb-10">
+              <Link
+                className="link btn btn-lg rounded-0"
+                to="/first-time-buyers"
+              >
+                View Resources
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ section */}
+        <section className="home-faq container-fluid">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 col-lg-5 d-flex flex-column align-items-center justify-content-start">
+                <h2 className="text-center title ls-tight my-5 ">
+                  Frequently Asked Questions
+                </h2>
+                <p className="subtitle text-center title lh-sm px-5">
+                  Here are some of the most frequent questions we receive from
+                  clients. Hopefully these answers can be of help to you.
+                </p>
+                <p className="subtitle text-center title lh-sm px-5">
+                  To request more information or further discuss any questions
+                  with Gurj, click here to book your one on one meeting today!
+                </p>
+              </div>
+              <div className="col-12 col-lg-7 d-flex flex-column justify-content-center">
+                {JSONData.content.map((data, index) => {
+                  return (
+                    <div className="pt-5 row align-items-start ">
+                      <div className="col-12 collapse-card">
+                        <a
+                          className="accordion-button collapsed d-grid"
+                          data-bs-toggle="collapse"
+                          href="#collapseOnboarding"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="collapseOnboarding"
+                        >
+                          <div className="row ">
+                            <div className="col text-start subtitle">
+                              {data.Q}
+                            </div>
+                          </div>
+                        </a>
+                        <div className="collapse " id="collapseOnboarding">
+                          <div className="accordion-description fw-light lh-sm fs-5 p-8 pt-0">
+                            {data.A}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="request container-fluid text-lg-start pb-10 align-items-center">
           <div className="container-request container container-lg max-w-screen-lg mb-5 rounded-3 py-5 pb-10 ">
             <form
@@ -207,7 +403,7 @@ export default function Home({ data }) {
                     aria-label="Email Address"
                   />
                 </div>
-                <div className="arrow-icon col-9 col-lg-1 ">
+                <div className="arrow-icon col-9 col-lg-1">
                   <button className="py-0 primary" type="submit">
                     <FontAwesomeIcon icon={farArrow} className="fa-icon" />
                   </button>
@@ -224,12 +420,42 @@ export default function Home({ data }) {
 // export Experience query
 export const experienceQuery = graphql`
   query ExperienceCards {
-    allMarkdownRemark(sort: { fields: frontmatter___order }) {
+    experiences: allMarkdownRemark(
+      sort: { fields: frontmatter___order }
+      filter: { frontmatter: { slug: { eq: null } } }
+    ) {
       nodes {
         id
         frontmatter {
           name
           description
+        }
+      }
+    }
+    services: allMarkdownRemark(
+      sort: { fields: frontmatter___order }
+      filter: { frontmatter: { title: { ne: "" } } }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          order
+          slug
+          title
+          img {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          imgWide {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

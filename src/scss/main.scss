@@ -16,6 +16,7 @@ $secondary-400: #403e3e;
 $secondary-600: #0d0d0d;
 $tertiary-400: #f1ebe5;
 $stars-color: #eab308;
+$default-button: #fafafa;
 
 body {
   font-family: "Inter", sans-serif;
@@ -81,7 +82,7 @@ section {
   font-weight: 300;
   color: rgb($secondary-400, 0.85);
   font-size: 1.31875rem;
-  max-width: 50ch;
+  max-width: 52ch;
   text-align: center;
 }
 section.home-header {
@@ -171,8 +172,65 @@ section.home-experience {
       }
     }
   }
+  .my-swiper {
+    width: 95%;
+  }
+  .swiper-container {
+    width: 95%;
+  }
 }
 
+section.home-google-review {
+  background-color: rgba($primary-400, 0.1);
+  p {
+    color: rgba($secondary-400, 0.85);
+    font-size: 1.756875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    max-width: 32ch;
+  }
+  a {
+    color: $primary-400;
+    font-size: 1.756875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+}
+
+section.home-services {
+  .card {
+    box-shadow: 0px 0px 31px -7px rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+    .card-title {
+      font-size: 1.77rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      color: $secondary-400;
+    }
+  }
+  .link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.31870625rem;
+    text-decoration: underline;
+    color: $primary-400;
+  }
+}
+
+section.home-first-time-buyer {
+  .inside-container {
+    background-color: rgba($primary-400, 0.1);
+    .link {
+      color: $default-button;
+      font-size: 0.9375rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      background-color: $primary-400;
+    }
+  }
+}
 // buttons
 // .primary {
 //   background-color: #eab308;
