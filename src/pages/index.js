@@ -59,13 +59,13 @@ export default function Home({ data }) {
                 <div className="mt-10 align-items-start rounded-0">
                   <Link
                     to="/services/buyers"
-                    className="header-buttom btn btn-lg mx-2 px-lg-8 rounded-0 py-3"
+                    className="header-buttom btn me-2 px-lg-8 border-none rounded-0 py-3"
                   >
                     I am a buyer
                   </Link>
                   <Link
                     to="/services/sellers"
-                    className="header-buttom-secondary btn btn-lg border-none mx-2 px-lg-8 rounded-0 py-3"
+                    className="header-buttom-secondary btn border-none px-lg-8 rounded-0 py-3"
                   >
                     I am a seller
                   </Link>
@@ -77,8 +77,13 @@ export default function Home({ data }) {
         {/* Meet Gurjivan SECTION */}
         <section className="home-meet reason-why text-lg-start pb-20 pt-lg-6 align-items-center pt-10">
           <div className="container-lg mb-5 ">
-            <h2 className="text-center title ls-tight my-5 ">Meet Gurjivan</h2>
-            <div className="about-box d-flex flex-column flex-md-row">
+            <h2 className="d-none d-md-block text-center main-title title ls-tight my-5 ">
+              <span className="px-5">Meet Gurjivan</span>
+            </h2>
+            <h2 className="d-block d-md-none text-center title ls-tight my-5 ">
+              <span className="px-5">Meet Gurjivan</span>
+            </h2>
+            <div className="about-box d-flex flex-column mt-10 flex-md-row">
               <div className="flex-shrink-0">
                 <img
                   className="img-fluid"
