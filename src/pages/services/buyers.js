@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
 import { Link } from "gatsby"
-import backgroundimage from "./../../images/bs-background.png"
 import sol_1 from "./../../images/sol-1.png"
 import sol_2 from "./../../images/sol-2.png"
 import sol_3 from "./../../images/sol-3.png"
@@ -19,10 +18,8 @@ import {
   faFileInvoice,
 } from "@fortawesome/free-solid-svg-icons"
 import Helmet from "react-helmet"
-const sectionBackground = {
-  background: `linear-gradient(0deg, #181819 5%, transparent 30% ),
-      url(${backgroundimage})`,
-}
+import { StaticImage } from "gatsby-plugin-image"
+
 export default function Home() {
   return (
     <Layout>
@@ -31,21 +28,15 @@ export default function Home() {
         <title>Gurjivan | Buyers</title>
       </Helmet>
       <div>
-        <section
-          className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
-          style={sectionBackground}
-        >
-          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6">
-            <div className="row row-grid align-items-center justify-content-center text-center">
-              <div className="header rounded-4 bg-black bg-opacity-50 p-10 col-9 col-lg-7 text-center ms-10">
-                <h1 className="display-5 text-white mb-5">
-                  Guiding you to your
-                  <br />
-                  dream home
+        <section className="container-fluid buyers-header pb-20 d-flex justify-content-center ">
+          <div className="container row">
+            <div className="col col-md-8 col-lg-6 header">
+              <div className="text-center pt-5 pb-5 pt-lg-6">
+                <h1 className="mb-5 header-title">
+                  Guiding you to your dream home
                 </h1>
-                <p className="lead text-white text-opacity-80 fs-4 lh-sm">
-                  How we tailor our services
-                  <br /> best to serve you
+                <p className="header-subtitle">
+                  How we tailor our services best to serve you
                 </p>
                 <div className="row">
                   <div className="col-6 mt-10 d-grid pe-0">
@@ -66,6 +57,12 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="d-none d-md-block col-4 col-lg-6">
+              <StaticImage
+                src="./../../images/buyers/header-img.png"
+                fit={"cover"}
+              />
             </div>
           </div>
         </section>
