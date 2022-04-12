@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import sol_1 from "./../../images/sol-1.png"
 import sol_2 from "./../../images/sol-2.png"
 import sol_3 from "./../../images/sol-3.png"
@@ -18,9 +18,31 @@ import {
   faFileInvoice,
 } from "@fortawesome/free-solid-svg-icons"
 import Helmet from "react-helmet"
-import { StaticImage } from "gatsby-plugin-image"
+import BackgroundImage from "gatsby-background-image"
 
 export default function Home() {
+  const { headerImg, headerImgSmall } = useStaticQuery(
+    graphql`
+      query {
+        headerImg: file(relativePath: { eq: "buyers/header-img.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        headerImgSmall: file(
+          relativePath: { eq: "buyers/header-img-small.png" }
+        ) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
   return (
     <Layout>
       <Helmet>
@@ -28,10 +50,10 @@ export default function Home() {
         <title>Gurjivan | Buyers</title>
       </Helmet>
       <div>
-        <section className="container-fluid buyers-header pb-20 d-flex justify-content-center ">
+        <section className="container-fluid buyers-header d-flex justify-content-center pb-0 pe-0 me-0">
           <div className="container row">
-            <div className="col col-md-8 col-lg-6 header">
-              <div className="text-center pt-5 pb-5 pt-lg-6">
+            <div className="col col-md-8 col-lg-6 header py-20">
+              <div className="text-center my-20 pb-5 pt-lg-6">
                 <h1 className="mb-5 header-title">
                   Guiding you to your dream home
                 </h1>
@@ -39,31 +61,26 @@ export default function Home() {
                   How we tailor our services best to serve you
                 </p>
                 <div className="row">
-                  <div className="col-6 mt-10 d-grid pe-0">
-                    <Link
-                      to="/first-time-buyers"
-                      className="primary btn btn-block border-none shadow-sm mx-2"
-                    >
-                      First Time Buyers
-                    </Link>
-                  </div>
-                  <div className="col-6 mt-10 d-grid ps-0">
-                    <Link
-                      to="/services/sellers"
-                      className="secondary btn btn-block border-none mx-2"
-                    >
-                      I am a seller
+                  <div className="col mt-10 d-grid pe-0">
+                    <Link className="link btn btn-lg rounded-0" to="/contact">
+                      Contact
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="d-none d-md-block col-4 col-lg-6">
-              <StaticImage
-                src="./../../images/buyers/header-img.png"
-                fit={"cover"}
-              />
-            </div>
+            <BackgroundImage
+              Tag={`section`}
+              id={`test`}
+              className="d-none d-lg-block col col-md-4 col-lg-6 "
+              fluid={headerImg.childImageSharp.fluid}
+            ></BackgroundImage>
+            <BackgroundImage
+              Tag={`section`}
+              id={`test`}
+              className="d-none d-md-block d-lg-none col col-md-4 col-lg-6 "
+              fluid={headerImgSmall.childImageSharp.fluid}
+            ></BackgroundImage>
           </div>
         </section>
         <section className="solution container-fluid text-lg-start align-items-center pt-10 pb-15">

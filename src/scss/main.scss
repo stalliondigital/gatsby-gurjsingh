@@ -83,6 +83,7 @@ section {
 /*          HOME PAGE         */
 /*********************************************/
 .header-title {
+  color: $secondary-400;
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 700;
@@ -90,6 +91,7 @@ section {
   line-height: 5.0625rem;
 }
 .header-subtitle {
+  color: $primary-400;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -403,6 +405,17 @@ section.footer {
 
 section.buyers-header {
   background-color: $primary-100;
+  .header-image {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .link {
+    color: $default-button;
+    font-size: 0.9375rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: $primary-400;
+  }
 }
 
 // buttons
