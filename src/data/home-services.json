@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Buyers",
+    "slug": "buyers",
+    "img": "../images/home/buyers.png",
+    "imgWide": "../images/home/buyers_wide.png"
+  },
+  {
+    "title": "Sellers",
+    "slug": "sellers",
+    "img": "../images/home/sellers.png",
+    "imgWide": "../images/home/sellers_wide.png"
+  },
+  {
+    "title": "Investors",
+    "slug": "investors",
+    "img": "../images/home/investors.png",
+    "imgWide": "../images/home/investors_wide.png"
+  }
+]
