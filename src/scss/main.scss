@@ -418,470 +418,105 @@ section.buyers-header {
   }
 }
 
-// buttons
-// .primary {
-//   background-color: #eab308;
-//   color: white;
-// }
-// .primary:hover {
-//   background-color: #d19a00;
-//   color: white;
-// }
-// .secondary {
-//   background-color: #9797a0;
-//   color: white;
-// }
-// .secondary:hover {
-//   background-color: #7e7e87;
-//   color: white;
-// }
+.card {
+  background-color: $primary-100;
+  border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+}
+.card-header {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.47rem;
+  color: $secondary-400;
+  line-height: 31px;
+  vertical-align: middle;
+}
+.card-number {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 161.494px;
+  line-height: 140px;
+  color: rgba(206, 170, 84, 0.15);
+}
 
-// // obout section index page
-// section.about {
-//   background-color: #181819;
+.card-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.153125rem;
+  color: $primary-400;
+}
 
-//   .about-container {
-//     background-color: #222222;
-//     border-radius: 27px;
-//     border: 11px solid #37373d;
-//     img.large {
-//       min-height: 432px;
-//       min-width: 510px;
-//     }
-//   }
-// }
+.card-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.91518125rem;
+  color: rgba($secondary-400, 0.85);
+}
+.uppertitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.284rem;
+  text-transform: uppercase;
+  color: $primary-400;
+}
+.white-card-body {
+  background: #ffffff;
+  box-shadow: 0px 0px 26.9211px -6.07895px rgba(0, 0, 0, 0.25);
+  border-radius: 0.868421px;
+}
 
-// section.experience {
-//   background-color: #181819;
-//   .experience-inside {
-//     background: radial-gradient(circle, rgba(234, 179, 8, 0.3) 0%, #181819 55%);
+.banner {
+  background-color: $primary-100;
+  color: $primary-400;
+}
 
-//     .card-container {
-//       .card-testimonial {
-//         background-color: #222222;
-//         border: none !important;
-//         .card-body {
-//           border: none;
-//           color: white;
-//         }
-//         .card-footer {
-//           background-color: rgba(228, 170, 46, 0.1);
-//           color: #eab308;
-//           border-radius: 0 0 15px 15px;
-//         }
-//         @include media-breakpoint-down(lg) {
-//           font-size: rfs-fluid-value(1.5rem);
-//         }
-//       }
-//       .card:focus {
-//         border: none !important;
-//       }
-//     }
-//   }
-// }
+.banner-text {
+  color: $primary-400;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  max-width: 60ch;
+  text-align: center;
+}
+.phase-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2407375rem;
+  line-height: 1.5rem;
 
-// section.request {
-//   background-color: #181819;
+  color: rgba($secondary-400, 0.85);
+}
 
-//   .container-request {
-//     background-color: #806510;
-//     .book-icon {
-//       background-color: #644d05;
-//       border-radius: 50%;
-//       width: 70px;
-//       height: 70px;
-//       font-size: 27px;
-//       display: inline-flex;
-//       justify-content: center;
-//       align-items: center;
-//       color: white;
-//       transform: rotate(-7.3deg);
-//     }
-//     .phone-icon {
-//       color: rgba(234, 179, 8, 0.5);
-//       transform: rotate(15.5deg);
-//     }
-//     .primary {
-//       color: #eab308;
-//     }
-//     .secondary-button {
-//       color: #816610;
-//     }
-//     p {
-//       font-size: 28px;
-//       font-weight: 400;
-//     }
-
-//     .form-data {
-//       input {
-//         color: #c2a138;
-//         font-size: 1.1em;
-//         background-color: #5e4700;
-//       }
-//       .fa-icon {
-//         background: #5e4700;
-//         color: #806510;
-//         width: 50px;
-//         height: 50px;
-//         border-radius: 50%;
-//         text-align: center;
-//         line-height: 100px;
-//         vertical-align: middle;
-//         padding: 0px;
-//         margin: -11px;
-//       }
-
-//       ::placeholder {
-//         color: #c2a138;
-//         font-size: 1.1em;
-//       }
-//     }
-//   }
-// }
-
-// section.footer {
-//   background-color: #222222;
-
-//   .contact {
-//     font-size: 18px;
-//     line-height: normal;
-//   }
-//   .cite {
-//     font-size: 0.9em;
-//     max-width: 40ch;
-//     @include media-breakpoint-down(sm) {
-//       font-size: rfs-fluid-value(0.7rem);
-//     }
-//   }
-
-//   .links {
-//     p.header {
-//       font-weight: bold;
-//       padding-bottom: 1em;
-//     }
-//     @include media-breakpoint-down(lg) {
-//       font-size: rfs-fluid-value(2rem);
-//     }
-//     @include media-breakpoint-down(md) {
-//       font-size: rfs-fluid-value(1rem);
-//     }
-//   }
-
-//   .footer-name {
-//     font-size: 1.1875em;
-//   }
-//   .footer-license {
-//     font-size: 0.9325em;
-//   }
-//   .footer-mls {
-//     font-size: 0.625em;
-//     opacity: 0.5;
-//   }
-// }
-
-// section.solution {
-//   background-color: #181819;
-//   .card-container {
-//     .card {
-//       background-color: #37373d;
-//       color: white;
-//       .card-img {
-//         background-color: #27272c;
-//         display: flex;
-//         justify-content: center;
-//         img {
-//           height: 145px;
-//           width: fit-content;
-//         }
-//       }
-//       .number {
-//         border-radius: 50%;
-//         width: 30px;
-//         height: 30px;
-//         padding: 10px;
-//         background: #979797;
-//         border: none;
-//         color: white;
-//         text-align: center;
-//         font: 32px Arial, sans-serif;
-//         display: inline-block;
-//         line-height: 85%;
-//       }
-//     }
-//   }
-// }
-
-// .break {
-//   background: #181819;
-//   h2 {
-//     text-align: center;
-//     span {
-//       background: #181819;
-//       color: #27272c;
-//       padding: 0 10px;
-//     }
-//   }
-// }
-
-// section.phases {
-//   .first-time {
-//     color: #ffffff;
-//     background-color: #7a5d00;
-//   }
-//   .accordion {
-//     border: none;
-//     .accordion-item {
-//       border: none;
-//       background-color: #37373d;
-//       .accordion-button {
-//         .icon {
-//           transition: all 0.15s;
-//         }
-//       }
-//       .accordion-button::after {
-//         display: none !important;
-//       }
-//       .accordion-button {
-//         box-shadow: none;
-//       }
-//       .accordion-body {
-//         border: none;
-//         padding-bottom: 2rem;
-//         box-shadow: none;
-//       }
-//       .accordion-button:not(.collapsed) {
-//         .icon {
-//           transform: rotate(-90deg);
-//         }
-//       }
-//     }
-//   }
-//   h2.phase {
-//     color: #eab308;
-//   }
-//   .collapse-card {
-//     color: rgb(255, 255, 255);
-
-//     .accordion-button {
-//       transition: all 0.1s cubic-bezier(0.05, 0.64, 0.88, 0.43);
-//       .icon {
-//         transition: all 0.15s cubic-bezier(0.05, 0.64, 0.88, 0.43);
-//       }
-//     }
-//     .accordion-button.collapsed {
-//       box-shadow: none;
-//       background-color: #37373d;
-//       border-radius: 1rem;
-//       padding: 1.75rem;
-//       padding-right: 1.75rem;
-//       padding-left: 2.5rem;
-//     }
-//     .accordion-button:not(.collapsed) {
-//       background-color: rgba(234, 179, 8, 0.5);
-//       border-top-left-radius: 1rem;
-//       border-top-right-radius: 1rem;
-//       box-shadow: none;
-//       padding-top: 1.75rem;
-//       padding-right: 1.75rem;
-//       padding-left: 2.5rem;
-//       padding-bottom: 1rem;
-//       .icon {
-//         transform: rotate(-90deg);
-//       }
-//     }
-
-//     .accordion-description {
-//       color: rgba(255, 255, 255, 0.75);
-//       background-color: rgba(234, 179, 8, 0.5);
-//       box-shadow: none;
-//       border-bottom-right-radius: 1rem;
-//       border-bottom-left-radius: 1rem;
-//     }
-
-//     .accordion-button::after {
-//       display: none !important;
-//     }
-//     // .accordion-button.collapsed:after {
-//     //   transform: rotate(0deg);
-//     // }
-//   }
-
-//   .container-info {
-//     background-color: #7a5d00;
-//   }
-
-//   .container-phase {
-//     background-color: rgba(128, 101, 16, 0.4);
-//     h2 {
-//       max-width: 18ch;
-//       text-align: center;
-//     }
-//   }
-//   .container-instructions {
-//     h3.instruction-title {
-//       color: #eab308;
-//     }
-//     // span {
-//     //   background-color: rgba(234, 179, 8, 0.1);
-//     //   border-radius: 50%;
-//     //   background-size: 56px 56px;
-//     // }
-//     .fa-icon {
-//       background-color: rgba(234, 179, 8, 0.1);
-//       border-radius: 50%;
-//       width: 2.688rem;
-//       height: 2.688rem;
-//       font-size: 7rem;
-//       display: inline-flex;
-//       justify-content: center;
-//       align-items: center;
-//       color: #eab308;
-//       padding: 0.75rem;
-//     }
-//     .fa-increase {
-//       padding: 0.625rem;
-//     }
-//   }
-// }
-// .container-discover {
-//   background-color: #37373d;
-// }
-// .container-divisor {
-//   background-color: #766532;
-//   height: 260px;
-// }
-
-// p.description {
-//   color: white;
-//   opacity: 0.75;
-// }
-
-// .contact-page {
-//   section.solution {
-//     // background-color: #eab308;
-//     .card-container {
-//       .card {
-//         background-color: #37373d;
-//         color: white;
-//         .card-img {
-//           background-color: #27272c;
-//           display: flex;
-//           justify-content: center;
-//           img {
-//             height: 145px;
-//             width: fit-content;
-//           }
-//         }
-//         .number {
-//           border-radius: 50%;
-//           width: 30px;
-//           height: 30px;
-//           padding: 10px;
-//           background: #979797;
-//           border: none;
-//           color: white;
-//           text-align: center;
-//           font: 32px Arial, sans-serif;
-//           display: inline-block;
-//           line-height: 85%;
-//         }
-//       }
-//     }
-//   }
-//   .contact-card {
-//     transition: 0.5s all;
-//   }
-//   .contact-card:hover {
-//     transform: translateY(-5px);
-//   }
-// }
-
-// .footer-link:link {
-//   text-decoration: none;
-// }
-
-// .footer-link:visited {
-//   text-decoration: none;
-// }
-
-// .footer-link:hover {
-//   text-decoration: underline;
-// }
-
-// .footer-link:active {
-//   text-decoration: underline;
-// }
-
-// a.footer-icon {
-//   text-decoration: none;
-//   color: white;
-//   margin-right: 12px;
-//   transition: 300ms all;
-// }
-
-// a.footer-icon:hover {
-//   color: grey !important;
-// }
-
-// a.footer-icon:active {
-//   color: grey !important;
-// }
-// .footer-address {
-//   max-width: 25ch;
-//   color: rgb(255, 255, 255);
-//   @include media-breakpoint-down(md) {
-//     font-size: rfs-fluid-value(1rem);
-//   }
-//   @include media-breakpoint-down(sm) {
-//     font-size: rfs-fluid-value(0.8rem);
-//   }
-// }
-// .description-text {
-//   @include media-breakpoint-down(sm) {
-//     font-size: rfs-fluid-value(0.9rem);
-//   }
-// }
-
-// .first-time-link {
-//   border-bottom: rgba(255, 255, 255, 0.75) 2px solid;
-// }
-// .first-time-link:hover {
-//   border-bottom: none;
-// }
-
-// section.contact-request {
-//   background-color: #181819;
-
-//   .container-request {
-//     background-color: #37373d;
-//     h2 {
-//       max-width: 18ch;
-//     }
-//     .form-data {
-//       input {
-//         color: #171719;
-//         font-size: 1.1em;
-//       }
-//       .arrow-icon button {
-//         font-size: 45px;
-//         color: #a8a8a8;
-//         background-color: #37373d;
-//         .fa-icon {
-//           background-color: #202022;
-//           border-radius: 50%;
-//           background-size: 40px 40px;
-//           border: none;
-//         }
-//       }
-
-//       ::placeholder {
-//         color: #171719;
-//         font-size: 1.1em;
-//       }
-//     }
-//   }
-// }
-
-// .contact-description {
-//   max-width: 75ch;
-// }
+section.buyers-request {
+  border-top: 1.5px dashed $primary-400;
+  .container-request {
+    background-color: $primary-100;
+  }
+  .subtitle {
+    font-size: 1.63125rem;
+    max-width: 24ch;
+  }
+  .form-control {
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: $secondary-400;
+    box-shadow: 3px 4px 4px -2px rgba(0, 0, 0, 0.06);
+  }
+  .link {
+    color: $default-button;
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: $primary-400;
+  }
+}
