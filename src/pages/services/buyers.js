@@ -83,8 +83,8 @@ export default function Home() {
         <title>Gurjivan | Buyers</title>
       </Helmet>
       <div>
-        <section className="container-fluid buyers-header d-flex justify-content-center pb-0 pe-0 me-0">
-          <div className="container row">
+        <section className="container-fluid buyers-header pb-0 pe-0 me-0">
+          <div className="container-fluid row pe-0 me-0 ">
             <div className="col col-md-8 col-lg-6 header py-20">
               <div className="text-start my-20 pb-5 pt-lg-6">
                 <h1 className="mb-5 header-title">
@@ -105,13 +105,13 @@ export default function Home() {
             <BackgroundImage
               Tag={`section`}
               id={`test`}
-              className="d-none d-lg-block col col-md-4 col-lg-6 "
+              className="d-none d-lg-block col col-md-4 col-lg-6"
               fluid={headerImg.childImageSharp.fluid}
             ></BackgroundImage>
             <BackgroundImage
               Tag={`section`}
               id={`test`}
-              className="d-none d-md-block d-lg-none col col-md-4 col-lg-6 "
+              className="d-none d-md-block d-lg-none col col-md-4 col-lg-6"
               fluid={headerImgSmall.childImageSharp.fluid}
             ></BackgroundImage>
           </div>
@@ -343,8 +343,8 @@ export default function Home() {
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="buyerkit" />
               <div className="row py-5">
-                <div className="col d-flex flex-column flex-lg-row">
-                  <div className="px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">
+                <div className="col d-flex flex-column flex-lg-row row">
+                  <div className="col col-lg-7 px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">
                     <h2 className="title text-center text-lg-start pb-5">
                       Excited to start the home buying process?
                     </h2>
@@ -353,7 +353,7 @@ export default function Home() {
                       as soon as possible.
                     </p>
                   </div>
-                  <div className="form-data row row-cols-1 justify-content-center d-flex align-items-center g-3 px-10">
+                  <div className="col form-data row row-cols-1 justify-content-center d-flex align-items-center g-3 px-10">
                     <div className="col ">
                       <input
                         type="text"
