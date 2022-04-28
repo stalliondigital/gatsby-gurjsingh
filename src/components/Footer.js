@@ -106,7 +106,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-md-5 pt-10">
+            <div className="col-12 col-md-5 pt-10 pt-md-0">
               {/* <img src={footerImg} className="img-fluid h-4" alt="" /> */}
               <StaticImage
                 src="./../images/footer/remax.png"
