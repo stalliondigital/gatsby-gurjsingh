@@ -85,12 +85,12 @@ export default function Home() {
       <div>
         <section className="container-fluid buyers-header pb-0 pe-0 me-0">
           <div className="container-fluid row pe-0 me-0 ">
-            <div className="col col-md-8 col-lg-6 header py-20">
-              <div className="text-start my-20 pb-5 pt-lg-6">
-                <h1 className="mb-5 header-title">
+            <div className="col col-md-8 col-lg-6 header py-20 d-flex align-items-end justify-content-end">
+              <div className="text-start my-20 pb-5 pt-lg-6 ">
+                <h1 className="mb-5 header-title align-self-end">
                   Guiding you to your dream home
                 </h1>
-                <p className="header-subtitle">
+                <p className="header-subtitle align-self-start">
                   How we tailor our services best to serve you
                 </p>
                 <div className="row">
@@ -236,7 +236,7 @@ export default function Home() {
               >
                 {phasesTwo.map(phase => (
                   <SwiperSlide className="">
-                    <div className="row d-flex align-items-center justify-content-center h-100">
+                    <div className="row d-flex align-items-center justify-content-center h-100 pb-10">
                       <div className="col-8 h-100">
                         <div className="mb-3 h-100">
                           <div className="white-card-body d-flex">
@@ -272,9 +272,9 @@ export default function Home() {
                 className="mySwiper d-lg-none"
               >
                 {phasesTwo.map(phase => (
-                  <SwiperSlide className="">
-                    <div className="row d-flex align-items-center justify-content-center h-100">
-                      <div className="col col-md-10 col-lg-8 h-100">
+                  <SwiperSlide className="h-100">
+                    <div className="row d-flex align-items-center justify-content-center h-100 pb-10">
+                      <div className="col h-100">
                         <div className="mb-3 h-100">
                           <div className="white-card-body d-flex ">
                             <Img
@@ -282,12 +282,14 @@ export default function Home() {
                               alt="Two people talking about the home buying process"
                               className="col-5 d-none d-md-block "
                             />
-                            <div className="col white-card-body">
-                              <div className=" py-20 px-5">
+                            <div className="col h-100">
+                              <div className=" p-10">
                                 <h5 className="card-title">
                                   {phase.node.title}
                                 </h5>
-                                <p className="card-text">{phase.node.desc}</p>
+                                <p className="card-text lh-sm">
+                                  {phase.node.desc}
+                                </p>
                                 <p className="card-text">
                                   <small className="text-muted"></small>
                                 </p>
