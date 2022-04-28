@@ -191,113 +191,114 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="card-group row justify-content-center row-cols-1 mt-0 pt-0 d-lg-none">
-              <Swiper
-                slidesPerView={1}
-                breakpoints={{
-                  // when window width is >= 640px
-                  640: {
-                    slidesPerView: 2,
-                  },
-                  // when window width is >= 768px
-                  768: {
-                    slidesPerView: 2,
-                  },
-                }}
-                centeredSlides={true}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[Pagination]}
-                className="my-swiper "
-              >
-                {sellersProcess.edges.map((edge, index) => {
-                  return (
-                    <SwiperSlide className="swiper-card pb-10 ">
-                      <div className="flipcard-mobile mx-5">
-                        <input
-                          type="checkbox"
-                          id={edge.node.id + "mobile"}
-                          className="flipcard-flipback"
-                          aria-hidden="true"
-                        />
-                        <div className="flipcard-content">
-                          {/* {{! Card front }} */}
-                          <div className="flipcard-front">
-                            <div className="flipcard-inner">
-                              <div className="card-number seller-card-number-static">
-                                {index + 1}
-                              </div>
-                              <div className="card-header">
-                                {edge.node.title}
-                              </div>
+          </div>
+          <div className="row justify-content-center row-cols-1 mt-0 pt-0 d-lg-none">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              breakpoints={{
+                // when window width is >= 640px
+                640: {
+                  slidesPerView: 2,
+                },
+                // when window width is >= 768px
+                768: {
+                  slidesPerView: 2,
+                },
+              }}
+              centeredSlides={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="my-swiper "
+            >
+              {sellersProcess.edges.map((edge, index) => {
+                return (
+                  <SwiperSlide className="swiper-card pb-20 ">
+                    <div className="flipcard-mobile ">
+                      <input
+                        type="checkbox"
+                        id={edge.node.id + "mobile"}
+                        className="flipcard-flipback"
+                        aria-hidden="true"
+                      />
+                      <div className="flipcard-content ">
+                        {/* {{! Card front }} */}
+                        <div className="flipcard-front">
+                          <div className="flipcard-inner">
+                            <div className="card-number seller-card-number-static">
+                              {index + 1}
+                            </div>
+                            <div className="card-header ">
+                              {edge.node.title}
+                            </div>
 
-                              <div className="flipcard-image d-flex align-items-center justify-content-center">
-                                <Img
-                                  fluid={edge.node.img.childImageSharp.fluid}
-                                  alt={edge.node.alt}
-                                  className="col-8"
-                                />
-                              </div>
-                              <label
-                                for={edge.node.id + "mobile"}
-                                className="flipcard-button btn card-link rounded-0 px-10 my-5 align-self-end "
-                                aria-hidden="true"
-                              >
-                                How It Works
-                              </label>
+                            <div className="flipcard-image d-flex align-items-center justify-content-center">
+                              <Img
+                                fluid={edge.node.img.childImageSharp.fluid}
+                                alt={edge.node.alt}
+                                className="col-8"
+                              />
                             </div>
-                          </div>
-                          {/* {{! Card back }} */}
-                          <div className="flipcard-back">
-                            <div className="flipcard-inner">
-                              <div className="card-body">
-                                <p className="card-text lh-sm pt-5">
-                                  {edge.node.desc}
-                                </p>
-                              </div>
-                              <label
-                                for={edge.node.id + "mobile"}
-                                className="flipcard-button flipcard-flipfront btn card-link rounded-0 mb-5 align-self-end"
-                                aria-hidden="true"
-                              >
-                                Back
-                              </label>
-                            </div>
+                            <label
+                              for={edge.node.id + "mobile"}
+                              className="flipcard-button btn card-link rounded-0 mb-5 align-self-end "
+                              aria-hidden="true"
+                            >
+                              How It Works
+                            </label>
                           </div>
                         </div>
-                      </div>
-                    </SwiperSlide>
-                  )
-                })}
-                <SwiperSlide className="swipe-card pb-10">
-                  <div className="flipcard">
-                    <input
-                      type="checkbox"
-                      id="not-needed"
-                      className="flipcard-flipback"
-                      aria-hidden="true"
-                    />
-                    <div className="flipcard-content">
-                      {/* {{! Card front }} */}
-                      <div className="flipcard-front">
-                        <div className="flipcard-inner ">
-                          <div className="card-header d-flex align-items-center justify-content-center pt-20">
-                            <div>Get Started Now!</div>
+                        {/* {{! Card back }} */}
+                        <div className="flipcard-back">
+                          <div className="flipcard-inner">
+                            <div className="card-body">
+                              <p className="card-text lh-sm ">
+                                {edge.node.desc}
+                              </p>
+                            </div>
+                            <label
+                              for={edge.node.id + "mobile"}
+                              className="flipcard-button flipcard-flipfront btn card-link rounded-0 mb-5 align-self-end"
+                              aria-hidden="true"
+                            >
+                              Back
+                            </label>
                           </div>
-                          <a
-                            href="#contact"
-                            className="flipcard-button btn card-link rounded-0 px-10 my-5 align-self-end "
-                          >
-                            Contact Gurj
-                          </a>
                         </div>
                       </div>
                     </div>
+                  </SwiperSlide>
+                )
+              })}
+              <SwiperSlide className="swipe-card pb-10">
+                <div className="flipcard-mobile-about">
+                  <input
+                    type="checkbox"
+                    id="not-needed"
+                    className="flipcard-flipback"
+                    aria-hidden="true"
+                  />
+                  <div className="flipcard-content">
+                    {/* {{! Card front }} */}
+                    <div className="flipcard-front">
+                      <div className="flipcard-inner ">
+                        <div className="card-header d-flex align-items-center justify-content-center pt-20">
+                          <div>Get Started Now!</div>
+                        </div>
+                        <a
+                          href="#contact"
+                          className="flipcard-button btn card-link rounded-0 px-10 my-5 align-self-end "
+                        >
+                          Contact Gurj
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </section>
         <section className="container-fluid d-flex justify-content-center flex-column align-items-center">
