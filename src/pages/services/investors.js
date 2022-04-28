@@ -1,18 +1,55 @@
 import React from "react"
 import Layout from "../../components/Layout"
-import { Link } from "gatsby"
-import backgroundimage from "./../../images/background_investors.png"
-import diff_img from "./../../images/prep-3.png"
-import inv_1 from "./../../images/investors-1.png"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
+import { graphql, useStaticQuery, Link } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import Helmet from "react-helmet"
+import Img from "gatsby-image"
 import Stars from "../../components/Stars"
-const sectionBackground = {
-  background: `linear-gradient(0deg, #181819 5%, transparent 30% ),
-      url(${backgroundimage})`,
-}
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination } from "swiper"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+
 export default function Home() {
+  const { headerImg, investorProcess, experienceProcess } = useStaticQuery(
+    graphql`
+      query {
+        headerImg: file(relativePath: { eq: "investors/header-img.png" }) {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        investorProcess: allInvestorsProcessJson {
+          edges {
+            node {
+              title
+              desc
+              img {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+        experienceProcess: allExperienceJson {
+          edges {
+            node {
+              name
+              experience
+            }
+          }
+        }
+      }
+    `
+  )
+  const process = investorProcess.edges
+  const experiences = experienceProcess.edges
   return (
     <Layout>
       <Helmet>
@@ -20,27 +57,33 @@ export default function Home() {
         <title>Gurjivan | Investors</title>
       </Helmet>
       <div>
-        <section
-          className="home position-relative pt-48 pb-20  bg-cover bg-size--cover"
-          style={sectionBackground}
-        >
-          <div className="container-lg max-w-screen-xl position-relative overlap-10 text-center pt-5 pb-5 pt-lg-6">
-            <div className="row row-grid align-items-center justify-content-center text-center">
-              <div className="header rounded-4 bg-black bg-opacity-50 p-10 col-9 col-lg-7 text-center ms-10">
-                <h1 className="display-5 text-white mb-5">
-                  How We Discover Value Where Others Can’t
+        <section className="container-fluid buyers-header pb-0 ps-0 ms-0">
+          <div className="container-fluid row ps-0 ms-0 ">
+            <BackgroundImage
+              Tag={`section`}
+              id={`test`}
+              className="d-none d-md-block col col-md-4 col-lg-6 "
+              fluid={headerImg.childImageSharp.fluid}
+            ></BackgroundImage>
+            {/* <BackgroundImage
+              Tag={`section`}
+              id={`test`}
+              className="d-none d-md-block d-lg-none col col-md-4 col-lg-6 "
+              fluid={headerImgSmall.childImageSharp.fluid}
+            ></BackgroundImage> */}
+            <div className="col col-md-8 col-lg-6 ps-10 header py-20">
+              <div className="text-start my-20 pb-5 pt-lg-6">
+                <h1 className="mb-5 header-title">
+                  How We Discover Value Where Others Cannot
                 </h1>
-                <p className="lead text-white text-opacity-80 fs-4 lh-sm">
+                <p className="header-subtitle">
                   Explore how our vast systems of information empower our
-                  investor focused clients
+                  investor focused clients.
                 </p>
-                <div className="row justify-content-center">
-                  <div className="col-6 mt-10 d-grid pe-0">
-                    <Link
-                      to="/contact"
-                      className="primary btn btn-block border-none shadow-sm mx-2"
-                    >
-                      Contact Gurjivan
+                <div className="row">
+                  <div className="col mt-10 justify-content-start ">
+                    <Link className="link btn rounded-0 px-5" to="/contact">
+                      Contact Gurj
                     </Link>
                   </div>
                 </div>
@@ -48,215 +91,156 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section className="phases container-fluid text-lg-start align-items-center pt-20">
-          <div className=" container-lg max-w-screen-xl   mb-5 ">
-            <div className="container justify-content-center">
-              <div className="d-flex justify-content-center">
-                <img
-                  src={diff_img}
-                  className="img-fluid pe-lg-7"
-                  alt="a person drawing graphs on a whiteboard"
-                />
-              </div>
-              <h2 className="ls-tight font-bolder display-5 text-white text-center mb-2 ">
-                The Difference is in the Process
-              </h2>
-              <div className="row justify-content-center">
-                <div className="col-8">
-                  <p className="description text-white fw-light text-center lh-sm fs-5 ">
-                    Working as Technical Consultant at the highest level across
-                    Pacific Canada had enabled Gurj to look further past the
-                    traditional approach of depending solely on personal &
-                    professional relationships to generate positive results for
-                    his clients within the realm of real estate.
-                  </p>
+        <section className="phases container-fluid container-text-lg-start align-items-center ">
+          <div className="container pt-10 d-flex flex-column align-items-center">
+            <h2 className="title mb-2 ">Preparing You to Buy</h2>
+            <p className="subtitle text-center mb-10">
+              Our first step toward success will be to discuss & plan exactly
+              what you need from your home to best position you when exploring
+              Greater Vancouver's real estate market.
+            </p>
+            <div className="card-group d-flex flex-column flex-lg-row">
+              {process.map(phase => (
+                <div className="card m-5 ">
+                  <Img fluid={phase.node.img.childImageSharp.fluid} />
+                  <div className="card-body white-card-body">
+                    <h5 className="card-title">{phase.node.title}</h5>
+                    <p className="card-text lh-sm">{phase.node.desc} </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="container container-fluid pb-0">
-            {/* PART: Why Information is King. */}
-            <div className="pt-20 pb-10 row align-items-start justify-content-start ">
-              <div className="col-12 col-lg-10">
-                <h3 className="text-white fs-4 pb-3 ">
-                  Why Information is King.
-                </h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  Gurjivan has built a network of information by collecting,
-                  storing, and indexing past and current sales, developments,
-                  expansions, municipal projects, and so much more. With the
-                  wealth of information regarding almost all past real estate
-                  ventures within the last 80 years, he is able to juxtapose and
-                  analyze this with the database of upcoming projects he also
-                  has to best identify the likelihood of what past trends will
-                  repeat themselves in the near future.
-                </p>
-              </div>
-            </div>
-
-            {/* PART: Better Data, Better Results, Better Returns */}
-            <div className="row align-items-start justify-content-start pt-10">
-              <div className="col-12 col-lg-8">
-                <h3 className="text-white fs-4 pb-7 ">
-                  Better Data, Better Results, Better Returns
-                </h3>
-                <p className="description text-white fw-light lh-sm fs-5 pe-7 ">
-                  Using the combination of his personal & professional contacts,
-                  his system of historical information and his algorithm of
-                  predicting future trends, Gurj can offer his clients a full
-                  encompassing report on almost every project all while being
-                  able to pull data on the historical trends to support his
-                  findings. With this, he can best position his clientele in
-                  almost any and every deal.
-                </p>
-              </div>
-              <div className="d-flex align-items-center justify-content-center col-9 col-lg-3 pb-7 pb-lg-2">
-                <img
-                  src={inv_1}
-                  className="img-fluid pe-lg-6 "
-                  alt="a magnifying glass on a document"
-                />
-              </div>
-            </div>
-            {/* PART: Our Onboarding Consultation */}
-            <div className=" row row align-items-start justify-content-start pb-0">
-              <div className="col-12 col-lg-10">
-                <h3 className="text-white fs-4 pb-3 ">
-                  Bringing it Full Circle
-                </h3>
-                <p className="description text-white fw-light lh-sm fs-5 ">
-                  Utilizing this system for his investor-oriented clients with
-                  the network of builders, developers, and realtors amongst a
-                  variety of other key professionals in the world of real
-                  estate, it is easy to see why Gurj has already had tremendous
-                  success representing clients of all calibers. Regardless of if
-                  you are looking for your first income generating property, or
-                  if you’re a seasoned veteran looking to expand their
-                  portfolio, Gurjivan has both the skills and industry-leading
-                  tools to guide you to accomplish your goals.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
-
-        <section className="experience container-fluid text-lg-start align-items-center px-0 pb-0">
-          <div className="experience-inside container-lg text-lg-start py-20 pb-5 pb-lg-20">
-            <div className="experience-container container-lg max-w-screen-xl   mb-5 py-20 pb-5 pb-lg-20">
-              <h2 className="ls-tight font-bolder display-5 text-white mb-5 text-center pb-5">
+        <section className="home-experience container-fluid text-lg-start pb-10 px-0 align-items-center ">
+          <div
+            className="experience-inside text-center justify-content-center
+          container-lg p-0 py-10 text-lg-start"
+          >
+            <h2 className="text-center title ls-tight my-5 ">
+              What Others Say
+            </h2>
+            <div className="d-flex justify-content-center align-items-center">
+              <p className="subtitle text-center title lh-sm">
+                Gurjivan will not rest until his customers are truly satisfied.
+                Don’t just take our word for it, see what others have to say.
+              </p>
+            </div>
+            <div className="experience-container  mb-5 ">
+              <h2 className="ls-tight font-bolder display-5 pt-10 text-white mb-5 text-center pb-5">
                 What Others Say
               </h2>
-              <div className="row my-5 g-4 justify-content-center row-cols-1 row-cols-lg-3">
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-start">
-                      <p className="lh-sm">
-                        “Super helpful in answering every question I had. As
-                        someone with next to no knowledge in real estate, he was
-                        able to explain in an easy to understand way. Have not
-                        met anyone more professional before!”
-                      </p>
+              <div className="row my-5 justify-content-center row-cols-1 ">
+                <Swiper
+                  slidesPerView={1}
+                  spaceBetween={10}
+                  breakpoints={{
+                    // when window width is >= 640px
+                    640: {
+                      slidesPerView: 2,
+                    },
+                    // when window width is >= 768px
+                    768: {
+                      slidesPerView: 2,
+                    },
+                  }}
+                  centeredSlides={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination]}
+                  className="my-swiper d-block d-lg-none card-container"
+                >
+                  {experiences.map(experience => (
+                    <SwiperSlide className="swiper-card h-100 pb-10">
+                      <div className="swiper-body mx-5 col h-100 d-flex align-items-stretch">
+                        <div className="card-testimonial card mb-3 d-flex align-self-stretch">
+                          <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
+                            <p className="lh-sm">
+                              {experience.node.experience}
+                            </p>
+                          </div>
+                          <div className="card-footer d-flex ps-8 pe-5 justify-content-between">
+                            <Stars />
+                            <span>{experience.node.name}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <div className="d-none d-lg-flex card-container col-10 row row-cols-1 row-cols-lg-3 ">
+                  {experiences.map(experience => (
+                    <div className="col h-100 d-flex align-items-stretch">
+                      <div className="card-testimonial card mb-3 d-flex align-self-stretch">
+                        <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
+                          <p className="lh-sm">{experience.node.experience}</p>
+                        </div>
+                        <div className="card-footer d-flex ps-8 pe-5 justify-content-between">
+                          <Stars />
+                          <span>{experience.node.name}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="card-footer d-flex justify-content-between">
-                      <span>Adam T.</span>
-                      <Stars />
-                    </div>
-                  </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-start">
-                      <p className="lh-sm">
-                        “A very honest and pleasant person. He gives super
-                        genuine responses and advice and is overall just a very
-                        professional and outstanding person.”
-                      </p>
-                    </div>
-                    <div className="card-footer d-flex justify-content-between">
-                      <span>Kenneth J.</span>
-                      <Stars />
-                    </div>
-                  </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-start">
-                      <p className="lh-sm">
-                        “After countless experiences with realtors, I can
-                        confidently say that my wife and I have thoroughly
-                        enjoyed seeking for a home with Gurj. He made it simple
-                        and selling our house was an even easier task. Hopefully
-                        Gurj will be practicing when we move again.”
-                      </p>
-                    </div>
-                    <div className="card-footer d-flex justify-content-between">
-                      <span>Tommy L.</span>
-                      <Stars />
-                    </div>
-                  </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-start">
-                      <p className="lh-sm">
-                        “Gurjivan Singh is the best realtor I have ever dealt
-                        with. Very professional, experienced, and helpful.
-                        Highly recommend.”
-                      </p>
-                    </div>
-                    <div className="card-footer d-flex justify-content-between">
-                      <span>Kelen M.</span>
-                      <Stars />
-                    </div>
-                  </div>
-                </div>
-                <div className="card-container col-8 col-lg-4 ">
-                  <div className="card-testimonial card m-15 m-lg-3 h-100">
-                    <div className="card-body p-5 text-start">
-                      <p className="lh-sm">
-                        “Really pleasant interaction with this service. Helped
-                        make my move from the island to the mainland so much
-                        smoother. They were friendly and seemed very genuine.
-                        Highly recommend.”
-                      </p>
-                    </div>
-                    <div className="card-footer d-flex justify-content-between">
-                      <span>Patrick H.</span>
-                      <Stars />
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="request text-lg-start container-fluid pb-0 align-items-center pb-20">
-          <div className="container-request container mb-0 rounded-3 py-10 ">
-            <form className="g-3 text-center justify-content-center py-5">
-              <div className="row justify-content-center">
-                <div className="col-1 d-flex align-items-center justify-content-start">
-                  <h2 className="phone-icon">
-                    <FontAwesomeIcon
-                      className="font-awesome"
-                      icon={faPhoneAlt}
-                      size="3x"
-                    />
-                  </h2>
-                </div>
-                <div className="col-10 col-lg-8 px-0 d-flex align-items-center">
-                  <h2 className="ls-tight fs-1 text-white ps-0 pb-5">
-                    Get in contact with Gurj today and be added to his investor
-                    client list
-                  </h2>
-                </div>
-                <div className="col-6 col-lg-3 d-flex align-items-center justify-content-center">
-                  <Link
-                    to="/contact"
-                    className="secondary-button btn btn-block border-none bg-white fs-4"
-                  >
-                    Contact Gurjivan
-                  </Link>
+        <section className="buyers-request container-fluid pb-10 align-items-center mb-10">
+          <div className="container-request container mb-5 py-10 mt-20">
+            <form
+              method="post"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+              name="buyerkit"
+              className="g-3 text-center justify-content-center"
+            >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="buyerkit" />
+              <div className="row py-5">
+                <div className="col d-flex flex-column flex-lg-row row">
+                  <div className="col col-lg-7 px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">
+                    <h2 className="title text-center text-lg-start pb-5">
+                      Contact Gurj to join his investor client list
+                    </h2>
+                    <p className="subtitle text-center text-lg-start mb-10 lh-sm">
+                      Enter your details and Gurjivan will get in touch with you
+                      as soon as possible.
+                    </p>
+                  </div>
+                  <div className="col form-data row row-cols-1 justify-content-center d-flex align-items-center g-3 px-10">
+                    <div className="col ">
+                      <input
+                        type="text"
+                        className="form-control rounded-0 border-0"
+                        placeholder="Name"
+                        aria-label="Name"
+                      />
+                    </div>
+                    <div className="col">
+                      <input
+                        type="number"
+                        className="form-control rounded-0 border-0"
+                        placeholder="Phone Number"
+                        aria-label="Phone Number"
+                      />
+                    </div>
+                    <div className="col">
+                      <input
+                        type="email"
+                        className="form-control rounded-0 border-0"
+                        placeholder="Email Address"
+                        aria-label="Email Address"
+                      />
+                    </div>
+                    <div className="col d-grid">
+                      <button className="button link py-2 " type="submit">
+                        Contact
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>
