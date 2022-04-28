@@ -361,9 +361,13 @@ export default function Home() {
               </p>
             </div>
             <div className="col d-flex align-items-center">
-              <Link className="card-link btn rounded-0 px-5" to="/contact">
+              <a
+                href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
+                target="_blank"
+                className="card-link btn rounded-0 px-5"
+              >
                 Read Testimonials
-              </Link>
+              </a>
             </div>
           </div>
         </section>
