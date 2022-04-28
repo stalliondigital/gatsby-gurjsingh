@@ -1,6 +1,5 @@
 import { Link, graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import mls_logo from "./../images/mls.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFacebook,

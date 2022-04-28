@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
-import reviewGoogle from "./../images/review-google.png"
+import reviewGoogle from "./../images/home/review-google.png"
 import gurjivanImageCut from "./../images/home/gurjivan-image-cut.png"
 import backgroundimage from "./../images/home/background.png"
 import { Helmet } from "react-helmet"
