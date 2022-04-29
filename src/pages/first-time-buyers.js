@@ -153,6 +153,7 @@ export default function Home() {
                         <a
                           href={link}
                           target="_blank"
+                          rel="noreferrer"
                           className="w-100 btn card-link rounded-0 mt-5 align-self-end mb-0 pb-3"
                         >
                           Learn More
@@ -299,6 +300,7 @@ export default function Home() {
               <a
                 href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
                 target="_blank"
+                rel="noreferrer"
                 className="card-link btn rounded-0 px-5"
               >
                 Read Testimonials
@@ -436,6 +438,8 @@ export default function Home() {
                               <a
                                 href={data.node.url}
                                 className="text-reset text-decoration-underline"
+                                target="_blank"
+                                rel="noreferrer"
                               >
                                 {data.node.urltext}
                               </a>

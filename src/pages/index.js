@@ -250,6 +250,7 @@ export default function Home({ data }) {
               <a
                 href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
                 target="_blank"
+                rel="noreferrer"
                 className="btn btn-lg border-none mt-10 ps-0 ms-0 py-3 lh-sm"
               >
                 Read what people are saying

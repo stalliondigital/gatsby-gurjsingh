@@ -64,6 +64,7 @@ export default function Footer() {
                     className="footer-icon pe-2"
                     href="tel:778-951-8275"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <FontAwesomeIcon icon={faPhoneAlt} />
                   </a>
@@ -71,6 +72,7 @@ export default function Footer() {
                     className="footer-icon pe-2"
                     href="mailto:gurj@gurjsingh.ca"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <FontAwesomeIcon icon={faEnvelope} />
                   </a>
@@ -78,6 +80,7 @@ export default function Footer() {
                     className="footer-icon pe-2"
                     href="https://www.facebook.com/GetGurj"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <FontAwesomeIcon icon={faFacebook} />
                   </a>
@@ -85,6 +88,7 @@ export default function Footer() {
                     className="footer-icon pe-2"
                     href="https://www.instagram.com/getgurj/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
@@ -92,6 +96,7 @@ export default function Footer() {
                     className="footer-icon pe-2"
                     href="https://twitter.com/getgurj"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
@@ -99,6 +104,7 @@ export default function Footer() {
                     className="footer-icon"
                     href="https://www.linkedin.com/in/getgurj/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <FontAwesomeIcon icon={faLinkedinIn} />
                   </a>
@@ -118,6 +124,7 @@ export default function Footer() {
                 className="text-reset"
                 href="https://www.remax.ca"
                 target="_blank"
+                rel="noreferrer"
               >
                 <p className="remax-text pt-0 mt-n1 pb-5">RE/MAX 2000 REALTY</p>
               </a>
@@ -126,6 +133,7 @@ export default function Footer() {
                   className="text-reset text-start footer-icon row pe-0"
                   href="https://goo.gl/maps/5jnt94uo3t56WFsz9"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <div className="footer-icon col-1 d-none d-lg-inline">
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
@@ -252,6 +260,7 @@ export default function Footer() {
                 className="text-reset footer-link"
                 href="https://stalliondigital.ca"
                 target="_blank"
+                rel="noreferrer"
               >
                 Stallion Digital
               </a>

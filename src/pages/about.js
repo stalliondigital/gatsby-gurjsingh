@@ -166,6 +166,7 @@ export default function About() {
                 <a
                   href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
                   target="_blank"
+                  rel="noreferrer"
                   className="card-link btn rounded-0 px-5"
                 >
                   Read More
@@ -224,6 +225,7 @@ export default function About() {
                         className="text-reset text-start footer-icon row pe-0"
                         href="tel:778-951-8275"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <div className="footer-icon col-1 ">
                           <FontAwesomeIcon icon={faPhoneAlt} />
@@ -236,6 +238,7 @@ export default function About() {
                         className="text-reset text-start footer-icon row pe-0"
                         href="mailto:gurj@gurjsingh.ca"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <div className="footer-icon col-1 ">
                           <FontAwesomeIcon icon={faEnvelope} />
@@ -248,6 +251,7 @@ export default function About() {
                         className="text-reset text-start footer-icon row pe-0"
                         href="https://www.facebook.com/GetGurj"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <div className="footer-icon col-1 ">
                           <FontAwesomeIcon icon={faFacebook} />
@@ -260,6 +264,7 @@ export default function About() {
                         className="text-reset text-start footer-icon row pe-0"
                         href="https://www.instagram.com/getgurj/"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <div className="footer-icon col-1 ">
                           <FontAwesomeIcon icon={faInstagram} />
@@ -272,6 +277,7 @@ export default function About() {
                         className="text-reset text-start footer-icon row pe-0"
                         href="https://twitter.com/getgurj"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <div className="footer-icon col-1 ">
                           <FontAwesomeIcon icon={faTwitter} />
@@ -284,6 +290,7 @@ export default function About() {
                         className="text-reset text-start footer-icon row pe-0"
                         href="https://www.linkedin.com/in/getgurj/"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <div className="footer-icon col-1 ">
                           <FontAwesomeIcon icon={faLinkedinIn} />

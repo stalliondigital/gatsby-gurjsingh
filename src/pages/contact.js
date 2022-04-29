@@ -91,6 +91,7 @@ export default function Contact() {
                       className="ps-5 pe-2"
                       href="tel:778-951-8275"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="small-word d-inline">
                         <FontAwesomeIcon icon={faPhoneAlt} />
@@ -100,6 +101,7 @@ export default function Contact() {
                       className="px-2"
                       href="https://www.facebook.com/GetGurj"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="small-word d-inline">
                         <FontAwesomeIcon icon={faFacebook} />
@@ -109,6 +111,7 @@ export default function Contact() {
                       className="px-2"
                       href="https://www.instagram.com/getgurj/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="small-word d-inline">
                         <FontAwesomeIcon icon={faInstagram} />
@@ -118,6 +121,7 @@ export default function Contact() {
                       className="px-2"
                       href="https://twitter.com/getgurj"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="small-word d-inline">
                         <FontAwesomeIcon icon={faTwitter} />
@@ -127,6 +131,7 @@ export default function Contact() {
                       className="px-2"
                       href="https://www.linkedin.com/in/getgurj/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <div className="small-word d-inline">
                         <FontAwesomeIcon icon={faLinkedinIn} />
@@ -144,7 +149,12 @@ export default function Contact() {
               <div className="row justify-content-center row-cols-1 row-cols-lg-3 mt-0 pt-0">
                 <div className="col col-md-7 col-lg-4 mb-3 ">
                   <div className="card p-4 h-100 mt-0 pt-0">
-                    <a className="" href="tel:778-951-8275" target="_blank">
+                    <a
+                      className=""
+                      href="tel:778-951-8275"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <div className="card-body ">
                         <p className="card-header p-2 text-center">
                           Phone Number
@@ -209,6 +219,7 @@ export default function Contact() {
                           className="px-2"
                           href="https://www.facebook.com/GetGurj"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <div className="small-word d-inline">
                             <FontAwesomeIcon icon={faFacebook} />
@@ -218,6 +229,7 @@ export default function Contact() {
                           className="px-2"
                           href="https://www.instagram.com/getgurj/"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <div className="small-word d-inline">
                             <FontAwesomeIcon icon={faInstagram} />
@@ -227,6 +239,7 @@ export default function Contact() {
                           className="px-2"
                           href="https://twitter.com/getgurj"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <div className="small-word d-inline">
                             <FontAwesomeIcon icon={faTwitter} />
@@ -236,6 +249,7 @@ export default function Contact() {
                           className="px-2"
                           href="https://www.linkedin.com/in/getgurj/"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <div className="small-word d-inline">
                             <FontAwesomeIcon icon={faLinkedinIn} />
