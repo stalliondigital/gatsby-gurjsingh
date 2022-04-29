@@ -1,0 +1,26 @@
+[
+  {
+    "benefit": "GST New Housing Rebate",
+    "description": "You may be eligible for a tax rebate on a portion of the GST paid as part of the purchase or construction of a new home. You make also be legible for a rebate of the cost of substantially renovating your property, building an add-on to your existing home or converting a commercial property to residential only if the fair market of the is under $450,000.",
+    "url": "",
+    "urltext": ""
+  },
+  {
+    "benefit": "Home Owner Grant",
+    "description": "Under the B.C Home Owner Grant, you may be eligible to lower the amount of property taxes you pay on an annual basis on your principal residence.",
+    "urltext": "View more information here",
+    "url": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/annual-property-tax/home-owner-grant"
+  },
+  {
+    "benefit": "RRSP Home Buyers Plan (HBP)",
+    "description": "Buying a newly built home in B.C? You may be eligible for this exemption which helps lower or eliminate the amount of property transfer tax you’re required to pay when you’re buying a newly build home $750,000 or less.",
+    "urltext": "Find out more here",
+    "url": "https://www2.gov.bc.ca/gov/content/taxes/property-taxes/property-transfer-tax/exemptions/newly-built-home-exemption"
+  },
+  {
+    "benefit": "What is Property Transfer Tax (PTT)",
+    "description": "PTT is a tax payable to the provincial government by the purchasers of all types of real estate (commercial, residential, industrial). To find out how PTT is calculated, ",
+    "urltext": "please see here",
+    "url": "https://forms2.gov.bc.ca/forms/content?id=EEE44ACAC0DB4212BB616D7BD233F2A6"
+  }
+]

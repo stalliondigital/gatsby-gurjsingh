@@ -298,7 +298,6 @@ section.home-qanda {
     font-weight: 300;
     color: rgb($secondary-400, 0.85);
     font-size: 1.31875rem;
-    max-width: 52ch;
     text-align: center;
     @media (max-width: $breakpoint-mobile) {
       font-size: 0.94375rem;
@@ -699,4 +698,43 @@ section.buyers-request {
 .flipcard-image {
   height: 100%;
   width: 100%;
+}
+.banner-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.394675rem;
+
+  color: $secondary-400;
+}
+.card-testimonial {
+  background: #faf7ee;
+  border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+  .card-body {
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 1.186875rem;
+    color: $secondary-400;
+  }
+  .card-footer {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 1.31875rem;
+    color: rgba($secondary-400, 0.85);
+    .experience-star {
+      color: $stars-color;
+    }
+  }
+}
+.experience-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.31870625rem;
+  color: $primary-400;
+  max-width: 20ch;
 }
