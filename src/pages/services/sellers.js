@@ -166,7 +166,7 @@ export default function Home() {
                               />
                             </div>
                             <label
-                              for={edge.node.id}
+                              htmlFor={edge.node.id}
                               className="flipcard-button btn card-link rounded-0 px-10 my-5 align-self-end "
                               aria-hidden="true"
                             >
@@ -183,7 +183,7 @@ export default function Home() {
                               </p>
                             </div>
                             <label
-                              for={edge.node.id}
+                              htmlFor={edge.node.id}
                               className="flipcard-button flipcard-flipfront btn card-link rounded-0 mb-5 align-self-end"
                               aria-hidden="true"
                             >
@@ -272,7 +272,7 @@ export default function Home() {
                               />
                             </div>
                             <label
-                              for={edge.node.id + "mobile"}
+                              htmlFor={edge.node.id + "mobile"}
                               className="flipcard-button btn card-link rounded-0 mb-5 align-self-end "
                               aria-hidden="true"
                             >
@@ -289,7 +289,7 @@ export default function Home() {
                               </p>
                             </div>
                             <label
-                              for={edge.node.id + "mobile"}
+                              htmlFor={edge.node.id + "mobile"}
                               className="flipcard-button flipcard-flipfront btn card-link rounded-0 mb-5 align-self-end"
                               aria-hidden="true"
                             >
