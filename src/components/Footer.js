@@ -261,7 +261,10 @@ export default function Footer() {
             <div className="container justify-content-center align-items-center ">
               <div className="row justify-content-center align-items-center ">
                 <div className="col-5 col-md-2 pb-5">
-                  <StaticImage src="./../images/footer/mls.png" />
+                  <StaticImage
+                    src="./../images/footer/mls.png"
+                    alt="mls logo"
+                  />
                 </div>
                 <div className="footer-mls col-12 col-md-10 text-start lh-sm ">
                   The data relating to real estate on this web site comes in
