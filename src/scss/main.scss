@@ -336,44 +336,47 @@ section.home-request {
 /*********************************************/
 /*          FOOTER         */
 /*********************************************/
+.footer-icon {
+  color: $primary-400;
+}
+.footer-address {
+  max-width: 25ch;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  color: $secondary-400;
+}
+.logo-text {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.51340625rem;
+}
+.description-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85905625rem;
+}
+.cite {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  max-width: 31ch;
+}
+
+.remax-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1866375rem;
+}
 section.footer {
   background-color: $primary-100;
   color: $secondary-400;
-  .logo-text {
-    font-family: "Playfair Display";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.51340625rem;
-  }
-  .description-text {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 0.85905625rem;
-  }
-  .cite {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 0.9375rem;
-    max-width: 31ch;
-  }
-  .footer-icon {
-    color: $primary-400;
-  }
-  .remax-text {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.1866375rem;
-  }
-  .footer-address {
-    max-width: 25ch;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 0.9375rem;
-  }
+
   .header {
     font-family: "Playfair Display";
     font-style: normal;
@@ -737,4 +740,31 @@ section.buyers-request {
   font-size: 1.31870625rem;
   color: $primary-400;
   max-width: 20ch;
+}
+.big-letter {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7.9079375rem;
+  line-height: 169px;
+
+  color: $secondary-400;
+}
+.small-word {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.37903125rem;
+  line-height: 27px;
+  color: #ceaa54;
+}
+.quick-links {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: rgba($secondary-400, 0.85);
 }
