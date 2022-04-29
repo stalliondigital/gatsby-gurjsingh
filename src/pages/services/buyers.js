@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
+import { navigate } from "gatsby-link"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Helmet from "react-helmet"
 import BackgroundImage from "gatsby-background-image"
@@ -12,7 +13,35 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 export default function Home() {
+  // data necesary for form submit
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   const { headerImg, headerImgSmall, phaseOne, phaseTwo, phaseThree } =
     useStaticQuery(
       graphql`
@@ -36,8 +65,10 @@ export default function Home() {
           phaseOne: allBuyersPhaseOneJson {
             edges {
               node {
+                id
                 title
                 desc
+                alt
                 img {
                   childImageSharp {
                     fluid {
@@ -51,8 +82,10 @@ export default function Home() {
           phaseTwo: allBuyersPhaseTwoJson {
             edges {
               node {
+                id
                 title
                 desc
+                alt
                 img {
                   childImageSharp {
                     fluid {
@@ -75,7 +108,7 @@ export default function Home() {
     )
   const phases = phaseOne.edges
   const phasesTwo = phaseTwo.edges
-  console.log(phases)
+
   return (
     <Layout>
       <Helmet>
@@ -107,12 +140,14 @@ export default function Home() {
               id={`test`}
               className="d-none d-lg-block col col-md-4 col-lg-6"
               fluid={headerImg.childImageSharp.fluid}
+              alt="a couple through a house guide with a realtor"
             ></BackgroundImage>
             <BackgroundImage
               Tag={`section`}
               id={`test`}
               className="d-none d-md-block d-lg-none col col-md-4 col-lg-6"
               fluid={headerImgSmall.childImageSharp.fluid}
+              alt="a couple through a house guide with a realtor"
             ></BackgroundImage>
           </div>
         </section>
@@ -156,7 +191,7 @@ export default function Home() {
                   <div className="card-img d-flex justify-content-center ">
                     <StaticImage
                       src="./../../images/buyers/works_2.png"
-                      alt="Two people talking about the home buying process"
+                      alt="A man with a computer and a phone"
                     />
                   </div>
                 </div>
@@ -172,7 +207,7 @@ export default function Home() {
                   <div className="card-img d-flex justify-content-center ">
                     <StaticImage
                       src="./../../images/buyers/works_3.png"
-                      alt="Two people talking about the home buying process"
+                      alt="A woman with a for sale sign"
                     />
                   </div>
                 </div>
@@ -191,8 +226,11 @@ export default function Home() {
             </p>
             <div className="card-group d-flex flex-column flex-lg-row">
               {phases.map(phase => (
-                <div className="card m-5 ">
-                  <Img fluid={phase.node.img.childImageSharp.fluid} />
+                <div className="card m-5 " key={phase.node.id}>
+                  <Img
+                    fluid={phase.node.img.childImageSharp.fluid}
+                    alt={phase.node.alt}
+                  />
                   <div className="card-body white-card-body">
                     <h5 className="card-title">{phase.node.title}</h5>
                     <p className="card-text">{phase.node.desc} </p>
@@ -235,14 +273,14 @@ export default function Home() {
                 className="mySwiper d-none d-lg-block "
               >
                 {phasesTwo.map(phase => (
-                  <SwiperSlide className="">
+                  <SwiperSlide className="" key={phase.node.id}>
                     <div className="row d-flex align-items-center justify-content-center h-100 pb-10">
                       <div className="col-8 h-100">
                         <div className="mb-3 h-100">
                           <div className="white-card-body d-flex">
                             <Img
                               fluid={phase.node.img.childImageSharp.fluid}
-                              alt="Two people talking about the home buying process"
+                              alt={phase.node.alt}
                               className="col-5"
                             />
                             <div className="col-7">
@@ -272,14 +310,14 @@ export default function Home() {
                 className="mySwiper d-lg-none"
               >
                 {phasesTwo.map(phase => (
-                  <SwiperSlide className="h-100">
+                  <SwiperSlide className="h-100" key={phase.node.id}>
                     <div className="row d-flex align-items-center justify-content-center h-100 pb-10">
                       <div className="col h-100">
                         <div className="mb-3 h-100">
                           <div className="white-card-body d-flex ">
                             <Img
                               fluid={phase.node.img.childImageSharp.fluid}
-                              alt="Two people talking about the home buying process"
+                              alt={phase.node.alt}
                               className="col-5 d-none d-md-block "
                             />
                             <div className="col h-100">
@@ -319,6 +357,7 @@ export default function Home() {
               id={`test`}
               className="col"
               fluid={phaseThree.childImageSharp.fluid}
+              alt="a couple recieving keys of their new house"
             ></Img>
             <div className="col d-flex justify-content-center  align-items-center ">
               <p className="phase-text  p-10">
@@ -341,8 +380,9 @@ export default function Home() {
               data-netlify="true"
               name="buyerkit"
               className="g-3 text-center justify-content-center"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="bot-field" onChange={handleChange} />
               <input type="hidden" name="form-name" value="buyerkit" />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
@@ -362,6 +402,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Name"
                         aria-label="Name"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -370,6 +411,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Phone Number"
                         aria-label="Phone Number"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -378,6 +420,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Email Address"
                         aria-label="Email Address"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col d-grid">

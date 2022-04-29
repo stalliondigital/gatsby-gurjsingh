@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
+import { navigate } from "gatsby-link"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Img from "gatsby-image"
@@ -12,9 +13,36 @@ import { Pagination } from "swiper"
 // Import Swiper styles
 import "swiper/css"
 import "swiper/css/pagination"
-import { StaticImage } from "gatsby-plugin-image"
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 export default function Home() {
+  // data necesary for form submit
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   const { headerImg, headerImgSmall, sellersProcess } = useStaticQuery(
     graphql`
       query {
@@ -67,12 +95,14 @@ export default function Home() {
               id={`test`}
               className="d-none d-lg-block col col-md-4 col-lg-6 "
               fluid={headerImg.childImageSharp.fluid}
+              alt="a window with a sold sign"
             ></BackgroundImage>
             <BackgroundImage
               Tag={`section`}
               id={`test`}
               className="d-none d-md-block d-lg-none col col-md-4 col-lg-6 "
               fluid={headerImgSmall.childImageSharp.fluid}
+              alt="a window with a sold sign"
             ></BackgroundImage>
             <div className="col col-md-8 col-lg-6 ps-10 header py-20">
               <div className="text-start my-20 pb-5 pt-lg-6">
@@ -112,7 +142,7 @@ export default function Home() {
               <div className="flipcard-wrapper">
                 {sellersProcess.edges.map((edge, index) => {
                   return (
-                    <div className="flipcard">
+                    <div className="flipcard" key={index}>
                       <input
                         type="checkbox"
                         id={edge.node.id}
@@ -215,7 +245,7 @@ export default function Home() {
             >
               {sellersProcess.edges.map((edge, index) => {
                 return (
-                  <SwiperSlide className="swiper-card pb-20 ">
+                  <SwiperSlide className="swiper-card pb-20 " key={index}>
                     <div className="flipcard-mobile ">
                       <input
                         type="checkbox"
@@ -383,8 +413,9 @@ export default function Home() {
               data-netlify="true"
               name="buyerkit"
               className="g-3 text-center justify-content-center"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="bot-field" onChange={handleChange} />
               <input type="hidden" name="form-name" value="buyerkit" />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
@@ -404,6 +435,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Name"
                         aria-label="Name"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -412,6 +444,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Phone Number"
                         aria-label="Phone Number"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -420,6 +453,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Email Address"
                         aria-label="Email Address"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col d-grid">

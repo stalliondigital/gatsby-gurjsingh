@@ -1,19 +1,48 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowAltCircleRight as farArrow } from "@fortawesome/free-regular-svg-icons"
 import {
   faFacebook,
   faInstagram,
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons"
-import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
 import Helmet from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
+import { navigate } from "gatsby-link"
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 export default function Contact() {
+  // data necesary for form submit
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   const { headerImg } = useStaticQuery(
     graphql`
       query {
@@ -41,6 +70,7 @@ export default function Contact() {
               id={`test`}
               className="d-none d-md-block col col-md-4 col-lg-4 "
               fluid={headerImg.childImageSharp.fluid}
+              alt="man talking with a cellphone"
             ></BackgroundImage>
             <div className="col col-md-8 col-lg-8 ps-10 header py-20">
               <div className="text-start my-20 pb-5 pt-lg-6">
@@ -123,7 +153,7 @@ export default function Contact() {
                       <div className="card-img d-flex justify-content-center ">
                         <StaticImage
                           src="./../images/contact/contact.png"
-                          alt="Two people talking about the home buying process"
+                          alt="person in front of a computer talking with the cellphone"
                         />
                       </div>
                       <div className="text-container py-5">
@@ -146,7 +176,7 @@ export default function Contact() {
                       <div className="card-img d-flex justify-content-center ">
                         <StaticImage
                           src="./../images/contact/contact.png"
-                          alt="Two people talking about the home buying process"
+                          alt="person in front of a computer talking with the cellphone"
                         />
                       </div>
                       <div className="text-container py-5">
@@ -167,7 +197,7 @@ export default function Contact() {
                     <div className="card-img d-flex justify-content-center ">
                       <StaticImage
                         src="./../images/contact/contact.png"
-                        alt="Two people talking about the home buying process"
+                        alt="person in front of a computer talking with the cellphone"
                       />
                     </div>
                     <div className="text-container py-5 justify-content-center text-center">
@@ -227,8 +257,9 @@ export default function Contact() {
               data-netlify="true"
               name="buyerkit"
               className="g-3 text-center justify-content-center"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="bot-field" onChange={handleChange} />
               <input type="hidden" name="form-name" value="buyerkit" />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
@@ -248,6 +279,7 @@ export default function Contact() {
                         className="form-control rounded-0 border-0"
                         placeholder="Name"
                         aria-label="Name"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -256,6 +288,7 @@ export default function Contact() {
                         className="form-control rounded-0 border-0"
                         placeholder="Phone Number"
                         aria-label="Phone Number"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -264,6 +297,7 @@ export default function Contact() {
                         className="form-control rounded-0 border-0"
                         placeholder="Email Address"
                         aria-label="Email Address"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col d-grid">

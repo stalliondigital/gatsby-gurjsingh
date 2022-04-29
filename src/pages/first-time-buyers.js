@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { navigate } from "gatsby-link"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { Helmet } from "react-helmet"
@@ -13,7 +14,36 @@ import "swiper/css/pagination"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLevelDownAlt } from "@fortawesome/free-solid-svg-icons"
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 export default function Home() {
+  // data necesary for form submit
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   const { headerImg, incentives, experienceProcess, benefits } = useStaticQuery(
     graphql`
       query {
@@ -29,6 +59,7 @@ export default function Home() {
         incentives: allFirstTimeBuyersIncentivesJson {
           edges {
             node {
+              id
               title
               description
               link
@@ -38,6 +69,7 @@ export default function Home() {
         experienceProcess: allExperienceJson {
           edges {
             node {
+              id
               name
               experience
             }
@@ -46,6 +78,7 @@ export default function Home() {
         benefits: allFirstTimeBuyersBenefitsJson {
           edges {
             node {
+              id
               benefit
               description
               url
@@ -90,6 +123,7 @@ export default function Home() {
               id={`test`}
               className="d-none d-md-block col col-md-4 col-lg-6"
               fluid={headerImg.childImageSharp.fluid}
+              alt="First Time Buyers recieving the key to their home"
             ></BackgroundImage>
           </div>
         </section>
@@ -107,9 +141,9 @@ export default function Home() {
           <div className="card-container container align-items-center mt-20">
             <div className="row justify-content-center row-cols-1 row-cols-lg-3 mt-0 pt-0">
               {allFirstTimeBuyersIncentives.map(incentive => {
-                const { title, description, link } = incentive.node
+                const { title, description, link, id } = incentive.node
                 return (
-                  <div className="col col-md-8 col-lg-4 mb-3 ">
+                  <div className="col col-md-8 col-lg-4 mb-3" key={id}>
                     <div className="card p-4 h-100 mt-0 pt-0 d-flex   justify-content-center ">
                       <div className="card-body d-flex flex-column justify-content-start ">
                         <p className="card-header text-center align-self-start">
@@ -135,7 +169,7 @@ export default function Home() {
           <div className="container banner d-flex p-md-10 py-10">
             <StaticImage
               src="./../images/first-time-buyers/ftb-image.png"
-              alt="A woman reading a guide"
+              alt="A man reading a guide while talking on the phone"
               className="d-none d-md-block"
             />
             <div className="container d-flex flex-column justify-content-center ps-md-20">
@@ -223,7 +257,10 @@ export default function Home() {
                       className="my-swiper "
                     >
                       {experiences.map(experience => (
-                        <SwiperSlide className="swiper-card h-100 pb-10">
+                        <SwiperSlide
+                          className="swiper-card h-100 pb-10"
+                          key={experience.node.id}
+                        >
                           <div className="swiper-body card-outer col h-100 d-flex align-items-stretch">
                             <div className="card-testimonial card mb-3 d-flex align-self-stretch">
                               <div className="card-body py-10 text-start align-self-stretch">
@@ -295,8 +332,9 @@ export default function Home() {
               data-netlify="true"
               name="buyerkit"
               className="g-3 text-center justify-content-center"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="bot-field" onChange={handleChange} />
               <input type="hidden" name="form-name" value="buyerkit" />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
@@ -316,6 +354,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Name"
                         aria-label="Name"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -324,6 +363,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Phone Number"
                         aria-label="Phone Number"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -332,6 +372,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Email Address"
                         aria-label="Email Address"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col d-grid">
@@ -363,9 +404,12 @@ export default function Home() {
                 <div className="accordion  d-flex flex-column justify-content-center mx-0 px-0">
                   {benefitsAndInfo.map((data, index) => {
                     return (
-                      <div className="accordion-item align-items-start rounded-0 mx-0 px-0 my-2">
+                      <div
+                        className="accordion-item align-items-start rounded-0 mx-0 px-0 my-2"
+                        key={data.node.id}
+                      >
                         <h2
-                          class="accordion-header"
+                          className="accordion-header"
                           id={"panelsStayOpen-heading" + index}
                         >
                           <a

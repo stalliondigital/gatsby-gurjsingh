@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
+import { navigate } from "gatsby-link"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Helmet from "react-helmet"
@@ -11,7 +12,35 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 export default function Home() {
+  // data necesary for form submit
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   const { headerImg, investorProcess, experienceProcess } = useStaticQuery(
     graphql`
       query {
@@ -25,8 +54,10 @@ export default function Home() {
         investorProcess: allInvestorsProcessJson {
           edges {
             node {
+              id
               title
               desc
+              alt
               img {
                 childImageSharp {
                   fluid {
@@ -40,6 +71,7 @@ export default function Home() {
         experienceProcess: allExperienceJson {
           edges {
             node {
+              id
               name
               experience
             }
@@ -64,13 +96,8 @@ export default function Home() {
               id={`test`}
               className="d-none d-md-block col col-md-4 col-lg-6 "
               fluid={headerImg.childImageSharp.fluid}
+              alt="phone, calculator and a pen"
             ></BackgroundImage>
-            {/* <BackgroundImage
-              Tag={`section`}
-              id={`test`}
-              className="d-none d-md-block d-lg-none col col-md-4 col-lg-6 "
-              fluid={headerImgSmall.childImageSharp.fluid}
-            ></BackgroundImage> */}
             <div className="col col-md-8 col-lg-6 ps-10 header py-20">
               <div className="text-start my-20 pb-5 pt-lg-6">
                 <h1 className="mb-5 header-title">
@@ -101,8 +128,11 @@ export default function Home() {
             </p>
             <div className="card-group d-flex flex-column flex-lg-row">
               {process.map(phase => (
-                <div className="card m-5 ">
-                  <Img fluid={phase.node.img.childImageSharp.fluid} />
+                <div className="card m-5 " key={phase.node.id}>
+                  <Img
+                    fluid={phase.node.img.childImageSharp.fluid}
+                    alt={phase.node.alt}
+                  />
                   <div className="card-body white-card-body">
                     <h5 className="card-title">{phase.node.title}</h5>
                     <p className="card-text lh-sm">{phase.node.desc} </p>
@@ -152,7 +182,10 @@ export default function Home() {
                   className="my-swiper d-block d-lg-none card-container"
                 >
                   {experiences.map(experience => (
-                    <SwiperSlide className="swiper-card h-100 pb-10">
+                    <SwiperSlide
+                      className="swiper-card h-100 pb-10"
+                      key={experience.node.id}
+                    >
                       <div className="swiper-body mx-5 col h-100 d-flex align-items-stretch">
                         <div className="card-testimonial card mb-3 d-flex align-self-stretch">
                           <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
@@ -171,7 +204,10 @@ export default function Home() {
                 </Swiper>
                 <div className="d-none d-lg-flex card-container col-10 row row-cols-1 row-cols-lg-3 ">
                   {experiences.map(experience => (
-                    <div className="col h-100 d-flex align-items-stretch">
+                    <div
+                      className="col h-100 d-flex align-items-stretch"
+                      key={experience.node.id}
+                    >
                       <div className="card-testimonial card mb-3 d-flex align-self-stretch">
                         <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
                           <p className="lh-sm">{experience.node.experience}</p>
@@ -196,8 +232,9 @@ export default function Home() {
               data-netlify="true"
               name="buyerkit"
               className="g-3 text-center justify-content-center"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="bot-field" onChange={handleChange} />
               <input type="hidden" name="form-name" value="buyerkit" />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
@@ -217,6 +254,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Name"
                         aria-label="Name"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -225,6 +263,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Phone Number"
                         aria-label="Phone Number"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -233,6 +272,7 @@ export default function Home() {
                         className="form-control rounded-0 border-0"
                         placeholder="Email Address"
                         aria-label="Email Address"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col d-grid">

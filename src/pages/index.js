@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { navigate } from "gatsby-link"
 import { graphql, Link } from "gatsby"
 import reviewGoogle from "./../images/home/review-google.png"
 import gurjivanImageCut from "./../images/home/gurjivan-image-cut.png"
@@ -22,6 +23,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import "swiper/css"
 import "swiper/css/pagination"
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const sectionBackground = {
   background: `linear-gradient(90.22deg, rgba(206, 170, 84, 0.72) 0.17%, rgba(206, 170, 84, 0) 100.39%),
       url(${backgroundimage})`,
@@ -29,6 +36,28 @@ const sectionBackground = {
 }
 
 export default function Home({ data }) {
+  // data necesary for form submit
+  const [state, setState] = React.useState({})
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
+  }
+
   const experiences = data.experiences.nodes
   const services = data.services.nodes
 
@@ -159,7 +188,10 @@ export default function Home({ data }) {
                   className="my-swiper d-block d-lg-none card-container"
                 >
                   {experiences.map(experience => (
-                    <SwiperSlide className="swiper-card h-100 ">
+                    <SwiperSlide
+                      className="swiper-card h-100 "
+                      key={experience.id}
+                    >
                       <div className="swiper-body mx-5 col h-100 d-flex align-items-stretch">
                         <div className="card-testimonial card mb-3 d-flex align-self-stretch">
                           <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
@@ -178,7 +210,10 @@ export default function Home({ data }) {
                 </Swiper>
                 <div className="d-none d-lg-flex card-container col-10 row row-cols-1 row-cols-lg-3 ">
                   {experiences.map(experience => (
-                    <div className="col h-100 d-flex align-items-stretch">
+                    <div
+                      className="col h-100 d-flex align-items-stretch"
+                      key={experience.id}
+                    >
                       <div className="card-testimonial card mb-3 d-flex align-self-stretch">
                         <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
                           <p className="lh-sm">
@@ -238,14 +273,14 @@ export default function Home({ data }) {
                 services below.
               </p>
             </div>
-            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
+            <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
               {services.map(service => (
                 <Link
                   to={"/services/" + service.frontmatter.slug}
                   key={service.id}
                 >
-                  <div class="col">
-                    <div class="card rounded-0">
+                  <div className="col">
+                    <div className="card rounded-0">
                       <Img
                         fluid={
                           service.frontmatter.imgWide.childImageSharp.fluid
@@ -256,8 +291,8 @@ export default function Home({ data }) {
                         fluid={service.frontmatter.img.childImageSharp.fluid}
                         className="d-block d-md-none d-lg-block"
                       />
-                      <div class="card-body d-flex justify-content-between align-items-end mb-0 pb-0">
-                        <h5 class="card-title text-start ps-3 ">
+                      <div className="card-body d-flex justify-content-between align-items-end mb-0 pb-0">
+                        <h5 className="card-title text-start ps-3 ">
                           {service.frontmatter.title}
                         </h5>
                         <div className="card-title text-end d-inline-block pe-3 ">
@@ -341,9 +376,12 @@ export default function Home({ data }) {
                 <div className="accordion  d-flex flex-column justify-content-center mx-0 px-0">
                   {JSONData.content.map((data, index) => {
                     return (
-                      <div className="accordion-item align-items-start rounded-0 mx-0 px-0 my-2">
+                      <div
+                        className="accordion-item align-items-start rounded-0 mx-0 px-0 my-2"
+                        key={index}
+                      >
                         <h2
-                          class="accordion-header"
+                          className="accordion-header"
                           id={"panelsStayOpen-heading" + index}
                         >
                           <a
@@ -380,14 +418,15 @@ export default function Home({ data }) {
         <section className="home-request container-fluid pb-10 align-items-center">
           <div className="container-request container mb-5 py-10 ">
             <form
-              method="post"
+              name="buyerkit"
+              method="POST"
               netlify-honeypot="bot-field"
               data-netlify="true"
-              name="buyerkit"
               className="g-3 text-center justify-content-center"
+              onSubmit={handleSubmit}
             >
-              <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="buyerkit" />
+              <input type="hidden" name="bot-field" onChange={handleChange} />
               <div className="row py-5">
                 <div className="col">
                   <div className="px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">
@@ -405,6 +444,7 @@ export default function Home({ data }) {
                         className="form-control rounded-0 border-0"
                         placeholder="Name"
                         aria-label="Name"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -413,6 +453,7 @@ export default function Home({ data }) {
                         className="form-control rounded-0 border-0"
                         placeholder="Phone Number"
                         aria-label="Phone Number"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col">
@@ -421,6 +462,7 @@ export default function Home({ data }) {
                         className="form-control rounded-0 border-0"
                         placeholder="Email Address"
                         aria-label="Email Address"
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="col d-grid">
