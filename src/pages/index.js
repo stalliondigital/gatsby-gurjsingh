@@ -73,8 +73,8 @@ export default function Home({ data }) {
           className="home-header pt-48 pb-20 bg-cover"
           style={sectionBackground}
         >
-          <div className="container-xxl text-center text-lg-start pb-40 pt-lg-6">
-            <div className="row justify-content-center">
+          <div className="container text-center text-lg-start pb-40 pt-lg-6">
+            <div className="row d-flex flex-column justify-content-center justify-lg-content-start ">
               <div className="header col-10 col-lg-7 text-start ms-10">
                 <h1 className="home-title mb-5 text-uppercase fw-light">
                   Bridging the Gap Between Unimaginable and Possible
@@ -133,7 +133,7 @@ export default function Home({ data }) {
                 <div className="d-flex justify-content-start ps-5 pb-5">
                   <Link
                     to="/about"
-                    className="btn btn-lg rounded-0 py-3 border-none mx-2 pe-8"
+                    className="btn button-effect-invert rounded-0 py-3 border-none mx-2 pe-8"
                   >
                     READ MORE
                     <FontAwesomeIcon
@@ -192,7 +192,7 @@ export default function Home({ data }) {
                       className="swiper-card h-100 "
                       key={experience.id}
                     >
-                      <div className="swiper-body mx-5 col h-100 d-flex align-items-stretch">
+                      <div className="swiper-body mx-5 col h-100 d-flex align-items-stretch pb-10">
                         <div className="card-testimonial card mb-3 d-flex align-self-stretch">
                           <div className="card-body py-10 ps-8 pe-5 text-start align-self-stretch">
                             <p className="lh-sm">
@@ -242,7 +242,7 @@ export default function Home({ data }) {
                 className="img-fluid "
               />
             </div>
-            <div className="col d-flex flex-column d-lg-row align-items-center justify-content-center">
+            <div className="col d-flex flex-column d-lg-row align-items-start justify-content-center">
               <p className="paragrah lh-sm ">
                 Gurjivan always upholds a high standard and it shows. 5 Stars on
                 Google!
@@ -279,9 +279,10 @@ export default function Home({ data }) {
                 <Link
                   to={"/services/" + service.frontmatter.slug}
                   key={service.id}
+                  className=""
                 >
                   <div className="col">
-                    <div className="card rounded-0">
+                    <div className="card  rounded-0">
                       <Img
                         fluid={
                           service.frontmatter.imgWide.childImageSharp.fluid
@@ -299,7 +300,7 @@ export default function Home({ data }) {
                         <div className="card-title text-end d-inline-block pe-3 ">
                           <FontAwesomeIcon
                             icon={faLongArrowAltRight}
-                            className="fa-icon"
+                            className="fa-icon arrow-color"
                             transform="grow-8"
                           />
                         </div>

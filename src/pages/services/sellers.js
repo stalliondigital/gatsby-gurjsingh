@@ -167,7 +167,7 @@ export default function Home() {
                             </div>
                             <label
                               htmlFor={edge.node.id}
-                              className="flipcard-button btn card-link rounded-0 px-10 my-5 align-self-end "
+                              className="flipcard-button btn rounded-0 px-10 my-5 align-self-end "
                               aria-hidden="true"
                             >
                               How It Works
@@ -184,7 +184,7 @@ export default function Home() {
                             </div>
                             <label
                               htmlFor={edge.node.id}
-                              className="flipcard-button flipcard-flipfront btn card-link rounded-0 mb-5 align-self-end"
+                              className="flipcard-button flipcard-flipfront btn rounded-0 mb-5 align-self-end"
                               aria-hidden="true"
                             >
                               Back
@@ -210,10 +210,10 @@ export default function Home() {
                           <div>Get Started Now!</div>
                         </div>
                         <a
-                          href="#contact"
+                          href="/contact"
                           className="flipcard-button btn card-link rounded-0 px-10 my-5 align-self-end "
                         >
-                          How It Works
+                          Contact Gurj
                         </a>
                       </div>
                     </div>
@@ -318,7 +318,7 @@ export default function Home() {
                           <div>Get Started Now!</div>
                         </div>
                         <a
-                          href="#contact"
+                          href="/contact"
                           className="flipcard-button btn card-link rounded-0 px-10 my-5 align-self-end "
                         >
                           Contact Gurj
@@ -396,7 +396,7 @@ export default function Home() {
                 href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
                 target="_blank"
                 rel="noreferrer"
-                className="card-link btn rounded-0 px-5"
+                className="flipcard-button btn rounded-0 px-5"
               >
                 Read Testimonials
               </a>

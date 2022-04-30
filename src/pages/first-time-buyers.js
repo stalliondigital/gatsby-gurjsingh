@@ -101,7 +101,7 @@ export default function Home() {
       <div>
         <section className="container-fluid buyers-header pb-0 pe-0 me-0">
           <div className="container-fluid row pe-0 me-0 ">
-            <div className="col col-md-8 col-lg-5 header py-20 d-flex align-items-end justify-content-end">
+            <div className="col col-md-8 col-lg-6 header py-20 d-flex align-items-end justify-content-end">
               <div className="text-start my-20 pb-5 pt-lg-6 ">
                 <h1 className="mb-5 header-title align-self-end">
                   First Time Home Buyers in BC
@@ -154,7 +154,7 @@ export default function Home() {
                           href={link}
                           target="_blank"
                           rel="noreferrer"
-                          className="w-100 btn card-link rounded-0 mt-5 align-self-end mb-0 pb-3"
+                          className="w-100 btn flipcard-button rounded-0 mt-5 align-self-end mb-0 pb-3"
                         >
                           Learn More
                         </a>
@@ -181,10 +181,7 @@ export default function Home() {
                 discuss their situation one-on-one. Having a conversation with
                 an experienced industry professional will only help you organize
                 and plan success in our market.{" "}
-                <Link
-                  className="text-reset text-decoration-underline"
-                  to="/contact"
-                >
+                <Link className="text-reset text-link" to="/contact">
                   Click here
                 </Link>{" "}
                 to get in contact with Gurj as well as to receive a full
@@ -301,7 +298,7 @@ export default function Home() {
                 href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
                 target="_blank"
                 rel="noreferrer"
-                className="card-link btn rounded-0 px-5"
+                className="flipcard-button btn rounded-0 px-5"
               >
                 Read Testimonials
               </a>

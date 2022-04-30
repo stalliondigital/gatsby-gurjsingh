@@ -64,7 +64,7 @@ export default function Contact() {
       </Helmet>
       <div className="contact-page">
         <section className="container-fluid buyers-header pb-0 ps-0 ms-0 d-flex justify-content-center">
-          <div className="container row ps-0 ms-0 ">
+          <div className="container-fluid row ps-0 ms-0 ">
             <BackgroundImage
               Tag={`section`}
               id={`test`}
@@ -146,28 +146,25 @@ export default function Contact() {
         <section className="container-fluid">
           <div className="container px-0 mx-0 p-md-auto m-md-auto">
             <div className="card-container container align-items-center mt-20">
-              <div className="row justify-content-center row-cols-1 row-cols-lg-3 mt-0 pt-0">
+              <div className="row card-group justify-content-center row-cols-1 row-cols-lg-3 mt-0 pt-0">
                 <div className="col col-md-7 col-lg-4 mb-3 ">
-                  <div className="card p-4 h-100 mt-0 pt-0">
-                    <a
-                      className=""
-                      href="tel:778-951-8275"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <div className="card-body ">
-                        <p className="card-header p-2 text-center">
-                          Phone Number
-                        </p>
-                      </div>
-                      <div className="card-img d-flex justify-content-center ">
-                        <StaticImage
-                          src="./../images/contact/contact.png"
-                          alt="person in front of a computer talking with the cellphone"
-                        />
-                      </div>
-                      <div className="text-container py-5">
-                        <p className="small-word text-center">778-951-8275</p>
+                  <div className="card h-100 ">
+                    <a href="tel:778-951-8275" target="_blank" rel="noreferrer">
+                      <div className="d-flex flex-column justify-content-around h-100">
+                        <div className="col ">
+                          <p className="card-header text-center py-10">
+                            Phone Number
+                          </p>
+                        </div>
+                        <div className="col d-flex justify-content-center pt-5 pb-10 ">
+                          <StaticImage
+                            src="./../images/contact/contact_1.png"
+                            alt="person in front of a computer talking with the cellphone"
+                          />
+                        </div>
+                        <div className="col text-container pt-5 pb-5">
+                          <p className="small-word text-center">778-951-8275</p>
+                        </div>
                       </div>
                     </a>
                   </div>
@@ -175,7 +172,7 @@ export default function Contact() {
                 <div className="col col-md-7 col-lg-4 mb-3 ">
                   <div className="card p-4 h-100 mt-0 pt-0">
                     <a
-                      className="link btn rounded-0 py-3"
+                      className="link btn rounded-0 py-3 d-flex flex-column justify-content-between"
                       href="mailto:gurj@gurjsingh.ca"
                     >
                       <div className="card-body ">
@@ -185,11 +182,11 @@ export default function Contact() {
                       </div>
                       <div className="card-img d-flex justify-content-center ">
                         <StaticImage
-                          src="./../images/contact/contact.png"
-                          alt="person in front of a computer talking with the cellphone"
+                          src="./../images/contact/contact_2.png"
+                          alt="a person sending an email"
                         />
                       </div>
-                      <div className="text-container py-5">
+                      <div className="text-container pt-10">
                         <p className="small-word text-center">
                           gurj@gurjsingh.ca
                         </p>
@@ -198,7 +195,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="col col-md-7 col-lg-4 mb-3 ">
-                  <div className="card p-4 h-100 mt-0 pt-0">
+                  <div className="card p-4 h-100 mt-0 pt-0 d-flex flex-column justify-content-between">
                     <div className="card-body ">
                       <p className="card-header p-2 text-center">
                         Social Media
@@ -206,8 +203,8 @@ export default function Contact() {
                     </div>
                     <div className="card-img d-flex justify-content-center ">
                       <StaticImage
-                        src="./../images/contact/contact.png"
-                        alt="person in front of a computer talking with the cellphone"
+                        src="./../images/contact/contact_3.png"
+                        alt="a person with a social post frame"
                       />
                     </div>
                     <div className="text-container py-5 justify-content-center text-center">

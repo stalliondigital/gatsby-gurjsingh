@@ -58,8 +58,8 @@ export default function Navbar() {
           className="collapse navbar-collapse justify-content-end"
           id="navbarCollapse"
         >
-          <ul className="navbar-nav ms-auto navbar-end ">
-            <li className="nav-item dropdown">
+          <ul className="navbar-nav ms-auto navbar-end rounded-0">
+            <li className="nav-item dropdown rounded-0">
               <a
                 className="nav-link dropdown-toggle fw-light"
                 href="#"
@@ -71,7 +71,7 @@ export default function Navbar() {
                 Services
               </a>
               <ul
-                className="nav-dropdown dropdown-menu border-0"
+                className="nav-dropdown dropdown-menu shadow-none"
                 aria-labelledby="navbarDropdown"
               >
                 <li>
@@ -112,7 +112,7 @@ export default function Navbar() {
                 Resources
               </a>
               <ul
-                className="nav-dropdown dropdown-menu border-0"
+                className="nav-dropdown dropdown-menu shadow-none"
                 aria-labelledby="navbarDropdown"
               >
                 <li>

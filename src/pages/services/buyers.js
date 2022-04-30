@@ -226,7 +226,7 @@ export default function Home() {
             </p>
             <div className="card-group d-flex flex-column flex-lg-row">
               {phases.map(phase => (
-                <div className="card m-5 " key={phase.node.id}>
+                <div className="phase-card m-5 " key={phase.node.id}>
                   <Img
                     fluid={phase.node.img.childImageSharp.fluid}
                     alt={phase.node.alt}
@@ -253,7 +253,9 @@ export default function Home() {
         </div>
         <section className="container-fluid d-flex flex-column align-items-center mt-10">
           <h2 className="uppertitle  pt-5">PHASE TWO</h2>
-          <h2 className="title mb-2 ">Evolving Our Services for You</h2>
+          <h2 className="title mb-2 text-center text-md-start ">
+            Evolving Our Services for You
+          </h2>
           <p className="subtitle text-center mb-10">
             The Difference lays within our process of serving you. Gurjivan
             takes pride in his ability to adapt his services and share
@@ -345,7 +347,9 @@ export default function Home() {
         </section>
         <section className="container d-flex flex-column align-items-center">
           <h2 className="uppertitle  pt-5">PHASE Three</h2>
-          <h2 className="title mb-2 ">Welcoming You to Your New Home</h2>
+          <h2 className="title mb-2 text-center ">
+            Welcoming You to Your New Home
+          </h2>
           <p className="subtitle text-center mb-10">
             The most difficult and stressful part of the process is over. Now we
             can start shift our energy from finding you the house you love, to

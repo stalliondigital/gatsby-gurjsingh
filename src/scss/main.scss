@@ -9,7 +9,7 @@ $enable-negative-margins: true; // NAVBAR
 /*********************************************/
 
 $primary-100: #faf7ee;
-$primary-400: #ceaa54;
+$primary-400: #cea955;
 $primary-500: #ba9335;
 $primary-600: #93742a;
 $secondary-100: #d2d2d2;
@@ -80,6 +80,12 @@ nav {
 section {
   padding-bottom: 60px;
 }
+@include media-breakpoint-down(lg) {
+  .shadow-none {
+    box-shadow: none;
+    border-radius: 0%;
+  }
+}
 
 /*********************************************/
 /*          HOME PAGE         */
@@ -112,7 +118,7 @@ section {
   font-weight: 300;
   color: rgb($secondary-400, 0.85);
   font-size: 1.31875rem;
-  max-width: 55ch;
+  max-width: 56ch;
   text-align: center;
 }
 section.home-header {
@@ -161,10 +167,6 @@ section.home-meet {
       max-width: 58ch;
     }
     // READ MORE BUTTON
-    a {
-      color: $primary-400;
-      background-color: rgba($primary-400, 0.1);
-    }
   }
   @include media-breakpoint-down(lg) {
     .about-box {
@@ -423,6 +425,13 @@ section.buyers-header {
 .card {
   background-color: $primary-100;
   border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+}
+.phase-card {
+  background-color: $primary-100;
+  // border: 1px solid #d2d2d2;
   box-sizing: border-box;
   box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
   border-radius: 1px;
@@ -691,13 +700,19 @@ section.buyers-request {
 }
 
 .flipcard-button {
+  color: #fff;
+  background-color: $primary-400;
   width: 90%;
   cursor: pointer;
   backface-visibility: hidden;
   transition: 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    // box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+    background-color: $primary-500;
+    transition: all 0.25s ease !important;
+    -webkit-transition: all 0.25s ease !important;
   }
 }
 .flipcard-image {
@@ -799,4 +814,38 @@ a:hover {
 }
 .hover-lighten:hover {
   background-color: $secondary-100;
+}
+.button-effect-invert {
+  color: $primary-400 !important;
+  background-color: rgba($primary-400, 0.1) !important;
+}
+.button-effect-invert:hover {
+  color: #faf7ee !important;
+  background-color: $primary-400 !important;
+  transition: all 0.25s ease !important;
+  -webkit-transition: all 0.25s ease !important;
+}
+.arrow-color {
+  color: $primary-400;
+}
+
+.home-card {
+  transition: transform 0.25s ease;
+  :hover {
+    transform: scale(1.05);
+  }
+}
+
+//
+// CUSTOM CARDS BULLET PAGINATION
+//
+
+.swiper-pagination-bullet-active {
+  background-color: $primary-400 !important;
+}
+.text-link {
+  text-decoration: underline;
+  :hover {
+    text-decoration: none;
+  }
 }

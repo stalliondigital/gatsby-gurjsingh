@@ -128,7 +128,7 @@ export default function Home() {
             </p>
             <div className="card-group d-flex flex-column flex-lg-row">
               {process.map(phase => (
-                <div className="card m-5 " key={phase.node.id}>
+                <div className="card border-0 m-5 " key={phase.node.id}>
                   <Img
                     fluid={phase.node.img.childImageSharp.fluid}
                     alt={phase.node.alt}
