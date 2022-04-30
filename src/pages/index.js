@@ -282,7 +282,7 @@ export default function Home({ data }) {
                   className=""
                 >
                   <div className="col">
-                    <div className="card  rounded-0">
+                    <div className="card border-0 rounded-0">
                       <Img
                         fluid={
                           service.frontmatter.imgWide.childImageSharp.fluid
