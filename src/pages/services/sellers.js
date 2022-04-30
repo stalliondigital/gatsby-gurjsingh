@@ -419,7 +419,12 @@ export default function Home() {
             >
               <input type="hidden" name="bot-field" onChange={handleChange} />
               <input type="hidden" name="form-name" value="buyerkit" />
-              <input type="hidden" name="type" value="Seller client" />
+              <input
+                type="hidden"
+                name="type"
+                value="Seller client"
+                onChange={handleChange}
+              />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
                   <div className="col col-lg-7 px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">

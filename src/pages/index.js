@@ -428,7 +428,12 @@ export default function Home({ data }) {
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="buyerkit" />
-              <input type="hidden" name="type" value="Request a buyers kit" />
+              <input
+                type="hidden"
+                name="type"
+                value="Request a buyers kit"
+                onChange={handleChange}
+              />
               <input type="hidden" name="bot-field" onChange={handleChange} />
               <div className="row py-5">
                 <div className="col">
