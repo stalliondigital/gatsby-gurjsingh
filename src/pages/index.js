@@ -444,6 +444,7 @@ export default function Home({ data }) {
                     <div className="col ">
                       <input
                         type="text"
+                        name="name"
                         className="form-control rounded-0 border-0"
                         placeholder="Name"
                         aria-label="Name"
@@ -452,7 +453,8 @@ export default function Home({ data }) {
                     </div>
                     <div className="col">
                       <input
-                        type="number"
+                        type="tel"
+                        name="number"
                         className="form-control rounded-0 border-0"
                         placeholder="Phone Number"
                         aria-label="Phone Number"
@@ -462,6 +464,7 @@ export default function Home({ data }) {
                     <div className="col">
                       <input
                         type="email"
+                        name="email"
                         className="form-control rounded-0 border-0"
                         placeholder="Email Address"
                         aria-label="Email Address"
