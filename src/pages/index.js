@@ -54,7 +54,7 @@ export default function Home({ data }) {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => navigate("/thank-you/"))
       .catch(error => alert(error))
   }
 
@@ -419,8 +419,9 @@ export default function Home({ data }) {
         <section className="home-request container-fluid pb-10 align-items-center">
           <div className="container-request container mb-5 py-10 ">
             <form
-              name="buyerkit"
               method="POST"
+              action="/"
+              name="buyerkit"
               netlify-honeypot="bot-field"
               data-netlify="true"
               className="g-3 text-center justify-content-center"

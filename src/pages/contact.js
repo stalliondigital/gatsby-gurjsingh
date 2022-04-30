@@ -39,7 +39,7 @@ export default function Contact() {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => navigate("/thank-you/"))
       .catch(error => alert(error))
   }
 
@@ -267,6 +267,7 @@ export default function Contact() {
           <div className="container-request container mb-5 py-20 ">
             <form
               method="post"
+              action="/"
               netlify-honeypot="bot-field"
               data-netlify="true"
               name="buyerkit"

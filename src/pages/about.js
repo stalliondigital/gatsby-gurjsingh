@@ -38,7 +38,7 @@ export default function About() {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => navigate("/thank-you/"))
       .catch(error => alert(error))
   }
 
@@ -310,6 +310,7 @@ export default function About() {
           <div className="container-request container mb-5 py-20 mt-20">
             <form
               method="post"
+              action="/"
               netlify-honeypot="bot-field"
               data-netlify="true"
               name="buyerkit"
