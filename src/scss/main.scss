@@ -1,508 +1,851 @@
 @import "@webpixels/css";
-@import url("http://fonts.cdnfonts.com/css/itc-cheltenham-std");
+@import url("https://fonts.cdnfonts.com/css/playfair-display");
+@import url("https://fonts.cdnfonts.com/css/inter");
 
 $enable-negative-margins: true; // NAVBAR
+
+/*********************************************/
+/*          Style setup         */
+/*********************************************/
+
+$primary-100: #faf7ee;
+$primary-400: #cea955;
+$primary-500: #ba9335;
+$primary-600: #93742a;
+$secondary-100: #d2d2d2;
+$secondary-400: #403e3e;
+$secondary-600: #0d0d0d;
+$tertiary-400: #f1ebe5;
+$stars-color: #eab308;
+$default-button: #fafafa;
+
 body {
-  background-color: #181819;
+  font-family: "Inter", sans-serif;
 }
 
+/*********************************************/
+/*          NAVBAR         */
+/*********************************************/
 nav {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 32px -11px rgba(0, 0, 0, 0.25);
   .logo-text {
-    font-family: "ITC Cheltenham Std", sans-serif;
-    font-weight: 400;
-    font-size: 34px;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.513125rem;
+    text-transform: uppercase;
+    color: #000000;
+    .description-text {
+      color: #202020;
+      font-size: 0.85875rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+    }
   }
-  @include media-breakpoint-down(lg) {
-    background-color: #181819;
+  @media (min-width: 992px) {
+    .navbar-expand-lg .navbar-brand img {
+      height: 65px !important;
+    }
+  }
+  .logo {
+    height: 65px !important;
+    width: 65px !important;
   }
   .nav-button:focus,
   .nav-button:hover {
-    background-color: #222222 !important;
+    background-color: $primary-100 !important;
+    border: none;
   }
   .nav-dropdown {
-    background-color: #333333;
+    background-color: #faf7ee;
+  }
+  .navbar-nav,
+  .nav-link,
+  .dropdown-item {
+    color: rgb(131, 131, 131);
+    font-size: 0.9375rem !important;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(131, 131, 131)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    color: rgba(131, 131, 131, 0.8) !important;
+  }
+  .btn {
+    background-color: #ceaa54;
+    color: #ffffff;
+    font-size: 0.9375rem !important;
   }
 }
-// use svg
-// copy the markup code, d-flex strech and shrink
 section {
   padding-bottom: 60px;
 }
+@include media-breakpoint-down(lg) {
+  .shadow-none {
+    box-shadow: none;
+    border-radius: 0%;
+  }
+}
 
-section.home {
+/*********************************************/
+/*          HOME PAGE         */
+/*********************************************/
+.header-title {
+  color: $secondary-400;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.8144125rem;
+  line-height: 5.0625rem;
+  max-width: 19ch;
+}
+.header-subtitle {
+  color: $primary-400;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.09050625rem;
+  line-height: 1.3125rem;
+  max-width: 47ch;
+}
+.title {
+  font-family: "Playfair Display", sans-serif;
+  color: #403e3e;
+  font-size: 2.38125rem;
+}
+.subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: rgb($secondary-400, 0.85);
+  font-size: 1.31875rem;
+  max-width: 56ch;
+  text-align: center;
+}
+section.home-header {
   .header {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    .seller-title {
-      max-width: 23ch;
+    color: #faf7ee;
+    .home-title {
+      color: #faf7ee;
+      font-size: 2.875rem;
+    }
+    .home-description {
+      color: #faf7ee;
+      font-size: 1.125rem;
+    }
+    .header-buttom {
+      background-color: #403e3e;
+      color: #fafafa;
+      font-size: 0.9375rem !important;
+    }
+    .header-buttom-secondary {
+      background-color: #f1ebe5;
+      color: #403e3e;
+      font-size: 0.9375rem !important;
     }
   }
 }
-
-// buttons
-.primary {
-  background-color: #eab308;
-  color: white;
-}
-.primary:hover {
-  background-color: #d19a00;
-  color: white;
-}
-.secondary {
-  background-color: #9797a0;
-  color: white;
-}
-.secondary:hover {
-  background-color: #7e7e87;
-  color: white;
-}
-
-// obout section index page
-section.about {
-  background-color: #181819;
-
-  .about-container {
-    background-color: #222222;
-    border-radius: 27px;
-    border: 11px solid #37373d;
-    img.large {
-      min-height: 432px;
-      min-width: 510px;
-    }
+section.home-meet {
+  background: linear-gradient(
+    180deg,
+    rgba(206, 170, 84, 0.1) 75%,
+    rgba(206, 170, 84, 0) 100%
+  );
+  .content {
+    font-family: "Inter", sans-serif;
+    color: rgba(64, 62, 62, 0.85);
+    font-size: 1.31875rem;
   }
-}
-
-section.experience {
-  background-color: #181819;
-  .experience-inside {
-    background: radial-gradient(circle, rgba(234, 179, 8, 0.3) 0%, #181819 55%);
-
-    .card-container {
-      .card-testimonial {
-        background-color: #222222;
-        border: none !important;
-        .card-body {
-          border: none;
-          color: white;
-        }
-        .card-footer {
-          background-color: rgba(228, 170, 46, 0.1);
-          color: #eab308;
-          border-radius: 0 0 15px 15px;
-        }
-        @include media-breakpoint-down(lg) {
-          font-size: rfs-fluid-value(1.5rem);
-        }
-      }
-      .card:focus {
-        border: none !important;
-      }
-    }
-  }
-}
-
-section.request {
-  background-color: #181819;
-
-  .container-request {
-    background-color: #806510;
-    .book-icon {
-      background-color: #644d05;
-      border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      font-size: 27px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      transform: rotate(-7.3deg);
-    }
-    .phone-icon {
-      color: rgba(234, 179, 8, 0.5);
-      transform: rotate(15.5deg);
-    }
-    .primary {
-      color: #eab308;
-    }
-    .secondary-button {
-      color: #816610;
-    }
+  .about-box {
+    background: #ffffff;
+    box-shadow: 0px 0px 81px -25px rgba(0, 0, 0, 0.25);
+    font-family: "Inter";
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: 300;
+    border-right: $primary-400 solid 6px;
     p {
-      font-size: 28px;
-      font-weight: 400;
+      max-width: 58ch;
     }
-
-    .form-data {
-      input {
-        color: #c2a138;
-        font-size: 1.1em;
-        background-color: #5e4700;
-      }
-      .fa-icon {
-        background: #5e4700;
-        color: #806510;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 100px;
-        vertical-align: middle;
-        padding: 0px;
-        margin: -11px;
-      }
-
-      ::placeholder {
-        color: #c2a138;
-        font-size: 1.1em;
-      }
+    // READ MORE BUTTON
+  }
+  @include media-breakpoint-down(lg) {
+    .about-box {
+      font-size: 1.074375rem;
     }
   }
-}
-
-section.footer {
-  background-color: #222222;
-
-  .contact {
-    font-size: 18px;
-    line-height: normal;
-  }
-  .cite {
-    font-size: 0.9em;
-    max-width: 40ch;
-    @include media-breakpoint-down(sm) {
-      font-size: rfs-fluid-value(0.7rem);
+  @include media-breakpoint-down(sm) {
+    .about-box {
+      border-right: none;
     }
   }
-
-  .links {
-    p.header {
-      font-weight: bold;
-      padding-bottom: 1em;
-    }
-    @include media-breakpoint-down(lg) {
-      font-size: rfs-fluid-value(2rem);
-    }
-    @include media-breakpoint-down(md) {
-      font-size: rfs-fluid-value(1rem);
-    }
-  }
-
-  .footer-name {
-    font-size: 1.1875em;
-  }
-  .footer-license {
-    font-size: 0.9325em;
-  }
-  .footer-mls {
-    font-size: 0.625em;
-    opacity: 0.5;
-  }
-}
-
-section.solution {
-  background-color: #181819;
-  .card-container {
-    .card {
-      background-color: #37373d;
-      color: white;
-      .card-img {
-        background-color: #27272c;
-        display: flex;
-        justify-content: center;
-        img {
-          height: 145px;
-          width: fit-content;
-        }
-      }
-      .number {
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        padding: 10px;
-        background: #979797;
-        border: none;
-        color: white;
-        text-align: center;
-        font: 32px Arial, sans-serif;
-        display: inline-block;
-        line-height: 85%;
-      }
-    }
-  }
-}
-
-.break {
-  background: #181819;
-  h2 {
+  .main-title {
+    overflow: hidden;
     text-align: center;
-    span {
-      background: #181819;
-      color: #27272c;
-      padding: 0 10px;
-    }
+  }
+  .main-title:before,
+  .main-title:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 20%;
+  }
+  .main-title:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  .main-title:after {
+    left: 0.5em;
+    margin-right: -50%;
   }
 }
 
-section.phases {
-  .first-time {
-    color: #ffffff;
-    background-color: #7a5d00;
-  }
-  .accordion {
-    border: none;
-    .accordion-item {
-      border: none;
-      background-color: #37373d;
-      .accordion-button {
-        .icon {
-          transition: all 0.15s;
-        }
-      }
-      .accordion-button::after {
-        display: none !important;
-      }
-      .accordion-button {
-        box-shadow: none;
-      }
-      .accordion-body {
-        border: none;
-        padding-bottom: 2rem;
-        box-shadow: none;
-      }
-      .accordion-button:not(.collapsed) {
-        .icon {
-          transform: rotate(-90deg);
-        }
-      }
+section.home-experience {
+  background-color: white;
+  .card-testimonial {
+    background: #faf7ee;
+    border: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+    .card-body {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 1.186875rem;
+      color: $secondary-400;
     }
-  }
-  h2.phase {
-    color: #eab308;
-  }
-  .collapse-card {
-    color: rgb(255, 255, 255);
-
-    .accordion-button {
-      transition: all 0.1s cubic-bezier(0.05, 0.64, 0.88, 0.43);
-      .icon {
-        transition: all 0.15s cubic-bezier(0.05, 0.64, 0.88, 0.43);
-      }
-    }
-    .accordion-button.collapsed {
-      box-shadow: none;
-      background-color: #37373d;
-      border-radius: 1rem;
-      padding: 1.75rem;
-      padding-right: 1.75rem;
-      padding-left: 2.5rem;
-    }
-    .accordion-button:not(.collapsed) {
-      background-color: rgba(234, 179, 8, 0.5);
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-      box-shadow: none;
-      padding-top: 1.75rem;
-      padding-right: 1.75rem;
-      padding-left: 2.5rem;
-      padding-bottom: 1rem;
-      .icon {
-        transform: rotate(-90deg);
-      }
-    }
-
-    .accordion-description {
-      color: rgba(255, 255, 255, 0.75);
-      background-color: rgba(234, 179, 8, 0.5);
-      box-shadow: none;
-      border-bottom-right-radius: 1rem;
-      border-bottom-left-radius: 1rem;
-    }
-
-    .accordion-button::after {
-      display: none !important;
-    }
-    // .accordion-button.collapsed:after {
-    //   transform: rotate(0deg);
-    // }
-  }
-
-  .container-info {
-    background-color: #7a5d00;
-  }
-
-  .container-phase {
-    background-color: rgba(128, 101, 16, 0.4);
-    h2 {
-      max-width: 18ch;
-      text-align: center;
-    }
-  }
-  .container-instructions {
-    h3.instruction-title {
-      color: #eab308;
-    }
-    // span {
-    //   background-color: rgba(234, 179, 8, 0.1);
-    //   border-radius: 50%;
-    //   background-size: 56px 56px;
-    // }
-    .fa-icon {
-      background-color: rgba(234, 179, 8, 0.1);
-      border-radius: 50%;
-      width: 2.688rem;
-      height: 2.688rem;
-      font-size: 7rem;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      color: #eab308;
-      padding: 0.75rem;
-    }
-    .fa-increase {
-      padding: 0.625rem;
-    }
-  }
-}
-.container-discover {
-  background-color: #37373d;
-}
-.container-divisor {
-  background-color: #766532;
-  height: 260px;
-}
-
-p.description {
-  color: white;
-  opacity: 0.75;
-}
-
-.contact-page {
-  section.solution {
-    // background-color: #eab308;
-    .card-container {
-      .card {
-        background-color: #37373d;
-        color: white;
-        .card-img {
-          background-color: #27272c;
-          display: flex;
-          justify-content: center;
-          img {
-            height: 145px;
-            width: fit-content;
-          }
-        }
-        .number {
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-          padding: 10px;
-          background: #979797;
-          border: none;
-          color: white;
-          text-align: center;
-          font: 32px Arial, sans-serif;
-          display: inline-block;
-          line-height: 85%;
-        }
+    .card-footer {
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+      font-size: 1.31875rem;
+      color: rgba($secondary-400, 0.85);
+      .experience-star {
+        color: $stars-color;
       }
     }
   }
-  .contact-card {
-    transition: 0.5s all;
+  .my-swiper {
+    width: 95%;
   }
-  .contact-card:hover {
-    transform: translateY(-5px);
+  .swiper-container {
+    width: 95%;
   }
 }
 
-.footer-link:link {
-  text-decoration: none;
+section.home-google-review {
+  background-color: rgba($primary-400, 0.1);
+  p {
+    color: rgba($secondary-400, 0.85);
+    font-size: 1.756875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    max-width: 32ch;
+  }
+  a {
+    color: $primary-400;
+    font-size: 1.756875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
 }
 
-.footer-link:visited {
-  text-decoration: none;
+section.home-services {
+  .card {
+    box-shadow: 0px 0px 31px -7px rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+    .card-title {
+      font-size: 1.77rem;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      color: $secondary-400;
+    }
+  }
+  .link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.31870625rem;
+    text-decoration: underline;
+    color: $primary-400;
+  }
 }
 
-.footer-link:hover {
-  text-decoration: underline;
+section.home-first-time-buyer {
+  .inside-container {
+    background-color: rgba($primary-400, 0.1);
+    .link {
+      color: $default-button;
+      font-size: 0.9375rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      background-color: $primary-400;
+    }
+  }
 }
 
-.footer-link:active {
-  text-decoration: underline;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 640px;
+section.home-qanda {
+  .link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.31870625rem;
+    text-decoration: underline;
+    color: $primary-400;
+  }
+  .qanda {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: rgb($secondary-400, 0.85);
+    font-size: 1.31875rem;
+    text-align: center;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 0.94375rem;
+    }
+  }
+
+  .accordion-item {
+    background-color: $primary-100;
+  }
 }
 
-a.footer-icon {
-  text-decoration: none;
-  color: white;
-  margin-right: 12px;
-  transition: 300ms all;
+section.home-request {
+  .container-request {
+    background-color: $primary-100;
+  }
+  .subtitle {
+    font-size: 1.63125rem;
+    max-width: 24ch;
+  }
+  .form-control {
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: $secondary-400;
+    box-shadow: 3px 4px 4px -2px rgba(0, 0, 0, 0.06);
+  }
+  .link {
+    color: $default-button;
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: $primary-400;
+  }
 }
 
-a.footer-icon:hover {
-  color: grey !important;
-}
-
-a.footer-icon:active {
-  color: grey !important;
+/*********************************************/
+/*          FOOTER         */
+/*********************************************/
+.footer-icon {
+  color: $primary-400;
 }
 .footer-address {
   max-width: 25ch;
-  color: rgb(255, 255, 255);
-  @include media-breakpoint-down(md) {
-    font-size: rfs-fluid-value(1rem);
-  }
-  @include media-breakpoint-down(sm) {
-    font-size: rfs-fluid-value(0.8rem);
-  }
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  color: $secondary-400;
+}
+.logo-text {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.51340625rem;
 }
 .description-text {
-  @include media-breakpoint-down(sm) {
-    font-size: rfs-fluid-value(0.9rem);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85905625rem;
+}
+.cite {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  max-width: 31ch;
+}
+
+.remax-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1866375rem;
+}
+section.footer {
+  background-color: $primary-100;
+  color: $secondary-400;
+
+  .header {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  .footer-link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9375rem;
+  }
+  .footer-name {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .footer-mls {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.625rem;
   }
 }
 
-.first-time-link {
-  border-bottom: rgba(255, 255, 255, 0.75) 2px solid;
-}
-.first-time-link:hover {
-  border-bottom: none;
+/*********************************************/
+/*          BUYERS PAGE         */
+/*********************************************/
+
+section.buyers-header {
+  background-color: $primary-100;
+  .link {
+    color: $default-button;
+    font-size: 0.9375rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: $primary-400;
+  }
 }
 
-section.contact-request {
-  background-color: #181819;
+.card {
+  background-color: $primary-100;
+  border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+}
+.phase-card {
+  background-color: $primary-100;
+  // border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+}
+.card-header {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.47rem;
+  color: $secondary-400;
+  line-height: 31px;
+  vertical-align: middle;
+}
+.card-number {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 161.494px;
+  line-height: 140px;
+  color: rgba(206, 170, 84, 0.15);
+}
 
+.card-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.153125rem;
+  color: $primary-400;
+}
+
+.card-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.91518125rem;
+  color: rgba($secondary-400, 0.85);
+}
+.uppertitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.284rem;
+  text-transform: uppercase;
+  color: $primary-400;
+}
+.white-card-body {
+  background: #ffffff;
+  box-shadow: 0px 0px 26.9211px -6.07895px rgba(0, 0, 0, 0.25);
+  border-radius: 0.868421px;
+}
+
+.banner {
+  background-color: $primary-100;
+  color: $primary-400;
+}
+
+.banner-text {
+  color: $primary-400;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  max-width: 60ch;
+  text-align: center;
+}
+.phase-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2407375rem;
+  line-height: 1.5rem;
+
+  color: rgba($secondary-400, 0.85);
+}
+
+section.buyers-request {
+  border-top: 1.5px dashed $primary-400;
   .container-request {
-    background-color: #37373d;
-    h2 {
-      max-width: 18ch;
-    }
-    .form-data {
-      input {
-        color: #171719;
-        font-size: 1.1em;
-      }
-      .arrow-icon button {
-        font-size: 45px;
-        color: #a8a8a8;
-        background-color: #37373d;
-        .fa-icon {
-          background-color: #202022;
-          border-radius: 50%;
-          background-size: 40px 40px;
-          border: none;
-        }
-      }
-
-      ::placeholder {
-        color: #171719;
-        font-size: 1.1em;
-      }
-    }
+    background-color: $primary-100;
+  }
+  .subtitle {
+    font-size: 1.63125rem;
+    max-width: 37ch;
+  }
+  .title {
+    max-width: 20ch;
+  }
+  .form-control {
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: $secondary-400;
+    box-shadow: 3px 4px 4px -2px rgba(0, 0, 0, 0.06);
+  }
+  .link {
+    color: $default-button;
+    font-size: 1.31875rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    background-color: $primary-400;
   }
 }
 
-.contact-description {
-  max-width: 75ch;
+.card-link {
+  background: $primary-400;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.10545625rem;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.big-number {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.61661875rem;
+  color: $primary-400;
+}
+.banner-shadow {
+  background: #ffffff;
+  box-shadow: 0px 0px 26.9211px -6.07895px rgba(0, 0, 0, 0.25);
+  border-radius: 0.868421px;
+}
+
+.seller-swiper-card {
+  position: relative;
+}
+
+// .seller-body {
+.seller-card-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.seller-card-number-static {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+////////////////////////////////
+//        FLIPCARD PAGE      //
+///////////////////////////////
+
+.flipcard-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flipcard {
+  width: 396px !important;
+  height: 403px;
+  margin: 1em;
+  perspective: 1500px;
+
+  .flipcard-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.75, 0, 0.85, 1);
+  }
+}
+.flipcard-mobile-about {
+  width: 75vw;
+  height: 403px;
+  margin: 1em;
+  perspective: 1500px;
+
+  .flipcard-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.75, 0, 0.85, 1);
+  }
+}
+@media (max-width: 581px) {
+  .flipcard-mobile-about {
+    width: 85vw !important;
+  }
+}
+@media (min-width: 582px) and (max-width: 1000px) {
+  .flipcard-mobile-about {
+    width: calc(85%) !important;
+  }
+}
+.flipcard-mobile {
+  width: 90%;
+  height: 100%;
+  margin: 1em;
+  perspective: 1500px;
+
+  .flipcard-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.75, 0, 0.85, 1);
+  }
+}
+
+.flipcard-flipback {
+  display: none;
+
+  &:checked ~ .flipcard-content {
+    transform: rotateY(180deg);
+  }
+}
+
+.flipcard-front,
+.flipcard-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  background: $primary-100;
+  border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+
+  .flipcard-inner {
+    height: 100%;
+    max-width: 100%;
+    display: grid;
+    padding: 0em;
+    transform: translateZ(1px);
+  }
+}
+
+.flipcard-front {
+  text-align: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    backface-visibility: hidden;
+  }
+  .flipcard-inner {
+    grid-template-rows: 4fr 0fr 5fr 0fr -1fr;
+    justify-items: center;
+  }
+}
+
+.flipcard-back {
+  transform: rotateY(180deg);
+  background-color: $primary-100;
+  text-align: center;
+
+  .flipcard-inner {
+    justify-items: center;
+  }
+}
+
+.flipcard-button {
+  color: #fff;
+  background-color: $primary-400;
+  width: 90%;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    // box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+    background-color: $primary-500;
+    transition: all 0.25s ease !important;
+    -webkit-transition: all 0.25s ease !important;
+  }
+}
+.flipcard-image {
+  height: 100%;
+  width: 100%;
+}
+.banner-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.394675rem;
+
+  color: $secondary-400;
+}
+.card-testimonial {
+  background: #faf7ee;
+  border: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 25px -14px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+  .card-body {
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 1.186875rem;
+    color: $secondary-400;
+  }
+  .card-footer {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 1.31875rem;
+    color: rgba($secondary-400, 0.85);
+    .experience-star {
+      color: $stars-color;
+    }
+  }
+}
+.experience-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.31870625rem;
+  color: $primary-400;
+  max-width: 20ch;
+}
+.big-letter {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7.9079375rem;
+  line-height: 169px;
+
+  color: $secondary-400;
+}
+.small-word {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.37903125rem;
+  line-height: 27px;
+  color: #ceaa54;
+}
+.quick-links {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 22px;
+  color: rgba($secondary-400, 0.85);
+}
+a {
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+}
+a:hover {
+  -webkit-filter: brightness(110%);
+  filter: brightness(110%);
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease t;
+}
+.hover-animation {
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+}
+.hover-animation:hover {
+  -webkit-filter: brightness(110%) !important;
+  filter: brightness(110%) !important;
+  transition: all 0.25s ease !important;
+  -webkit-transition: all 0.25s ease !important;
+}
+.button-hover {
+  background-color: $primary-500;
+  color: rgb(255, 255, 255) !important;
+  transition: all 0.25s ease !important;
+  -webkit-transition: all 0.25s ease !important;
+}
+.hover-darken:hover {
+  background-color: $secondary-600;
+}
+.hover-lighten:hover {
+  background-color: $secondary-100;
+}
+.button-effect-invert {
+  color: $primary-400 !important;
+  background-color: rgba($primary-400, 0.1) !important;
+}
+.button-effect-invert:hover {
+  color: #faf7ee !important;
+  background-color: $primary-400 !important;
+  transition: all 0.25s ease !important;
+  -webkit-transition: all 0.25s ease !important;
+}
+.arrow-color {
+  color: $primary-400;
+}
+
+.home-card {
+  transition: transform 0.25s ease;
+  :hover {
+    transform: scale(1.05);
+  }
+}
+
+//
+// CUSTOM CARDS BULLET PAGINATION
+//
+
+.swiper-pagination-bullet-active {
+  background-color: $primary-400 !important;
+}
+.text-link {
+  text-decoration: underline;
+  :hover {
+    text-decoration: none;
+  }
 }
