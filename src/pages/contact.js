@@ -279,7 +279,7 @@ export default function Contact() {
               <input
                 type="hidden"
                 name="type"
-                value="Book a meeting"
+                value={"Book a meeting"}
                 onChange={handleChange}
               />
               <div className="row py-5">
