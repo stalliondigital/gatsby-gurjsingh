@@ -49,14 +49,11 @@ nav {
     height: 65px !important;
     width: 65px !important;
   }
-  // .nav-button:focus,
-  // .nav-button:hover {
-  //   // background-color: #faf7ee !important;
-  //   // -webkit-filter: brightness(110%) !important;
-  //   // filter: brightness(110%) !important;
-  //   // transition: all 0.8s !important;
-  //   // -webkit-transition: all 0.8s !important;
-  // }
+  .nav-button:focus,
+  .nav-button:hover {
+    background-color: $primary-100 !important;
+    border: none;
+  }
   .nav-dropdown {
     background-color: #faf7ee;
   }
