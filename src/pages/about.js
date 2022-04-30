@@ -358,7 +358,10 @@ export default function About() {
                       />
                     </div>
                     <div className="col d-grid">
-                      <button className="button link py-2 " type="submit">
+                      <button
+                        className="button link py-2 hover-animation"
+                        type="submit"
+                      >
                         Contact
                       </button>
                     </div>

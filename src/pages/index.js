@@ -382,7 +382,7 @@ export default function Home({ data }) {
                         key={index}
                       >
                         <h2
-                          className="accordion-header"
+                          className="accordion-header hover-animation"
                           id={"panelsStayOpen-heading" + index}
                         >
                           <a
@@ -393,7 +393,7 @@ export default function Home({ data }) {
                             aria-expanded="true"
                             aria-controls={"#panelsStayOpen-collapse" + index}
                           >
-                            <div className="text-start qanda">{data.Q}</div>
+                            <div className="text-start qanda ">{data.Q}</div>
                           </a>
                         </h2>
                         <div
@@ -467,7 +467,10 @@ export default function Home({ data }) {
                       />
                     </div>
                     <div className="col d-grid">
-                      <button className="button link py-2 " type="submit">
+                      <button
+                        className="button link py-2 hover-animation"
+                        type="submit"
+                      >
                         Request Kit
                       </button>
                     </div>

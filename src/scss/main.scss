@@ -49,17 +49,21 @@ nav {
     height: 65px !important;
     width: 65px !important;
   }
-  .nav-button:focus,
-  .nav-button:hover {
-    background-color: #faf7ee !important;
-  }
+  // .nav-button:focus,
+  // .nav-button:hover {
+  //   // background-color: #faf7ee !important;
+  //   // -webkit-filter: brightness(110%) !important;
+  //   // filter: brightness(110%) !important;
+  //   // transition: all 0.8s !important;
+  //   // -webkit-transition: all 0.8s !important;
+  // }
   .nav-dropdown {
     background-color: #faf7ee;
   }
   .navbar-nav,
   .nav-link,
   .dropdown-item {
-    color: #838383;
+    color: rgb(131, 131, 131);
     font-size: 0.9375rem !important;
   }
   .navbar-toggler-icon {
@@ -67,7 +71,7 @@ nav {
   }
   .nav-link:hover,
   .nav-link:focus {
-    color: #666666;
+    color: rgb(131, 131, 131);
   }
   .btn {
     background-color: #ceaa54;
@@ -765,4 +769,24 @@ section.buyers-request {
   font-size: 1.125rem;
   line-height: 22px;
   color: rgba($secondary-400, 0.85);
+}
+a {
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+}
+a:hover {
+  -webkit-filter: brightness(110%) !important;
+  filter: brightness(110%) !important;
+  transition: all 0.8s !important;
+  -webkit-transition: all 0.8s !important;
+}
+.hover-animation {
+  filter: brightness(100%);
+  -webkit-filter: brightness(100%);
+}
+.hover-animation:hover {
+  -webkit-filter: brightness(110%) !important;
+  filter: brightness(110%) !important;
+  transition: all 0.8s !important;
+  -webkit-transition: all 0.8s !important;
 }
