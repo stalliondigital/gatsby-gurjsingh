@@ -10,6 +10,7 @@ $enable-negative-margins: true; // NAVBAR
 
 $primary-100: #faf7ee;
 $primary-400: #ceaa54;
+$primary-500: #ba9335;
 $primary-600: #93742a;
 $secondary-100: #d2d2d2;
 $secondary-400: #403e3e;
@@ -68,7 +69,7 @@ nav {
   }
   .nav-link:hover,
   .nav-link:focus {
-    color: rgb(131, 131, 131);
+    color: rgba(131, 131, 131, 0.8) !important;
   }
   .btn {
     background-color: #ceaa54;
@@ -772,10 +773,10 @@ a {
   -webkit-filter: brightness(100%);
 }
 a:hover {
-  -webkit-filter: brightness(110%) !important;
-  filter: brightness(110%) !important;
-  transition: all 0.8s !important;
-  -webkit-transition: all 0.8s !important;
+  -webkit-filter: brightness(110%);
+  filter: brightness(110%);
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease t;
 }
 .hover-animation {
   filter: brightness(100%);
@@ -784,6 +785,18 @@ a:hover {
 .hover-animation:hover {
   -webkit-filter: brightness(110%) !important;
   filter: brightness(110%) !important;
-  transition: all 0.8s !important;
-  -webkit-transition: all 0.8s !important;
+  transition: all 0.25s ease !important;
+  -webkit-transition: all 0.25s ease !important;
+}
+.button-hover {
+  background-color: $primary-500;
+  color: rgb(255, 255, 255) !important;
+  transition: all 0.25s ease !important;
+  -webkit-transition: all 0.25s ease !important;
+}
+.hover-darken:hover {
+  background-color: $secondary-600;
+}
+.hover-lighten:hover {
+  background-color: $secondary-100;
 }

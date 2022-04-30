@@ -144,7 +144,7 @@ export default function Navbar() {
           <div className="d-flex justify-content-start align-items-lg-center mt-3 mt-lg-0">
             <Link
               to="/contact"
-              className="btn btn-sm border-none w-auto w-lg-auto rounded-0  fw-light"
+              className="btn btn-sm border-none w-auto w-lg-auto rounded-0 button-hover fw-light"
             >
               Contact
             </Link>

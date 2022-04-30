@@ -88,7 +88,7 @@ export default function Home({ data }) {
                 <div className="mt-10 align-items-start rounded-0">
                   <Link
                     to="/services/buyers"
-                    className="header-buttom btn me-2 px-lg-8 border-none rounded-0 py-3"
+                    className="header-buttom hover-darken btn me-2 px-lg-8 border-none rounded-0 py-3"
                   >
                     I am a buyer
                   </Link>
