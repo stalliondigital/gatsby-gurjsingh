@@ -333,23 +333,17 @@ export default function Home() {
               action="/"
               netlify-honeypot="bot-field"
               data-netlify="true"
-              name="buyerkit"
+              name="firstMeeting"
               className="g-3 text-center justify-content-center"
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="bot-field" onChange={handleChange} />
-              <input type="hidden" name="form-name" value="buyerkit" />
-              <input
-                type="hidden"
-                name="type"
-                value="First time buyer"
-                onChange={handleChange}
-              />
+              <input type="hidden" name="form-name" value="firstMeeting" />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
                   <div className="col col-lg-7 px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">
                     <h2 className="title text-center text-lg-start pb-5">
-                      List your home with Gurjivan now!
+                      Book your first meeting with Gurjivan
                     </h2>
                     <p className="subtitle text-center text-lg-start mb-10 lh-sm">
                       Enter your details and Gurjivan will get in touch with you

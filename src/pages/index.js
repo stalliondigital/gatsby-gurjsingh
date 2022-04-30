@@ -421,19 +421,13 @@ export default function Home({ data }) {
             <form
               method="POST"
               action="/"
-              name="buyerkit"
+              name="requestBuyerKit"
               netlify-honeypot="bot-field"
               data-netlify="true"
               className="g-3 text-center justify-content-center"
               onSubmit={handleSubmit}
             >
-              <input type="hidden" name="form-name" value="buyerkit" />
-              <input
-                type="hidden"
-                name="type"
-                value="Request a buyers kit"
-                onChange={handleChange}
-              />
+              <input type="hidden" name="form-name" value="requestBuyerKit" />
               <input type="hidden" name="bot-field" onChange={handleChange} />
               <div className="row py-5">
                 <div className="col">

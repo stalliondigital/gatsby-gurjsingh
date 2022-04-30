@@ -231,18 +231,12 @@ export default function Home() {
               action="/"
               netlify-honeypot="bot-field"
               data-netlify="true"
-              name="buyerkit"
+              name="investorClient"
               className="g-3 text-center justify-content-center"
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="bot-field" onChange={handleChange} />
-              <input type="hidden" name="form-name" value="buyerkit" />
-              <input
-                type="hidden"
-                name="type"
-                value="Investor client"
-                onChange={handleChange}
-              />
+              <input type="hidden" name="form-name" value="investorClient" />
               <div className="row py-5">
                 <div className="col d-flex flex-column flex-lg-row row">
                   <div className="col col-lg-7 px-10 justify-content-center d-flex flex-column align-items-center align-items-lg-start">
