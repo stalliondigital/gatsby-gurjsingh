@@ -276,38 +276,40 @@ export default function Home({ data }) {
             </div>
             <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4">
               {services.map(service => (
-                <Link
-                  to={"/services/" + service.frontmatter.slug}
-                  key={service.id}
-                  className=""
-                >
-                  <div className="col">
-                    <div className="card border-0 rounded-0">
-                      <Img
-                        fluid={
-                          service.frontmatter.imgWide.childImageSharp.fluid
-                        }
-                        className="d-none d-md-block d-lg-none"
-                      />
-                      <Img
-                        fluid={service.frontmatter.img.childImageSharp.fluid}
-                        className="d-block d-md-none d-lg-block"
-                      />
-                      <div className="card-body d-flex justify-content-between align-items-end mb-0 pb-0">
-                        <h5 className="card-title text-start ps-3 ">
-                          {service.frontmatter.title}
-                        </h5>
-                        <div className="card-title text-end d-inline-block pe-3 ">
-                          <FontAwesomeIcon
-                            icon={faLongArrowAltRight}
-                            className="fa-icon arrow-color"
-                            transform="grow-8"
-                          />
+                <div className="">
+                  <Link
+                    to={"/services/" + service.frontmatter.slug}
+                    key={service.id}
+                    className=""
+                  >
+                    <div className="col">
+                      <div className="card home-card border-0 rounded-0 ">
+                        <Img
+                          fluid={
+                            service.frontmatter.imgWide.childImageSharp.fluid
+                          }
+                          className="d-none d-md-block d-lg-none"
+                        />
+                        <Img
+                          fluid={service.frontmatter.img.childImageSharp.fluid}
+                          className="d-block d-md-none d-lg-block"
+                        />
+                        <div className="card-body d-flex justify-content-between align-items-end mb-0 pb-0">
+                          <h5 className="card-title text-start ps-3 ">
+                            {service.frontmatter.title}
+                          </h5>
+                          <div className="card-title text-end d-inline-block pe-3 ">
+                            <FontAwesomeIcon
+                              icon={faLongArrowAltRight}
+                              className="fa-icon arrow-color"
+                              transform="grow-8"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               ))}
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center mt-10 mb-10">
