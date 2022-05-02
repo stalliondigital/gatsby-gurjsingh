@@ -167,7 +167,7 @@ export default function About() {
                   href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
                   target="_blank"
                   rel="noreferrer"
-                  className="card-link btn rounded-0 px-5"
+                  className="testimonial-button btn rounded-0 px-5"
                 >
                   Read More
                 </a>
