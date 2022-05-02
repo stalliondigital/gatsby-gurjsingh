@@ -58,7 +58,74 @@ export default function Navbar() {
           className="collapse navbar-collapse justify-content-end"
           id="navbarCollapse"
         >
-          <ul className="navbar-nav ms-auto navbar-end rounded-0">
+          {/* small screen */}
+          <ul className="navbar-nav ms-auto navbar-end d-lg-none rounded-0">
+            <li className="nav-item dropdown rounded-0">
+              <a className="nav-link dropdown-toggle fw-light">Services</a>
+              <ul
+                className="nav-dropdown dropdown-menu shadow-none d-block"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <Link
+                    className="dropdown-item fw-light"
+                    to="/services/buyers"
+                  >
+                    Buyers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="dropdown-item fw-light"
+                    to="/services/sellers"
+                  >
+                    Sellers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="dropdown-item fw-light"
+                    to="/services/investors"
+                  >
+                    Investors
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle fw-light">Resources</a>
+              <ul
+                className="nav-dropdown dropdown-menu shadow-none d-block"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <Link
+                    className="dropdown-item  fw-light "
+                    to="/first-time-buyers"
+                  >
+                    First Time Buyers Center
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item  fw-light "
+                    href="https://www.ratehub.ca/mortgage-payment-calculator"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Mortage Calculator
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link fw-light " to="/about">
+                Know Gurj
+              </Link>
+            </li>
+          </ul>
+          {/* big screen */}
+          <ul className="navbar-nav ms-auto navbar-end rounded-0 d-none d-lg-flex">
             <li className="nav-item dropdown rounded-0">
               <a
                 className="nav-link dropdown-toggle fw-light"
@@ -71,7 +138,7 @@ export default function Navbar() {
                 Services
               </a>
               <ul
-                className="nav-dropdown dropdown-menu shadow-none"
+                className="nav-dropdown dropdown-menu"
                 aria-labelledby="navbarDropdown"
               >
                 <li>
@@ -112,7 +179,7 @@ export default function Navbar() {
                 Resources
               </a>
               <ul
-                className="nav-dropdown dropdown-menu shadow-none"
+                className="nav-dropdown dropdown-menu "
                 aria-labelledby="navbarDropdown"
               >
                 <li>

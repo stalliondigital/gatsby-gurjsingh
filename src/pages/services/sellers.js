@@ -153,7 +153,13 @@ export default function Home() {
                         {/* {{! Card front }} */}
                         <div className="flipcard-front">
                           <div className="flipcard-inner">
-                            <div className="card-number seller-card-number-static">
+                            <div
+                              className={`card-number  ${
+                                index == 5 || index == 7
+                                  ? "special-number"
+                                  : "seller-card-number-static"
+                              }`}
+                            >
                               {index + 1}
                             </div>
                             <div className="card-header">{edge.node.title}</div>
@@ -257,7 +263,13 @@ export default function Home() {
                         {/* {{! Card front }} */}
                         <div className="flipcard-front">
                           <div className="flipcard-inner">
-                            <div className="card-number seller-card-number-static">
+                            <div
+                              className={`card-number  ${
+                                index == 5 || index == 7
+                                  ? "special-number"
+                                  : "seller-card-number-static"
+                              }`}
+                            >
                               {index + 1}
                             </div>
                             <div className="card-header ">
@@ -396,7 +408,7 @@ export default function Home() {
                 href="https://goo.gl/maps/KJs3vYFhrUSz2iRz7"
                 target="_blank"
                 rel="noreferrer"
-                className="flipcard-button btn rounded-0 px-5"
+                className="testimonial-button btn rounded-0 px-5"
               >
                 Read Testimonials
               </a>

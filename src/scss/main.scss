@@ -86,7 +86,9 @@ section {
     border-radius: 0%;
   }
 }
-
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 /*********************************************/
 /*          HOME PAGE         */
 /*********************************************/
@@ -575,6 +577,12 @@ section.buyers-request {
   left: 10px;
 }
 
+.special-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 ////////////////////////////////
 //        FLIPCARD PAGE      //
 ///////////////////////////////
@@ -830,9 +838,10 @@ a:hover {
 }
 
 .home-card {
-  transition: transform 0.25s ease;
-  :hover {
+  transition: all 0.25s ease;
+  &:hover {
     transform: scale(1.05);
+    box-shadow: none !important;
   }
 }
 
@@ -843,9 +852,29 @@ a:hover {
 .swiper-pagination-bullet-active {
   background-color: $primary-400 !important;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: $primary-400 !important;
+}
 .text-link {
   text-decoration: underline;
   :hover {
     text-decoration: none;
+  }
+}
+
+.testimonial-button {
+  background: $primary-400;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.10545625rem;
+  text-align: center;
+  color: #ffffff;
+  &:hover {
+    color: #ffffff !important;
+    // background-color: $primary-500;
+    // transition: all 0.25s ease !important;
+    // -webkit-transition: all 0.25s ease !important;
   }
 }
