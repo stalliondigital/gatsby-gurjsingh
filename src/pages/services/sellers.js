@@ -155,7 +155,7 @@ export default function Home() {
                           <div className="flipcard-inner">
                             <div
                               className={`card-number  ${
-                                index == 5 || index == 7
+                                index === 5 || index === 7
                                   ? "special-number"
                                   : "seller-card-number-static"
                               }`}
@@ -184,7 +184,7 @@ export default function Home() {
                         <div className="flipcard-back">
                           <div className="flipcard-inner">
                             <div className="card-body">
-                              <p className="card-text lh-sm pt-5">
+                              <p className="card-text text-start lh-sm pt-5">
                                 {edge.node.desc}
                               </p>
                             </div>
@@ -265,7 +265,7 @@ export default function Home() {
                           <div className="flipcard-inner">
                             <div
                               className={`card-number  ${
-                                index == 5 || index == 7
+                                index === 5 || index === 7
                                   ? "special-number"
                                   : "seller-card-number-static"
                               }`}
@@ -296,7 +296,7 @@ export default function Home() {
                         <div className="flipcard-back">
                           <div className="flipcard-inner">
                             <div className="card-body">
-                              <p className="card-text lh-sm ">
+                              <p className="card-text lh-sm text-start">
                                 {edge.node.desc}
                               </p>
                             </div>
