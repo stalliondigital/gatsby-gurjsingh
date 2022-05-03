@@ -130,11 +130,14 @@ export default function Home() {
         <section className="solution container-fluid align-items-center pt-20 pb-15">
           <div className=" container mb-5 ">
             <div className="d-flex flex-column justify-content-center align-items-center">
-              <h2 className="title mb-2 text-center ">How it Works</h2>
+              <h2 className="title mb-2 text-center ">What You Need to Know</h2>
               <p className="subtitle text-center ">
-                We organize our buying process down into three simple steps to
-                make the home buying process as simple, straightforward and
-                stress free as possible.
+                Entering the market as a first time home buyer, you may be able
+                to qualify for incentives to help you maximize your buying power
+                while helping you save for long term financial growth.
+              </p>
+              <p className="subtitle text-center pt-5">
+                Learn about some of the incentives below:
               </p>
             </div>
           </div>
