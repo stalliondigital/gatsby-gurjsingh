@@ -137,7 +137,7 @@ export default function Home() {
                 while helping you save for long term financial growth.
               </p>
               <p className="subtitle text-center pt-5">
-                Learn about some of the incentives below:
+                The most meaningful incentives you should be familiar with include:
               </p>
             </div>
           </div>
