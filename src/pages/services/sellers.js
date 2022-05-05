@@ -350,13 +350,13 @@ export default function Home() {
               Let's discuss the true value of your home! In the lower mainland, real estate prices are always on the move. Sit down with Gurj to have a thoughtful, honest conversation to understand the current market trend, as well as to best strategize selling your home for maximum value!
             </p>
             <p className="header-subtitle my-10">
-              Home values are increasing, sell it while the value is highest!
+              Home values are always changing! Let us help you realize your home's potential!
             </p>
           </div>
           <div className="container banner d-flex justify-content-center align-items-center flex-column flex-md-row row py-10">
             <div className="col text-center">
               <p className="big-number">
-                33.8%}
+                22.3%
                 <FontAwesomeIcon
                   className="font-awesome fa-sm"
                   icon={faArrowAltCircleUp}
@@ -367,7 +367,7 @@ export default function Home() {
             </div>
             <div className="col text-center">
               <p className="big-number">
-                38.3%
+                26.4%
                 <FontAwesomeIcon
                   className="font-awesome fa-sm"
                   icon={faArrowAltCircleUp}
@@ -378,7 +378,7 @@ export default function Home() {
             </div>
             <div className="col text-center">
               <p className="big-number">
-                35.6%{" "}
+                28.7%{" "}
                 <FontAwesomeIcon
                   className="font-awesome fa-sm"
                   icon={faArrowAltCircleUp}
@@ -388,8 +388,10 @@ export default function Home() {
               <p className="subtitle">APARTMENTS</p>
             </div>
           </div>
-          <div className="text-center">
-            <p className="text-center">(Data last retrieved April 2022)</p>
+          <div className="text-center mt-5">
+            <p className="text-center text-muted">
+            <sup>*</sup> The above data represents average price change for all combined areas of the Fraser Valley since April 2021. (Data last retrieved April 2022)
+            </p>
           </div>
         </section>
         <section className="container-fluid banner-shadow d-flex justify-content-center align-items-center my-20 pt-20">
