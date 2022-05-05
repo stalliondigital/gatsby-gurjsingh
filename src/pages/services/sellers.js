@@ -356,7 +356,7 @@ export default function Home() {
           <div className="container banner d-flex justify-content-center align-items-center flex-column flex-md-row row py-10">
             <div className="col text-center">
               <p className="big-number">
-                43.6%{" "}
+                33.8%}
                 <FontAwesomeIcon
                   className="font-awesome fa-sm"
                   icon={faArrowAltCircleUp}
@@ -367,7 +367,7 @@ export default function Home() {
             </div>
             <div className="col text-center">
               <p className="big-number">
-                5.6%{" "}
+                38.3%
                 <FontAwesomeIcon
                   className="font-awesome fa-sm"
                   icon={faArrowAltCircleUp}
@@ -378,7 +378,7 @@ export default function Home() {
             </div>
             <div className="col text-center">
               <p className="big-number">
-                36.3%{" "}
+                35.6%{" "}
                 <FontAwesomeIcon
                   className="font-awesome fa-sm"
                   icon={faArrowAltCircleUp}
@@ -387,6 +387,9 @@ export default function Home() {
 
               <p className="subtitle">APARTMENTS</p>
             </div>
+          </div>
+          <div className="text-center">
+            <p className="text-center">(Data last retrieved April 2022)</p>
           </div>
         </section>
         <section className="container-fluid banner-shadow d-flex justify-content-center align-items-center my-20 pt-20">
