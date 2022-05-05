@@ -347,9 +347,7 @@ export default function Home() {
           <div className="container text-center d-flex flex-column align-items-center">
             <h1 className="mb-5 title">Unsure of Selling?</h1>
             <p className="subtitle">
-              Want to get the most value out of your home by selling it? Now is
-              the best time to sell your home. Take a look at some of the latest
-              data we have from the Fraser Valley Real Estate Board.
+              Let's discuss the true value of your home! In the lower mainland, real estate prices are always on the move. Sit down with Gurj to have a thoughtful, honest conversation to understand the current market trend, as well as to best strategize selling your home for maximum value!
             </p>
             <p className="header-subtitle my-10">
               Home values are increasing, sell it while the value is highest!
