@@ -69,16 +69,16 @@ export default function About() {
         <title>Gurjivan | About</title>
       </Helmet>
       <div className="contact-page">
-        <section className="container-fluid buyers-header pb-0 ps-0 ms-0">
-          <div className="container-fluid row ps-0 ms-0 ">
+        <section className="container-fluid buyers-header pb-0 ps-0 ms-0 d-flex  align-items-center justify-content-center">
+          <div className="container row ps-0 ms-0 ">
             <BackgroundImage
               Tag={`section`}
               id={`test`}
-              className="d-none d-md-block col col-md-4 col-lg-6 "
+              className="d-none d-md-block col col-md-4  "
               fluid={headerImg.childImageSharp.fluid}
               alt="Gurjivan portrait"
             ></BackgroundImage>
-            <div className="col col-md-8 col-lg-6 ps-10 header py-20">
+            <div className="col col-md-8 ps-10 header py-20">
               <div className="text-start my-20 pb-5 pt-lg-6">
                 <h1 className="mb-5 header-title">Gurjivan Singh</h1>
                 <p className="header-subtitle">
