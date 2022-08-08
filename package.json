@@ -14,11 +14,14 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^15.12.1",
+    "@contentful/rich-text-react-renderer": "^15.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "dotenv": "^16.0.1",
     "gatsby": "^4.5.2",
     "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^3.11.0",
@@ -27,6 +30,7 @@
     "gatsby-plugin-react-helmet": "^5.9.0",
     "gatsby-plugin-sass": "^5.5.0",
     "gatsby-plugin-sharp": "^4.5.2",
+    "gatsby-source-contentful": "^7.18.0",
     "gatsby-source-filesystem": "^4.5.2",
     "gatsby-transformer-json": "^4.13.0",
     "gatsby-transformer-remark": "^5.11.1",
