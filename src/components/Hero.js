@@ -11,9 +11,11 @@ const Hero = ({
   author,
 }) => (
   <div className="div mb-20">
-    <div className="blog-hero position-relative row">
-      {image && (
+    <div className="blog-hero position-relative ">
+      {image ? (
         <GatsbyImage className="blog-hero-image" alt={title} image={image} />
+      ) : (
+        <div className="blog-hero-missing-image d-none d-lg-block  "></div>
       )}
       <div className="blog-hero-details d-none d-lg-block position-absolute top-50 start-50 translate-middle-x  col-10">
         <h2 className="blog-hero-above-heading mt-20">{aboveSubheading}</h2>
@@ -57,8 +59,8 @@ const Hero = ({
         <h1 className="blog-hero-title">{title}</h1>
         <h2 className="blog-hero-below-heading my-10">{belowSubheading}</h2>
         <div className="blog-hero-line mx-20 mt-10"></div>
-        <div className="d-flex flex-row pb-10 pt-10 ms-20">
-          <div className="col-6 row ">
+        <div className="d-flex flex-column flex-md-row pb-10 pt-10 ms-20">
+          <div className="col col-md-6 row mb-10 m-md-auto">
             <div className="col-3 ">
               <GatsbyImage
                 className="blog-hero-author-image "
@@ -73,7 +75,7 @@ const Hero = ({
               <p className="col blog-hero-date">{createdAt}</p>
             </div>
           </div>
-          <div className="col-6 buttons d-flex flex-column justify-content-end me-10 pe-10  ">
+          <div className="col col-md-6 buttons d-flex flex-column justify-content-end me-10 pe-10  ">
             <Link
               to="/contact"
               className="btn rounded-0 me-3 blog-hero-main-button mb-2"
