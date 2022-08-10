@@ -946,6 +946,15 @@ a:hover {
 
     color: rgba(64, 62, 62, 0.85);
   }
+  &-no-image {
+    background: #ceaa54;
+    width: 100%;
+    height: 50%;
+  }
+  &-load-more-button {
+    background: #f1ebe5;
+    color: #403e3e;
+  }
 }
 /*********************************************/
 /*          BLOG         */

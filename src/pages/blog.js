@@ -68,6 +68,7 @@ export default function BlogIndex() {
           <ArticlePreview posts={posts} />
         </div>
       </section>
+      <div className="p-20 m-20"></div>
     </Layout>
   )
 }
