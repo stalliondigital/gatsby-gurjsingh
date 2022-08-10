@@ -509,7 +509,7 @@ export const experienceQuery = graphql`
   query ExperienceCards {
     experiences: allMarkdownRemark(
       sort: { fields: frontmatter___order }
-      filter: { frontmatter: { slug: { eq: null } } }
+      filter: { frontmatter: { slug: { eq: null }, name: { ne: null } } }
     ) {
       nodes {
         id
