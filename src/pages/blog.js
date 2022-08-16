@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import ArticlePreview from "../components/ArticlePreview"
 import BackgroundImage from "gatsby-background-image"
 export default function BlogIndex() {
-  const { headerImg, allContentfulBlog } = useStaticQuery(
+  const { headerImg, allContentfulBlog, placeholderImg } = useStaticQuery(
     graphql`
       query {
         allContentfulBlog: allContentfulBlog {
@@ -30,6 +30,13 @@ export default function BlogIndex() {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
+          }
+        }
+        placeholderImg: file(
+          relativePath: { eq: "blog/placeholder-img.jpeg" }
+        ) {
+          childImageSharp {
+            gatsbyImageData(height: 212, width: 412)
           }
         }
       }
@@ -63,9 +70,9 @@ export default function BlogIndex() {
           </div>
         </div>
       </section>
-      <section className="blog-posts container-fluid d-flex justify-content-center align-items-center">
+      <section className="blog-posts container-fluid d-flex justify-content-center align-items-center pt-20">
         <div className="container">
-          <ArticlePreview posts={posts} />
+          <ArticlePreview posts={posts} placeholderImg={placeholderImg} />
         </div>
       </section>
       <div className="p-20 m-20"></div>

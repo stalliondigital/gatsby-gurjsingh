@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { documentToPlainTextString } from "@contentful/rich-text-plain-text-renderer"
-const ArticlePreview = ({ posts }) => {
+import Img from "gatsby-image"
+const ArticlePreview = ({ posts, placeholderImg }) => {
   // State for the list
   const [list, setList] = useState([...posts.slice(0, 9)])
 
@@ -37,25 +38,31 @@ const ArticlePreview = ({ posts }) => {
   if (!posts) return null
   if (!Array.isArray(posts)) return null
   // const plainTextBody = documentToPlainTextString(JSON.parse(post.body.raw))
+  const image = getImage(placeholderImg)
   return (
-    <div className="card-group row">
+    <div className="article-list ">
       {list.map(post => (
-        <div className="col-12 col-lg-4 mb-5 " key={post.slug}>
-          <div className="blog-preview-card card border-0 m-4 h-100 ">
+        <div className=" " key={post.slug}>
+          <div className="blog-preview-card card border-0 h-100 ">
             {post.headerImage ? (
               <GatsbyImage alt="" image={post.headerImage.gatsbyImage} />
             ) : (
-              <div className="blog-preview-no-image"></div>
+              <GatsbyImage image={image} className="placeholder-image" alt="" />
             )}
             <div className="d-flex flex-column">
-              <h2 className="blog-preview-title p-5">{post.title}</h2>
+              <h2
+                className="blog-preview-title p-5 title-tooltip"
+                title={post.title}
+              >
+                {post.title}
+              </h2>
               <div className="blog-preview-text-overflow blog-preview-description mx-5">
                 {post.paragraph?.raw &&
                   documentToPlainTextString(JSON.parse(post.paragraph.raw))}
               </div>
-              <div className=" px-5 mt-5 mb-0">
+              <div className=" px-5 mt-5 mb-0 pb-5">
                 <Link
-                  className="blog-preview-link-button rounded-0 py-2 px-10"
+                  className="blog-preview-link-button rounded-0 py-2 px-10 "
                   to={`/blog/${post.slug}`}
                 >
                   Read Post

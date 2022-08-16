@@ -905,6 +905,14 @@ a:hover {
 /*********************************************/
 /*          BLOG    PREVIEW     */
 /*********************************************/
+.article-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 48px;
+}
 .blog-preview {
   &-text-overflow {
     overflow: hidden;
@@ -936,6 +944,10 @@ a:hover {
     font-size: 20.8134px;
     line-height: 25px;
     color: #ceaa54;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &-description {
     font-family: "Inter";
@@ -954,17 +966,51 @@ a:hover {
   &-load-more-button {
     background: #f1ebe5;
     color: #403e3e;
+    &:hover {
+      text-decoration: none;
+      color: rgba(64, 62, 62, 0.8) !important;
+      background: rgba(241, 235, 229, 0.8) !important;
+    }
   }
 }
 /*********************************************/
 /*          BLOG         */
 /*********************************************/
+.title-tooltip {
+  position: relative; /* making the .tooltip span a container for the tooltip text */
+}
+.title-tooltip:before {
+  content: attr(title); /* here's the magic */
+  position: absolute;
+
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* move to right */
+  left: 100%;
+  margin-left: 15px; /* and add a small left margin */
+
+  /* basic styles */
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+
+  display: none; /* hide by default */
+}
+.title-tooltip:hover:before {
+  display: block;
+}
 .blog {
   &-hero {
     &-missing-image {
       background: #ceaa54;
       width: 100%;
       height: 50vh;
+      min-height: 500px;
     }
     &-details {
       background: #ffffff;
@@ -1019,10 +1065,11 @@ a:hover {
       /* identical to box height */
 
       color: #403e3e;
+
       &-image {
         border-radius: 50%;
-        width: 72.19px;
-        height: 72.19px;
+        height: 75px;
+        width: 75px;
       }
     }
     &-date {
