@@ -4,6 +4,7 @@ import { navigate } from "gatsby-link"
 import { graphql, Link } from "gatsby"
 import reviewGoogle from "./../images/home/review-google.png"
 import gurjivanImageCut from "./../images/home/gurjivan-image-cut.png"
+import gurjivanImageCutSmall from "./../images/home/gurjivan-image-cut-small.png"
 import backgroundimage from "./../images/home/background.png"
 import { Helmet } from "react-helmet"
 // font awesome library
@@ -113,10 +114,15 @@ export default function Home({ data }) {
               <span className="px-5">Meet Gurjivan</span>
             </h2>
             <div className="about-box d-flex flex-column mt-10 flex-md-row">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 fill">
                 <img
-                  className="img-fluid"
+                  className="img d-none d-md-block"
                   src={gurjivanImageCut}
+                  alt="Portrait of Gurjivan Singh"
+                />
+                <img
+                  className="img d-block d-md-none"
+                  src={gurjivanImageCutSmall}
                   alt="Portrait of Gurjivan Singh"
                 />
               </div>
@@ -503,7 +509,7 @@ export const experienceQuery = graphql`
   query ExperienceCards {
     experiences: allMarkdownRemark(
       sort: { fields: frontmatter___order }
-      filter: { frontmatter: { slug: { eq: null } } }
+      filter: { frontmatter: { slug: { eq: null }, name: { ne: null } } }
     ) {
       nodes {
         id

@@ -99,6 +99,11 @@ export default function Navbar() {
                 aria-labelledby="navbarDropdown"
               >
                 <li>
+                  <Link className="dropdown-item  fw-light " to="/blog">
+                    Blog
+                  </Link>
+                </li>
+                <li>
                   <Link
                     className="dropdown-item  fw-light "
                     to="/first-time-buyers"
@@ -182,6 +187,11 @@ export default function Navbar() {
                 className="nav-dropdown dropdown-menu "
                 aria-labelledby="navbarDropdown"
               >
+                <li>
+                  <Link className="dropdown-item  fw-light " to="/blog">
+                    Blog
+                  </Link>
+                </li>
                 <li>
                   <Link
                     className="dropdown-item  fw-light "

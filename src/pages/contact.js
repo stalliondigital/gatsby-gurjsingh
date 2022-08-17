@@ -64,7 +64,7 @@ export default function Contact() {
       </Helmet>
       <div className="contact-page">
         <section className="container-fluid buyers-header pb-0 ps-0 ms-0 d-flex justify-content-center">
-          <div className="container-fluid row ps-0 ms-0 ">
+          <div className="container row ps-0 ms-0 ">
             <BackgroundImage
               Tag={`section`}
               id={`test`}
