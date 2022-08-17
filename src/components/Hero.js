@@ -25,7 +25,7 @@ const Hero = ({
         <div className="blog-hero-line mx-20 mt-10"></div>
         <div className="d-flex flex-row pb-10 pt-10 ms-20">
           <div className="col-6 row ">
-            <div className="col-3 ">
+            <div className="col-3 blog-hero-author-portrait p-0">
               <GatsbyImage
                 className="blog-hero-author-image "
                 alt={title}
@@ -60,9 +60,9 @@ const Hero = ({
         <h1 className="blog-hero-title">{title}</h1>
         <h2 className="blog-hero-below-heading my-10">{belowSubheading}</h2>
         <div className="blog-hero-line mx-20 mt-10"></div>
-        <div className="d-flex flex-column flex-md-row pb-10 pt-10 ms-20">
-          <div className="col col-md-6 row mb-10 m-md-auto">
-            <div className="col-3 ">
+        <div className="d-flex flex-column flex-md-row pb-10 pt-10 ms-20 ">
+          <div className="col row mb-10 m-md-auto justify-content-center">
+            <div className="col-3 blog-hero-author-portrait p-0">
               <GatsbyImage
                 className=" py-5 px-5 blog-hero-author-image"
                 alt={title}
