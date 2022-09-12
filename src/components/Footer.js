@@ -1,18 +1,18 @@
-import { Link, graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link, graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
   faTwitter,
   faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons"
+} from "@fortawesome/free-brands-svg-icons";
 import {
   faPhoneAlt,
   faEnvelope,
   faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons"
-import { StaticImage } from "gatsby-plugin-image"
+} from "@fortawesome/free-solid-svg-icons";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Footer() {
   const data = useStaticQuery(graphql`
@@ -24,9 +24,9 @@ export default function Footer() {
         }
       }
     }
-  `)
+  `);
 
-  const { title, description } = data.site.siteMetadata
+  const { title, description } = data.site.siteMetadata;
 
   return (
     <section className="footer pt-10 container-fluid p-0 m-0">
@@ -114,7 +114,7 @@ export default function Footer() {
             <div className="col-12 col-md-5 pt-10 pt-md-0">
               {/* <img src={footerImg} className="img-fluid h-4" alt="" /> */}
               <StaticImage
-                src="./../images/footer/remax.png"
+                src="./../images/footer/royale.png"
                 alt="mls logo"
                 width={88}
                 height={17}
@@ -122,11 +122,13 @@ export default function Footer() {
               />
               <a
                 className="text-reset"
-                href="https://www.remax.ca"
+                href="https://www.royallepage.ca/en/office/british-columbia/langley/royal-lepage-wolstencroft-realty/357"
                 target="_blank"
                 rel="noreferrer"
               >
-                <p className="remax-text pt-0 mt-n1 pb-5">RE/MAX 2000 REALTY</p>
+                <p className="brokerage-text pt-0 mt-n1 pb-5">
+                  Royal LePage Wolstencroft Realty
+                </p>
               </a>
               <div className="row text-start lh-sm pe-0">
                 <a
@@ -139,7 +141,7 @@ export default function Footer() {
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
                   </div>
                   <div className="col text-reset text-start footer-address ">
-                    #103-15127 100th Avenue, Surrey, BC V3R 0N9
+                    #135-19664 64th Avenue, Langley, BC V2Y 3J6
                   </div>
                 </a>
               </div>
@@ -296,5 +298,5 @@ export default function Footer() {
         </div>
       </div>
     </section>
-  )
+  );
 }
