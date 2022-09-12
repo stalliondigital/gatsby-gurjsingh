@@ -124,7 +124,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <p className="brokerage-text pt-0 mt-n1 pb-5">
+                <p className="brokerage-text pt-3 mt-n1 pb-5">
                   Royal LePage Wolstencroft Realty
                 </p>
               </a>
