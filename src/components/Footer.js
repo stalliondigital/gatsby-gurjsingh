@@ -116,9 +116,7 @@ export default function Footer() {
               <StaticImage
                 src="./../images/footer/royale.png"
                 alt="mls logo"
-                width={85}
-                height={43}
-                className="pb-0 mb-n1 d-block"
+                className="pb-0 mb-n1 d-block brokerage-image"
               />
               <a
                 className="text-reset"
